@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if tabBarController != nil {
             tabBarController?.delegate = self
             if tabBarController!.viewControllers != nil {
+                print("count: ", tabBarController!.viewControllers!.count )
                 for i in 0 ..< tabBarController!.viewControllers!.count {
                     let vc: UIViewController = tabBarController!.viewControllers![i]
                     vc.tabBarItem.tag = i
