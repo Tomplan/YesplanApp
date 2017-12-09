@@ -158,8 +158,8 @@
 		E2DAC6DC1FDC21FE00B5B81B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E2DAC7141FDC265500B5B81B /* Teamplanner.storyboard */,
 				E2DAC7111FDC265000B5B81B /* Events.storyboard */,
+				E2DAC7141FDC265500B5B81B /* Teamplanner.storyboard */,
 				E2DAC70E1FDC264A00B5B81B /* Resources.storyboard */,
 				E2DAC70B1FDC264600B5B81B /* Contacts.storyboard */,
 				E2DAC7081FDC264200B5B81B /* Tasks.storyboard */,
