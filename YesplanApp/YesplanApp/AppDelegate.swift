@@ -22,32 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if tabBarController != nil {
             tabBarController?.delegate = self
             if tabBarController!.viewControllers != nil {
-                print("count: ", tabBarController!.viewControllers!.count )
-                print(tabBarController!.viewControllers!)
                 for i in 0 ..< tabBarController!.viewControllers!.count {
-//                    print("controller: ", tabBarController!.viewControllers![i])
                     let vc: UIViewController = tabBarController!.viewControllers![i]
                     vc.tabBarItem.tag = i
-                    print("item: ", vc.tabBarItem.tag)
                 }
             }
         }
 
         let defaults: UserDefaults = UserDefaults.standard
-//        print("defaults: ", defaults)
-//        dump(defaults)
-//        print(defaults.object)
         let tabOrder: [Int]? = defaults.object(forKey: "tabOrder") as? [Int]
         
         if tabOrder != nil {
-//            print("tabOrder", tabOrder)
             var vcOrder: [UIViewController] = []
             for tag: Int in tabOrder! {
-                print("tag: ", tag)
                 for vc in tabBarController!.viewControllers! {
                     if vc.tabBarItem.tag == tag {
                         vcOrder.append(vc)
-                        print("vcOrder: ", vcOrder)
                     }
                 }
             }
@@ -85,10 +75,7 @@ extension AppDelegate: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didEndCustomizing viewControllers: [UIViewController], changed: Bool) {
         if changed {
             var tabOrder: [Int] = []
-//            print("tab: ", tabOrder)
-
             for vc: UIViewController in viewControllers {
-                print("vc: ", vc)
                 tabOrder.append(vc.tabBarItem.tag)
             }
 
