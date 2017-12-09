@@ -13,6 +13,10 @@
 		E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4771FDB173300E0F499 /* LaunchScreen.storyboard */; };
 		E22DE4841FDB173300E0F499 /* YesplanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE4831FDB173300E0F499 /* YesplanAppTests.swift */; };
 		E22DE48F1FDB173300E0F499 /* YesplanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */; };
+		E26A7D451FDC53A900F55465 /* VCEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26A7D431FDC53A800F55465 /* VCEvents.swift */; };
+		E26A7D461FDC53A900F55465 /* VCEvents.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26A7D441FDC53A800F55465 /* VCEvents.xib */; };
+		E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26A7D481FDC55C600F55465 /* TVCEvents.swift */; };
+		E26A7D4B1FDC55C600F55465 /* TVCEvents.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26A7D491FDC55C600F55465 /* TVCEvents.xib */; };
 		E2DAC6F11FDC261F00B5B81B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F31FDC261F00B5B81B /* Updates.storyboard */; };
 		E2DAC6F41FDC262500B5B81B /* To Do.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F61FDC262500B5B81B /* To Do.storyboard */; };
 		E2DAC6F71FDC262A00B5B81B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F91FDC262A00B5B81B /* User.storyboard */; };
@@ -57,6 +61,10 @@
 		E22DE48A1FDB173300E0F499 /* YesplanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YesplanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesplanAppUITests.swift; sourceTree = "<group>"; };
 		E22DE4901FDB173300E0F499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26A7D431FDC53A800F55465 /* VCEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCEvents.swift; sourceTree = "<group>"; };
+		E26A7D441FDC53A800F55465 /* VCEvents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCEvents.xib; sourceTree = "<group>"; };
+		E26A7D481FDC55C600F55465 /* TVCEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCEvents.swift; sourceTree = "<group>"; };
+		E26A7D491FDC55C600F55465 /* TVCEvents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCEvents.xib; sourceTree = "<group>"; };
 		E2DAC6F21FDC261F00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Updates.storyboard; sourceTree = "<group>"; };
 		E2DAC6F51FDC262500B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/To Do.storyboard"; sourceTree = "<group>"; };
 		E2DAC6F81FDC262A00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
@@ -123,7 +131,9 @@
 				E22DE4751FDB173300E0F499 /* Assets.xcassets */,
 				E2DAC6DC1FDC21FE00B5B81B /* Storyboards */,
 				E2DAC6AB1FDC188D00B5B81B /* MainStoryboards */,
+				E26A7D471FDC53B700F55465 /* VCs */,
 				E22DE47A1FDB173300E0F499 /* Info.plist */,
+				E26A7D4C1FDC55D100F55465 /* Cells */,
 			);
 			path = YesplanApp;
 			sourceTree = "<group>";
@@ -144,6 +154,24 @@
 				E22DE4901FDB173300E0F499 /* Info.plist */,
 			);
 			path = YesplanAppUITests;
+			sourceTree = "<group>";
+		};
+		E26A7D471FDC53B700F55465 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E26A7D431FDC53A800F55465 /* VCEvents.swift */,
+				E26A7D441FDC53A800F55465 /* VCEvents.xib */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		E26A7D4C1FDC55D100F55465 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E26A7D481FDC55C600F55465 /* TVCEvents.swift */,
+				E26A7D491FDC55C600F55465 /* TVCEvents.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E2DAC6AB1FDC188D00B5B81B /* MainStoryboards */ = {
@@ -291,9 +319,11 @@
 				E22DE4761FDB173300E0F499 /* Assets.xcassets in Resources */,
 				E2DAC6F71FDC262A00B5B81B /* User.storyboard in Resources */,
 				E2DAC7061FDC264200B5B81B /* Tasks.storyboard in Resources */,
+				E26A7D4B1FDC55C600F55465 /* TVCEvents.xib in Resources */,
 				E2DAC7091FDC264600B5B81B /* Contacts.storyboard in Resources */,
 				E2DAC6FD1FDC263400B5B81B /* Search.storyboard in Resources */,
 				E2DAC7001FDC263800B5B81B /* Help.storyboard in Resources */,
+				E26A7D461FDC53A900F55465 /* VCEvents.xib in Resources */,
 				E22DE4741FDB173300E0F499 /* Main.storyboard in Resources */,
 				E2DAC7031FDC263E00B5B81B /* Reports.storyboard in Resources */,
 			);
@@ -320,7 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */,
 				E22DE46D1FDB173300E0F499 /* AppDelegate.swift in Sources */,
+				E26A7D451FDC53A900F55465 /* VCEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
