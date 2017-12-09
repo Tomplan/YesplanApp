@@ -56,6 +56,8 @@ extension VCEvents: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCEvents") as! TVCEvents
         
         cell.LblEventName.text = "Name"
+        cell.LblEventLocation.text = "Location"
+        cell.LblEventsDefaultschedulestarttime.text = "starttime"
         
         return cell
     }
