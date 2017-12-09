@@ -13,6 +13,18 @@
 		E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4771FDB173300E0F499 /* LaunchScreen.storyboard */; };
 		E22DE4841FDB173300E0F499 /* YesplanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE4831FDB173300E0F499 /* YesplanAppTests.swift */; };
 		E22DE48F1FDB173300E0F499 /* YesplanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */; };
+		E2DAC6AE1FDC19EF00B5B81B /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6AC1FDC19EF00B5B81B /* Events.storyboard */; };
+		E2DAC6B11FDC1A2700B5B81B /* Resources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6AF1FDC1A2700B5B81B /* Resources.storyboard */; };
+		E2DAC6B41FDC1A4000B5B81B /* Teamplanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6B21FDC1A4000B5B81B /* Teamplanner.storyboard */; };
+		E2DAC6B61FDC1A8C00B5B81B /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6B51FDC1A8C00B5B81B /* Contacts.storyboard */; };
+		E2DAC6B91FDC1AAC00B5B81B /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6B71FDC1AAC00B5B81B /* Tasks.storyboard */; };
+		E2DAC6BB1FDC1B1700B5B81B /* Reports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6BA1FDC1B1700B5B81B /* Reports.storyboard */; };
+		E2DAC6BE1FDC1B5000B5B81B /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6BC1FDC1B5000B5B81B /* Help.storyboard */; };
+		E2DAC6C01FDC1B8B00B5B81B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6BF1FDC1B8B00B5B81B /* Search.storyboard */; };
+		E2DAC6C31FDC1BB200B5B81B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6C11FDC1BB200B5B81B /* User.storyboard */; };
+		E2DAC6C51FDC1BD700B5B81B /* To Do.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6C41FDC1BD700B5B81B /* To Do.storyboard */; };
+		E2DAC6C81FDC1C0800B5B81B /* Conflicts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6C61FDC1C0800B5B81B /* Conflicts.storyboard */; };
+		E2DAC6CA1FDC1C3000B5B81B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6C91FDC1C3000B5B81B /* Updates.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +57,18 @@
 		E22DE48A1FDB173300E0F499 /* YesplanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YesplanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesplanAppUITests.swift; sourceTree = "<group>"; };
 		E22DE4901FDB173300E0F499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DAC6AD1FDC19EF00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/Base.lproj/Events.storyboard; sourceTree = "<group>"; };
+		E2DAC6B01FDC1A2700B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/YesplanApp/Storyboards/Base.lproj/Resources.storyboard; sourceTree = "<group>"; };
+		E2DAC6B31FDC1A4000B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/Base.lproj/Teamplanner.storyboard; sourceTree = "<group>"; };
+		E2DAC6B51FDC1A8C00B5B81B /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		E2DAC6B81FDC1AAC00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/Base.lproj/Tasks.storyboard; sourceTree = "<group>"; };
+		E2DAC6BA1FDC1B1700B5B81B /* Reports.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reports.storyboard; sourceTree = "<group>"; };
+		E2DAC6BD1FDC1B5000B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/Base.lproj/Help.storyboard; sourceTree = "<group>"; };
+		E2DAC6BF1FDC1B8B00B5B81B /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		E2DAC6C21FDC1BB200B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/Base.lproj/User.storyboard; sourceTree = "<group>"; };
+		E2DAC6C41FDC1BD700B5B81B /* To Do.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "To Do.storyboard"; sourceTree = "<group>"; };
+		E2DAC6C71FDC1C0800B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YesplanApp/Storyboards/Base.lproj/Conflicts.storyboard; sourceTree = "<group>"; };
+		E2DAC6C91FDC1C3000B5B81B /* Updates.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Updates.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +148,20 @@
 		E2DAC6AB1FDC188D00B5B81B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E22DE4721FDB173300E0F499 /* Main.storyboard */,
 				E22DE4771FDB173300E0F499 /* LaunchScreen.storyboard */,
+				E22DE4721FDB173300E0F499 /* Main.storyboard */,
+				E2DAC6AC1FDC19EF00B5B81B /* Events.storyboard */,
+				E2DAC6B21FDC1A4000B5B81B /* Teamplanner.storyboard */,
+				E2DAC6AF1FDC1A2700B5B81B /* Resources.storyboard */,
+				E2DAC6B51FDC1A8C00B5B81B /* Contacts.storyboard */,
+				E2DAC6B71FDC1AAC00B5B81B /* Tasks.storyboard */,
+				E2DAC6BA1FDC1B1700B5B81B /* Reports.storyboard */,
+				E2DAC6BC1FDC1B5000B5B81B /* Help.storyboard */,
+				E2DAC6BF1FDC1B8B00B5B81B /* Search.storyboard */,
+				E2DAC6C11FDC1BB200B5B81B /* User.storyboard */,
+				E2DAC6C41FDC1BD700B5B81B /* To Do.storyboard */,
+				E2DAC6C61FDC1C0800B5B81B /* Conflicts.storyboard */,
+				E2DAC6C91FDC1C3000B5B81B /* Updates.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -237,9 +273,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DAC6B41FDC1A4000B5B81B /* Teamplanner.storyboard in Resources */,
 				E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */,
+				E2DAC6B11FDC1A2700B5B81B /* Resources.storyboard in Resources */,
+				E2DAC6C51FDC1BD700B5B81B /* To Do.storyboard in Resources */,
+				E2DAC6C81FDC1C0800B5B81B /* Conflicts.storyboard in Resources */,
+				E2DAC6CA1FDC1C3000B5B81B /* Updates.storyboard in Resources */,
+				E2DAC6AE1FDC19EF00B5B81B /* Events.storyboard in Resources */,
 				E22DE4761FDB173300E0F499 /* Assets.xcassets in Resources */,
+				E2DAC6C31FDC1BB200B5B81B /* User.storyboard in Resources */,
+				E2DAC6B91FDC1AAC00B5B81B /* Tasks.storyboard in Resources */,
+				E2DAC6B61FDC1A8C00B5B81B /* Contacts.storyboard in Resources */,
+				E2DAC6C01FDC1B8B00B5B81B /* Search.storyboard in Resources */,
+				E2DAC6BE1FDC1B5000B5B81B /* Help.storyboard in Resources */,
 				E22DE4741FDB173300E0F499 /* Main.storyboard in Resources */,
+				E2DAC6BB1FDC1B1700B5B81B /* Reports.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +362,62 @@
 				E22DE4781FDB173300E0F499 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6AC1FDC19EF00B5B81B /* Events.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6AD1FDC19EF00B5B81B /* Base */,
+			);
+			name = Events.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6AF1FDC1A2700B5B81B /* Resources.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6B01FDC1A2700B5B81B /* Base */,
+			);
+			name = Resources.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6B21FDC1A4000B5B81B /* Teamplanner.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6B31FDC1A4000B5B81B /* Base */,
+			);
+			name = Teamplanner.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6B71FDC1AAC00B5B81B /* Tasks.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6B81FDC1AAC00B5B81B /* Base */,
+			);
+			name = Tasks.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6BC1FDC1B5000B5B81B /* Help.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6BD1FDC1B5000B5B81B /* Base */,
+			);
+			name = Help.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6C11FDC1BB200B5B81B /* User.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6C21FDC1BB200B5B81B /* Base */,
+			);
+			name = User.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DAC6C61FDC1C0800B5B81B /* Conflicts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DAC6C71FDC1C0800B5B81B /* Base */,
+			);
+			name = Conflicts.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
