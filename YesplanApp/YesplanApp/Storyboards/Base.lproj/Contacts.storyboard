@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Um-wq-wxQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts-->
+        <scene sceneID="UA4-5d-rft">
+            <objects>
+                <viewController id="1Um-wq-wxQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecN-0N-1bu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="rUG-Fz-VF0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="Contacts" id="m1W-Ig-gR1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHX-NV-d1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Contacts" width="36" height="36"/>
+    </resources>
+</document>

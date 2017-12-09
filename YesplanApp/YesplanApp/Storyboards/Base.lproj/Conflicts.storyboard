@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SrY-e0-LvT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Conflicts-->
+        <scene sceneID="vEu-IM-WXH">
+            <objects>
+                <viewController id="SrY-e0-LvT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f8S-Hf-JUz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Haq-YZ-bTn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Conflicts" image="Conflicts" id="lcG-tr-x2T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxK-i8-kIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-223"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Conflicts" width="36" height="36"/>
+    </resources>
+</document>

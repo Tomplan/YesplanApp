@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n1l-CI-4sX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="gks-5R-nyf">
+            <objects>
+                <viewController id="n1l-CI-4sX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fwx-hJ-FQL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="RRw-zi-B69"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="zWE-ku-7CB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kt-r5-VUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Search" width="36" height="36"/>
+    </resources>
+</document>
