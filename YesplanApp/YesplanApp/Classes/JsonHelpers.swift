@@ -217,8 +217,10 @@ class JSONAny: Codable {
     public required init(from decoder: Decoder) throws {
         if var arrayContainer = try? decoder.unkeyedContainer() {
             self.value = try JSONAny.decodeArray(from: &arrayContainer)
+            
         } else if var container = try? decoder.container(keyedBy: JSONCodingKey.self) {
             self.value = try JSONAny.decodeDictionary(from: &container)
+         
         } else {
             let container = try decoder.singleValueContainer()
             self.value = try JSONAny.decode(from: container)
@@ -237,4 +239,5 @@ class JSONAny: Codable {
             try JSONAny.encode(to: &container, value: self.value)
         }
     }
+    
 }

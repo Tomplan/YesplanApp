@@ -97,13 +97,13 @@ class VCEvents: UIViewController {
 //        groupedYPEvents.removeAll()
 //        groupedYPEventsSorted.removeAll()
 //
-        let myEvents = YPData.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
-            dump(myEvents)
+//        let myEvents = YPData.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
+//            dump(myEvents)
 //        let myContacts = YPData.from(url: "https://dewerft.yesplan.be/api/contacts?api_key=6AED6266671C92209161289C37D109E0")!
 //           dump(myContacts)
-//        let myGetTasks = YPData.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
+        let myTasks = YPData.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
         
-//        dump(myTasks)
+        dump(myTasks)
         
     }
 

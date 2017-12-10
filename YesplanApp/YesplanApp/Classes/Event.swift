@@ -60,8 +60,7 @@ class Event: Codable {
     let start: String?
     let startdate: String?
     let starttime: String?
-    let status: Event?
-    let status1: String?
+    let status: JSONAny?
     let street: [String]?
     let team: String?
     let title: String?
@@ -69,6 +68,7 @@ class Event: Codable {
     let url: String?
     let value: String?
     let zipcode: String?
+    
 }
 
 extension Event {
@@ -125,7 +125,6 @@ extension Event {
         case startdate = "startdate"
         case starttime = "starttime"
         case status = "status"
-        case status1 = "status1"
         case street = "street"
         case team = "team"
         case title = "title"
