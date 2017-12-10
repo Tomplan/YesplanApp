@@ -10,7 +10,7 @@ import Foundation
 
 class YPData: Codable {
     let data: [Event]
-    let pagination: Attributes
+    let pagination: Pagination
 }
 
 extension YPData {
