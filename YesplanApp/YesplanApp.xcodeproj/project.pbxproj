@@ -37,6 +37,8 @@
 		E2A07FD71FDF317100F0D94B /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD61FDF317100F0D94B /* Child.swift */; };
 		E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD81FDF319D00F0D94B /* Location.swift */; };
 		E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDA1FDF333B00F0D94B /* Tasks.swift */; };
+		E2A07FDD1FDF379500F0D94B /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDC1FDF379500F0D94B /* Profiles.swift */; };
+		E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */; };
 		E2B4AB791FDF1DBE00374830 /* ContactBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4AB781FDF1DBE00374830 /* ContactBooking.swift */; };
 		E2DAC6F11FDC261F00B5B81B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F31FDC261F00B5B81B /* Updates.storyboard */; };
 		E2DAC6F41FDC262500B5B81B /* To Do.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F61FDC262500B5B81B /* To Do.storyboard */; };
@@ -106,6 +108,8 @@
 		E2A07FD61FDF317100F0D94B /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		E2A07FD81FDF319D00F0D94B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E2A07FDA1FDF333B00F0D94B /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		E2A07FDC1FDF379500F0D94B /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfiles.swift; sourceTree = "<group>"; };
 		E2B4AB781FDF1DBE00374830 /* ContactBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBooking.swift; sourceTree = "<group>"; };
 		E2DAC6F21FDC261F00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Updates.storyboard; sourceTree = "<group>"; };
 		E2DAC6F51FDC262500B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/To Do.storyboard"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				E2286E441FDDB9BA006CE49D /* Events.swift */,
 				E265B31D1FDF2AF70000591B /* Contacts.swift */,
 				E2A07FDA1FDF333B00F0D94B /* Tasks.swift */,
+				E2A07FDC1FDF379500F0D94B /* Profiles.swift */,
 				E2286E461FDDBA52006CE49D /* Pagination.swift */,
 				E2B4AB781FDF1DBE00374830 /* ContactBooking.swift */,
 				E265B3171FDF22AF0000591B /* ContactLink.swift */,
@@ -205,6 +210,7 @@
 				E26A7D471FDC53B700F55465 /* VCs */,
 				E22DE47A1FDB173300E0F499 /* Info.plist */,
 				E26A7D4C1FDC55D100F55465 /* Cells */,
+				E2A07FE01FDF38EE00F0D94B /* functions */,
 			);
 			path = YesplanApp;
 			sourceTree = "<group>";
@@ -243,6 +249,14 @@
 				E26A7D491FDC55C600F55465 /* TVCEvents.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E2A07FE01FDF38EE00F0D94B /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */,
+			);
+			path = functions;
 			sourceTree = "<group>";
 		};
 		E2DAC6AB1FDC188D00B5B81B /* MainStoryboards */ = {
@@ -435,7 +449,9 @@
 				E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */,
 				E265B3261FDF2C440000591B /* Own.swift in Sources */,
 				E265B32E1FDF2D1A0000591B /* Organization.swift in Sources */,
+				E2A07FDD1FDF379500F0D94B /* Profiles.swift in Sources */,
 				E265B3281FDF2C830000591B /* Profile.swift in Sources */,
+				E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */,
 				E2A07FD51FDF308600F0D94B /* Group.swift in Sources */,
 				E265B3221FDF2BD50000591B /* Attributes.swift in Sources */,
 				E265B31E1FDF2AF70000591B /* Contacts.swift in Sources */,

@@ -16,6 +16,9 @@ class VCEvents: UIViewController {
     var events = [Event]()
     var contacts = [Contact]()
     var tasks = [Task]()
+    var profiles = [Profile]()
+    
+    var profileColorArray: [String] = []
     
     var selectedDateString = ""
     var selectedEndDateString = ""
@@ -33,6 +36,7 @@ class VCEvents: UIViewController {
         } else {
             tableView.addSubview(refreshControl)
         }
+        GetProfiles()
         GetData()
 //        do_table_refresh()
     }
@@ -92,6 +96,7 @@ class VCEvents: UIViewController {
         
     }
     
+    
     func GetData()
     {
         if selectedDateString.isEmpty == true {
@@ -100,12 +105,23 @@ class VCEvents: UIViewController {
 //        groupedYPEvents.removeAll()
 //        groupedYPEventsSorted.removeAll()
 //
-//        let events = Events.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
+        let events = Events.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
 //            dump(events)
+        
+        print(events.data.count)
+        for i in 0 ..< events.data.count {
+            let ProfileId = events.data[i].profile.id
+            let ProfileColor = profileDict[ProfileId]
+//            print(ProfileId)
+//            print(ProfileColor!)
+            profileColorArray.append(ProfileColor!)
+        }
 //        let contacts = Contacts.from(url: "https://dewerft.yesplan.be/api/contacts?api_key=6AED6266671C92209161289C37D109E0")!
 //           dump(contacts)
-        let tasks = Tasks.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
-        dump(tasks)
+//        let tasks = Tasks.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
+//        dump(tasks)
+//        let profiles = Profiles.from(url: "https://dewerft.yesplan.be/api/profiles?api_key=6AED6266671C92209161289C37D109E0")!
+//                   dump(profiles)
 //        let myStatuses = YPData.from(url: "https://dewerft.yesplan.be/api/statuses?api_key=6AED6266671C92209161289C37D109E0")
 //        dump(myStatuses)
         
@@ -139,23 +155,51 @@ extension VCEvents: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return profileColorArray.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCEvents") as! TVCEvents
         
-        let borderColor: UIColor = .red
+//        let borderColor: UIColor = .red
+//        print(profileColorArray[indexPath.row])
+        if let bordercolor = UIColor(rgbString: profileColorArray[indexPath.row]) {
+            cell.ViewBorder.layer.borderColor = bordercolor.cgColor
+        } else {
+            print("invalid color specification")
+        }
+       
+        
         cell.ViewBorder.layer.cornerRadius = 5
         cell.ViewBorder.layer.borderWidth = 2
         cell.ViewBorder.layer.shadowOffset = CGSize(width: -1, height: 1)
-        cell.ViewBorder.layer.borderColor = borderColor.cgColor
+//        cell.ViewBorder.layer.borderColor = borderColor.cgColor
+        
  
         cell.LblEventName.text = "Name"
         cell.LblEventLocation.text = "Location"
         cell.LblEventsDefaultschedulestarttime.text = "starttime"
         
         return cell
+    }
+}
+extension UIColor {
+    convenience init?(rgbString: String) {
+        var red = 0.0
+        var green = 0.0
+        var blue = 0.0
+        
+        let scanner = Scanner(string: rgbString)
+        guard scanner.scanString("rgb(", into: nil)
+            && scanner.scanDouble(&red)
+            && scanner.scanString(",", into: nil)
+            && scanner.scanDouble(&green)
+            && scanner.scanString(",", into: nil)
+            && scanner.scanDouble(&blue)
+            && scanner.scanString(")", into: nil) else {
+                return nil
+        }
+        self.init(red: CGFloat(red/255.0), green: CGFloat(green/255.0), blue: CGFloat(blue/255.0), alpha: 1.0)
     }
 }
