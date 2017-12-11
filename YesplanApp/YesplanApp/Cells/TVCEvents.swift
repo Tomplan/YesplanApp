@@ -10,6 +10,7 @@ import UIKit
 
 class TVCEvents: UITableViewCell {
 
+    @IBOutlet weak var ViewBorder: UIView!
     @IBOutlet weak var LblEventsDefaultschedulestarttime: UILabel!
     @IBOutlet weak var LblEventLocation: UILabel!
     @IBOutlet weak var LblEventName: UILabel!

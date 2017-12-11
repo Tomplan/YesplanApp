@@ -1,5 +1,5 @@
 //
-//  YPData.swift
+//  Events.swift
 //  YesplanApp
 //
 //  Created by Tom Slegers on 10/12/17.
@@ -8,28 +8,26 @@
 
 import Foundation
 
-class YPData: Codable {
+class Events: Codable {
     let data: [Event]
     let pagination: Pagination
 }
 
-extension YPData {
-    static func from(json: String, using encoding: String.Encoding = .utf8) -> YPData? {
+extension Events {
+    static func from(json: String, using encoding: String.Encoding = .utf8) -> Events? {
         guard let data = json.data(using: encoding) else { return nil }
-        return YPData.from(data: data)
+        return Events.from(data: data)
     }
     
-    static func from(data: Data) -> YPData? {
+    static func from(data: Data) -> Events? {
         let decoder = JSONDecoder()
-        return try? decoder.decode(YPData.self, from: data)
+        return try? decoder.decode(Events.self, from: data)
     }
     
-    static func from(url urlString: String) -> YPData? {
+    static func from(url urlString: String) -> Events? {
         guard let url = URL(string: urlString) else {
-            print("no url")
             return nil }
         guard let data = try? Data(contentsOf: url) else {
-            print("no data")
             return nil }
         return from(data: data)
     }
@@ -45,7 +43,7 @@ extension YPData {
     }
 }
 
-extension YPData {
+extension Events {
     enum CodingKeys: String, CodingKey {
         case data = "data"
         case pagination = "pagination"

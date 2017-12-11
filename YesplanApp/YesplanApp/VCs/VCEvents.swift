@@ -13,7 +13,10 @@ class VCEvents: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var myYPData = [Event]()
+    var events = [Event]()
+    var contacts = [Contact]()
+    var tasks = [Task]()
+    
     var selectedDateString = ""
     var selectedEndDateString = ""
     var refreshControl: UIRefreshControl = UIRefreshControl()
@@ -97,13 +100,14 @@ class VCEvents: UIViewController {
 //        groupedYPEvents.removeAll()
 //        groupedYPEventsSorted.removeAll()
 //
-//        let myEvents = YPData.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
-//            dump(myEvents)
-//        let myContacts = YPData.from(url: "https://dewerft.yesplan.be/api/contacts?api_key=6AED6266671C92209161289C37D109E0")!
-//           dump(myContacts)
-        let myTasks = YPData.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
-        
-        dump(myTasks)
+//        let events = Events.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
+//            dump(events)
+//        let contacts = Contacts.from(url: "https://dewerft.yesplan.be/api/contacts?api_key=6AED6266671C92209161289C37D109E0")!
+//           dump(contacts)
+        let tasks = Tasks.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
+        dump(tasks)
+//        let myStatuses = YPData.from(url: "https://dewerft.yesplan.be/api/statuses?api_key=6AED6266671C92209161289C37D109E0")
+//        dump(myStatuses)
         
     }
 
@@ -138,9 +142,16 @@ extension VCEvents: UITableViewDataSource {
         return 10
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCEvents") as! TVCEvents
         
+        let borderColor: UIColor = .red
+        cell.ViewBorder.layer.cornerRadius = 5
+        cell.ViewBorder.layer.borderWidth = 2
+        cell.ViewBorder.layer.shadowOffset = CGSize(width: -1, height: 1)
+        cell.ViewBorder.layer.borderColor = borderColor.cgColor
+ 
         cell.LblEventName.text = "Name"
         cell.LblEventLocation.text = "Location"
         cell.LblEventsDefaultschedulestarttime.text = "starttime"

@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  Groups.swift
 //  YesplanApp
 //
 //  Created by Tom Slegers on 11/12/17.
@@ -7,48 +7,45 @@
 //
 
 import Foundation
+// To parse the JSON, add this file to your project and do:
+//
+//   let group = Group.from(json: jsonString)!
 
-class Event: Codable {
+import Foundation
+
+class Group: Codable {
     let attributes: Attributes
-    let defaultscheduledescription: String?
-    let defaultscheduleend: String?
-    let defaultscheduleendtime: String?
-    let defaultschedulestart: String?
-    let defaultschedulestarttime: String?
+    let children: [Child]
     let enddate: String
     let endtime: String
-    let group: Profile?
+    let group: JSONNull?
     let id: String
     let isproduction: Bool
-    let labels: [JSONAny]
-    let locations: [Profile]
+    let locations: [Location]
     let name: String
     let owner: Own
     let owninggroup: Own
     let owningteam: Own
     let production: JSONNull?
-    let profile: Profile
+    let profile: Profile?
+    let profiles: [Profile]
     let startdate: String
     let starttime: String
-    let status: Status
+    let status: Status?
+    let statuses: [Status]
     let type: String
     let url: String
 }
 
-extension Event {
+extension Group {
     enum CodingKeys: String, CodingKey {
         case attributes = "attributes"
-        case defaultscheduledescription = "defaultscheduledescription"
-        case defaultscheduleend = "defaultscheduleend"
-        case defaultscheduleendtime = "defaultscheduleendtime"
-        case defaultschedulestart = "defaultschedulestart"
-        case defaultschedulestarttime = "defaultschedulestarttime"
+        case children = "children"
         case enddate = "enddate"
         case endtime = "endtime"
         case group = "group"
         case id = "id"
         case isproduction = "isproduction"
-        case labels = "labels"
         case locations = "locations"
         case name = "name"
         case owner = "owner"
@@ -56,14 +53,12 @@ extension Event {
         case owningteam = "owningteam"
         case production = "production"
         case profile = "profile"
+        case profiles = "profiles"
         case startdate = "startdate"
         case starttime = "starttime"
         case status = "status"
+        case statuses = "statuses"
         case type = "_type"
         case url = "url"
     }
 }
-
-
-
-
