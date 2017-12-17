@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class ContactBooking: Codable {
+class Contactbooking: Codable {
     let contact: Contact
     let id: String
     let owner: Own
@@ -18,7 +18,7 @@ class ContactBooking: Codable {
     let url: String
 }
 
-extension ContactBooking {
+extension Contactbooking {
     enum CodingKeys: String, CodingKey {
         case contact = "contact"
         case id = "id"

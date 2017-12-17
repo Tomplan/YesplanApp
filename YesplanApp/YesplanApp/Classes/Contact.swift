@@ -8,33 +8,33 @@
 import Foundation
 
 class Contact: Codable {
-    let address: String
-    let addresses: [Address]
-    let addresslines: String
-    let attributes: Attributes
-    let city: String
+    let address: String?
+    let addresses: [Address]?
+    let addresslines: String?
+    let attributes: Attributes?
+    let city: String?
     let comment: String?
-    let contactinfo: [Contactinfo]
-    let country: String
-    let countrycode: String
-    let firstname: String
+    let contactinfo: [Contactinfo]?
+    let country: String?
+    let countrycode: String?
+    let firstname: String?
     let id: String
     let imageurl: JSONNull?
     let jobtitle: String?
-    let labels: [JSONAny]
-    let languagecode: String
-    let lastname: String
-    let links: [Link]
-    let name: String
+    let labels: [JSONAny]?
+    let languagecode: String?
+    let lastname: String?
+    let links: [Link]?
+    let name: String?
     let organization: Organization?
     let person: Organization?
-    let owner: Own
-    let owninggroup: Own
-    let owningteam: Own
-    let title: String
+    let owner: Own?
+    let owninggroup: Own?
+    let owningteam: Own?
+    let title: String?
     let type: String
     let url: String
-    let zipcode: String
+    let zipcode: String?
 }
 
 extension Contact {

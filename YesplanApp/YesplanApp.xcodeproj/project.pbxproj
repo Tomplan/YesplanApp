@@ -16,6 +16,16 @@
 		E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4771FDB173300E0F499 /* LaunchScreen.storyboard */; };
 		E22DE4841FDB173300E0F499 /* YesplanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE4831FDB173300E0F499 /* YesplanAppTests.swift */; };
 		E22DE48F1FDB173300E0F499 /* YesplanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */; };
+		E22FB6AB1FE701EE006E7658 /* Customdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22FB6AA1FE701EE006E7658 /* Customdata.swift */; };
+		E24FB9291FDFFA0D00C5242B /* Resourcebooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */; };
+		E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */; };
+		E24FB92F1FDFFB0000C5242B /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92E1FDFFB0000C5242B /* Placeholder.swift */; };
+		E24FB9311FDFFB8C00C5242B /* Costmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9301FDFFB8B00C5242B /* Costmodel.swift */; };
+		E24FB9331FDFFC0D00C5242B /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9321FDFFC0D00C5242B /* Discount.swift */; };
+		E24FB9351FDFFC3800C5242B /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9341FDFFC3800C5242B /* Formula.swift */; };
+		E24FB9371FDFFD1800C5242B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9361FDFFD1800C5242B /* Resource.swift */; };
+		E24FB9391FDFFF0500C5242B /* CostFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9381FDFFF0500C5242B /* CostFormula.swift */; };
+		E24FB93B1FDFFF6E00C5242B /* Priceformula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB93A1FDFFF6E00C5242B /* Priceformula.swift */; };
 		E265B3181FDF22AF0000591B /* ContactLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3171FDF22AF0000591B /* ContactLink.swift */; };
 		E265B31A1FDF25950000591B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3191FDF25950000591B /* Contact.swift */; };
 		E265B31C1FDF27290000591B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B31B1FDF27290000591B /* Event.swift */; };
@@ -33,13 +43,16 @@
 		E26A7D461FDC53A900F55465 /* VCEvents.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26A7D441FDC53A800F55465 /* VCEvents.xib */; };
 		E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26A7D481FDC55C600F55465 /* TVCEvents.swift */; };
 		E26A7D4B1FDC55C600F55465 /* TVCEvents.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26A7D491FDC55C600F55465 /* TVCEvents.xib */; };
+		E29CF90A1FE152CC005038A8 /* Resourcebookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29CF9091FE152CC005038A8 /* Resourcebookings.swift */; };
 		E2A07FD51FDF308600F0D94B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD41FDF308600F0D94B /* Group.swift */; };
 		E2A07FD71FDF317100F0D94B /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD61FDF317100F0D94B /* Child.swift */; };
 		E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD81FDF319D00F0D94B /* Location.swift */; };
 		E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDA1FDF333B00F0D94B /* Tasks.swift */; };
 		E2A07FDD1FDF379500F0D94B /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDC1FDF379500F0D94B /* Profiles.swift */; };
 		E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */; };
-		E2B4AB791FDF1DBE00374830 /* ContactBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4AB781FDF1DBE00374830 /* ContactBooking.swift */; };
+		E2AE9A681FE2940D00FD0C8A /* TBCEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE9A661FE2940D00FD0C8A /* TBCEvent.swift */; };
+		E2AE9A691FE2940D00FD0C8A /* TBCEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE9A671FE2940D00FD0C8A /* TBCEvent.xib */; };
+		E2B4AB791FDF1DBE00374830 /* Contactbooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */; };
 		E2DAC6F11FDC261F00B5B81B /* Updates.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F31FDC261F00B5B81B /* Updates.storyboard */; };
 		E2DAC6F41FDC262500B5B81B /* To Do.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F61FDC262500B5B81B /* To Do.storyboard */; };
 		E2DAC6F71FDC262A00B5B81B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC6F91FDC262A00B5B81B /* User.storyboard */; };
@@ -52,6 +65,17 @@
 		E2DAC70C1FDC264A00B5B81B /* Resources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC70E1FDC264A00B5B81B /* Resources.storyboard */; };
 		E2DAC70F1FDC265000B5B81B /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC7111FDC265000B5B81B /* Events.storyboard */; };
 		E2DAC7121FDC265500B5B81B /* Teamplanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DAC7141FDC265500B5B81B /* Teamplanner.storyboard */; };
+		E2FDE60F1FE00070006BA8DD /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE60E1FE00070006BA8DD /* Amount.swift */; };
+		E2FDE6111FE00185006BA8DD /* Contactbookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6101FE00185006BA8DD /* Contactbookings.swift */; };
+		E2FDE6131FE05EA2006BA8DD /* GetCurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */; };
+		E2FDE6191FE063AF006BA8DD /* GetEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6181FE063AF006BA8DD /* GetEvents.swift */; };
+		E2FDE61D1FE06E1B006BA8DD /* EventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE61C1FE06E1B006BA8DD /* EventSection.swift */; };
+		E2FDE6221FE0706B006BA8DD /* public func stringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE61E1FE0706A006BA8DD /* public func stringToDate.swift */; };
+		E2FDE6231FE0706B006BA8DD /* public func stringToSelectedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE61F1FE0706B006BA8DD /* public func stringToSelectedDate.swift */; };
+		E2FDE6241FE0706B006BA8DD /* public func stringToEventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6201FE0706B006BA8DD /* public func stringToEventDate.swift */; };
+		E2FDE6251FE0706B006BA8DD /* public func stringToTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6211FE0706B006BA8DD /* public func stringToTime.swift */; };
+		E2FDE6271FE08486006BA8DD /* GetStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6261FE08486006BA8DD /* GetStatuses.swift */; };
+		E2FDE6291FE084F9006BA8DD /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6281FE084F9006BA8DD /* Statuses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +111,16 @@
 		E22DE48A1FDB173300E0F499 /* YesplanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YesplanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesplanAppUITests.swift; sourceTree = "<group>"; };
 		E22DE4901FDB173300E0F499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E22FB6AA1FE701EE006E7658 /* Customdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customdata.swift; sourceTree = "<group>"; };
+		E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourcebooking.swift; sourceTree = "<group>"; };
+		E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInstance.swift; sourceTree = "<group>"; };
+		E24FB92E1FDFFB0000C5242B /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		E24FB9301FDFFB8B00C5242B /* Costmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costmodel.swift; sourceTree = "<group>"; };
+		E24FB9321FDFFC0D00C5242B /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		E24FB9341FDFFC3800C5242B /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
+		E24FB9361FDFFD1800C5242B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		E24FB9381FDFFF0500C5242B /* CostFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostFormula.swift; sourceTree = "<group>"; };
+		E24FB93A1FDFFF6E00C5242B /* Priceformula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priceformula.swift; sourceTree = "<group>"; };
 		E265B3171FDF22AF0000591B /* ContactLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLink.swift; sourceTree = "<group>"; };
 		E265B3191FDF25950000591B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E265B31B1FDF27290000591B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -104,13 +138,16 @@
 		E26A7D441FDC53A800F55465 /* VCEvents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCEvents.xib; sourceTree = "<group>"; };
 		E26A7D481FDC55C600F55465 /* TVCEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCEvents.swift; sourceTree = "<group>"; };
 		E26A7D491FDC55C600F55465 /* TVCEvents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCEvents.xib; sourceTree = "<group>"; };
+		E29CF9091FE152CC005038A8 /* Resourcebookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourcebookings.swift; sourceTree = "<group>"; };
 		E2A07FD41FDF308600F0D94B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		E2A07FD61FDF317100F0D94B /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		E2A07FD81FDF319D00F0D94B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E2A07FDA1FDF333B00F0D94B /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		E2A07FDC1FDF379500F0D94B /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
 		E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfiles.swift; sourceTree = "<group>"; };
-		E2B4AB781FDF1DBE00374830 /* ContactBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBooking.swift; sourceTree = "<group>"; };
+		E2AE9A661FE2940D00FD0C8A /* TBCEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCEvent.swift; sourceTree = "<group>"; };
+		E2AE9A671FE2940D00FD0C8A /* TBCEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TBCEvent.xib; sourceTree = "<group>"; };
+		E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactbooking.swift; sourceTree = "<group>"; };
 		E2DAC6F21FDC261F00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Updates.storyboard; sourceTree = "<group>"; };
 		E2DAC6F51FDC262500B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/To Do.storyboard"; sourceTree = "<group>"; };
 		E2DAC6F81FDC262A00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
@@ -123,6 +160,17 @@
 		E2DAC70D1FDC264A00B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Resources.storyboard; sourceTree = "<group>"; };
 		E2DAC7101FDC265000B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Events.storyboard; sourceTree = "<group>"; };
 		E2DAC7131FDC265500B5B81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Teamplanner.storyboard; sourceTree = "<group>"; };
+		E2FDE60E1FE00070006BA8DD /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		E2FDE6101FE00185006BA8DD /* Contactbookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactbookings.swift; sourceTree = "<group>"; };
+		E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentDate.swift; sourceTree = "<group>"; };
+		E2FDE6181FE063AF006BA8DD /* GetEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEvents.swift; sourceTree = "<group>"; };
+		E2FDE61C1FE06E1B006BA8DD /* EventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSection.swift; sourceTree = "<group>"; };
+		E2FDE61E1FE0706A006BA8DD /* public func stringToDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "public func stringToDate.swift"; sourceTree = "<group>"; };
+		E2FDE61F1FE0706B006BA8DD /* public func stringToSelectedDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "public func stringToSelectedDate.swift"; sourceTree = "<group>"; };
+		E2FDE6201FE0706B006BA8DD /* public func stringToEventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "public func stringToEventDate.swift"; sourceTree = "<group>"; };
+		E2FDE6211FE0706B006BA8DD /* public func stringToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "public func stringToTime.swift"; sourceTree = "<group>"; };
+		E2FDE6261FE08486006BA8DD /* GetStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatuses.swift; sourceTree = "<group>"; };
+		E2FDE6281FE084F9006BA8DD /* Statuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,11 +206,15 @@
 				E265B31D1FDF2AF70000591B /* Contacts.swift */,
 				E2A07FDA1FDF333B00F0D94B /* Tasks.swift */,
 				E2A07FDC1FDF379500F0D94B /* Profiles.swift */,
+				E2FDE6281FE084F9006BA8DD /* Statuses.swift */,
+				E29CF9091FE152CC005038A8 /* Resourcebookings.swift */,
+				E2FDE6101FE00185006BA8DD /* Contactbookings.swift */,
 				E2286E461FDDBA52006CE49D /* Pagination.swift */,
-				E2B4AB781FDF1DBE00374830 /* ContactBooking.swift */,
+				E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */,
 				E265B3171FDF22AF0000591B /* ContactLink.swift */,
 				E265B3191FDF25950000591B /* Contact.swift */,
 				E265B31B1FDF27290000591B /* Event.swift */,
+				E2FDE61C1FE06E1B006BA8DD /* EventSection.swift */,
 				E265B31F1FDF2B7C0000591B /* Task.swift */,
 				E265B3211FDF2BD50000591B /* Attributes.swift */,
 				E265B3251FDF2C440000591B /* Own.swift */,
@@ -175,6 +227,17 @@
 				E2A07FD41FDF308600F0D94B /* Group.swift */,
 				E2A07FD61FDF317100F0D94B /* Child.swift */,
 				E2A07FD81FDF319D00F0D94B /* Location.swift */,
+				E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */,
+				E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */,
+				E24FB92E1FDFFB0000C5242B /* Placeholder.swift */,
+				E24FB9301FDFFB8B00C5242B /* Costmodel.swift */,
+				E24FB9321FDFFC0D00C5242B /* Discount.swift */,
+				E24FB9341FDFFC3800C5242B /* Formula.swift */,
+				E24FB9361FDFFD1800C5242B /* Resource.swift */,
+				E24FB9381FDFFF0500C5242B /* CostFormula.swift */,
+				E24FB93A1FDFFF6E00C5242B /* Priceformula.swift */,
+				E2FDE60E1FE00070006BA8DD /* Amount.swift */,
+				E22FB6AA1FE701EE006E7658 /* Customdata.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				E22DE46B1FDB173300E0F499 /* YesplanApp */,
+				E22DE47A1FDB173300E0F499 /* Info.plist */,
 				E22DE4821FDB173300E0F499 /* YesplanAppTests */,
 				E22DE48D1FDB173300E0F499 /* YesplanAppUITests */,
 				E22DE46A1FDB173300E0F499 /* Products */,
@@ -208,9 +272,10 @@
 				E2DAC6DC1FDC21FE00B5B81B /* Storyboards */,
 				E2DAC6AB1FDC188D00B5B81B /* MainStoryboards */,
 				E26A7D471FDC53B700F55465 /* VCs */,
-				E22DE47A1FDB173300E0F499 /* Info.plist */,
+				E29CF9131FE1B93A005038A8 /* DVC */,
 				E26A7D4C1FDC55D100F55465 /* Cells */,
 				E2A07FE01FDF38EE00F0D94B /* functions */,
+				E2AE9A6A1FE2941700FD0C8A /* TBC */,
 			);
 			path = YesplanApp;
 			sourceTree = "<group>";
@@ -251,12 +316,35 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		E29CF9131FE1B93A005038A8 /* DVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DVC;
+			sourceTree = "<group>";
+		};
 		E2A07FE01FDF38EE00F0D94B /* functions */ = {
 			isa = PBXGroup;
 			children = (
+				E2FDE61E1FE0706A006BA8DD /* public func stringToDate.swift */,
+				E2FDE6201FE0706B006BA8DD /* public func stringToEventDate.swift */,
+				E2FDE61F1FE0706B006BA8DD /* public func stringToSelectedDate.swift */,
+				E2FDE6211FE0706B006BA8DD /* public func stringToTime.swift */,
 				E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */,
+				E2FDE6261FE08486006BA8DD /* GetStatuses.swift */,
+				E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */,
+				E2FDE6181FE063AF006BA8DD /* GetEvents.swift */,
 			);
 			path = functions;
+			sourceTree = "<group>";
+		};
+		E2AE9A6A1FE2941700FD0C8A /* TBC */ = {
+			isa = PBXGroup;
+			children = (
+				E2AE9A661FE2940D00FD0C8A /* TBCEvent.swift */,
+				E2AE9A671FE2940D00FD0C8A /* TBCEvent.xib */,
+			);
+			path = TBC;
 			sourceTree = "<group>";
 		};
 		E2DAC6AB1FDC188D00B5B81B /* MainStoryboards */ = {
@@ -402,6 +490,7 @@
 				E2DAC6F11FDC261F00B5B81B /* Updates.storyboard in Resources */,
 				E2DAC70F1FDC265000B5B81B /* Events.storyboard in Resources */,
 				E22DE4761FDB173300E0F499 /* Assets.xcassets in Resources */,
+				E2AE9A691FE2940D00FD0C8A /* TBCEvent.xib in Resources */,
 				E2DAC6F71FDC262A00B5B81B /* User.storyboard in Resources */,
 				E2DAC7061FDC264200B5B81B /* Tasks.storyboard in Resources */,
 				E26A7D4B1FDC55C600F55465 /* TVCEvents.xib in Resources */,
@@ -437,18 +526,35 @@
 			files = (
 				E265B31A1FDF25950000591B /* Contact.swift in Sources */,
 				E265B3181FDF22AF0000591B /* ContactLink.swift in Sources */,
-				E2B4AB791FDF1DBE00374830 /* ContactBooking.swift in Sources */,
+				E2FDE6131FE05EA2006BA8DD /* GetCurrentDate.swift in Sources */,
+				E2FDE6241FE0706B006BA8DD /* public func stringToEventDate.swift in Sources */,
+				E2FDE6251FE0706B006BA8DD /* public func stringToTime.swift in Sources */,
+				E29CF90A1FE152CC005038A8 /* Resourcebookings.swift in Sources */,
+				E2B4AB791FDF1DBE00374830 /* Contactbooking.swift in Sources */,
+				E24FB9311FDFFB8C00C5242B /* Costmodel.swift in Sources */,
 				E265B32A1FDF2CA90000591B /* Status.swift in Sources */,
 				E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */,
+				E2FDE6191FE063AF006BA8DD /* GetEvents.swift in Sources */,
+				E2FDE6111FE00185006BA8DD /* Contactbookings.swift in Sources */,
+				E2FDE6231FE0706B006BA8DD /* public func stringToSelectedDate.swift in Sources */,
 				E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */,
+				E2FDE6221FE0706B006BA8DD /* public func stringToDate.swift in Sources */,
 				E265B3201FDF2B7C0000591B /* Task.swift in Sources */,
 				E265B3321FDF2D7B0000591B /* Address.swift in Sources */,
+				E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */,
 				E265B31C1FDF27290000591B /* Event.swift in Sources */,
 				E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */,
+				E2FDE61D1FE06E1B006BA8DD /* EventSection.swift in Sources */,
+				E24FB92F1FDFFB0000C5242B /* Placeholder.swift in Sources */,
+				E2FDE6291FE084F9006BA8DD /* Statuses.swift in Sources */,
 				E2A07FD71FDF317100F0D94B /* Child.swift in Sources */,
 				E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */,
+				E2AE9A681FE2940D00FD0C8A /* TBCEvent.swift in Sources */,
 				E265B3261FDF2C440000591B /* Own.swift in Sources */,
 				E265B32E1FDF2D1A0000591B /* Organization.swift in Sources */,
+				E24FB93B1FDFFF6E00C5242B /* Priceformula.swift in Sources */,
+				E24FB9331FDFFC0D00C5242B /* Discount.swift in Sources */,
+				E24FB9391FDFFF0500C5242B /* CostFormula.swift in Sources */,
 				E2A07FDD1FDF379500F0D94B /* Profiles.swift in Sources */,
 				E265B3281FDF2C830000591B /* Profile.swift in Sources */,
 				E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */,
@@ -458,9 +564,15 @@
 				E22DE46D1FDB173300E0F499 /* AppDelegate.swift in Sources */,
 				E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */,
 				E265B3301FDF2D520000591B /* Contactinfo.swift in Sources */,
+				E2FDE6271FE08486006BA8DD /* GetStatuses.swift in Sources */,
+				E22FB6AB1FE701EE006E7658 /* Customdata.swift in Sources */,
 				E265B32C1FDF2CED0000591B /* Link.swift in Sources */,
+				E24FB9351FDFFC3800C5242B /* Formula.swift in Sources */,
 				E2286E451FDDB9BA006CE49D /* Events.swift in Sources */,
 				E26A7D451FDC53A900F55465 /* VCEvents.swift in Sources */,
+				E2FDE60F1FE00070006BA8DD /* Amount.swift in Sources */,
+				E24FB9291FDFFA0D00C5242B /* Resourcebooking.swift in Sources */,
+				E24FB9371FDFFD1800C5242B /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +837,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WC44CBGXS;
 				INFOPLIST_FILE = YesplanApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TomPlan.YesplanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -740,6 +853,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WC44CBGXS;
 				INFOPLIST_FILE = YesplanApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TomPlan.YesplanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

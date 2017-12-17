@@ -14,27 +14,27 @@ import Foundation
 import Foundation
 
 class Group: Codable {
-    let attributes: Attributes
-    let children: [Child]
-    let enddate: String
-    let endtime: String
+    let attributes: Attributes?
+    let children: [Child]?
+    let enddate: String?
+    let endtime: String?
     let group: JSONNull?
-    let id: String
-    let isproduction: Bool
-    let locations: [Location]
-    let name: String
-    let owner: Own
-    let owninggroup: Own
-    let owningteam: Own
+    let id: String?
+    let isproduction: Bool?
+    let locations: [Location]?
+    let name: String?
+    let owner: Own?
+    let owninggroup: Own?
+    let owningteam: Own?
     let production: JSONNull?
     let profile: Profile?
     let profiles: [Profile]
-    let startdate: String
-    let starttime: String
+    let startdate: String?
+    let starttime: String?
     let status: Status?
-    let statuses: [Status]
-    let type: String
-    let url: String
+    let statuses: [Status]?
+    let type: String?
+    let url: String?
 }
 
 extension Group {

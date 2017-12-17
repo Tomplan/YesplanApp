@@ -12,9 +12,9 @@ class Event: Codable {
     let attributes: Attributes
     let defaultscheduledescription: String?
     let defaultscheduleend: String?
-    let defaultscheduleendtime: String?
+    var defaultscheduleendtime: String?
     let defaultschedulestart: String?
-    let defaultschedulestarttime: String?
+    var defaultschedulestarttime: String?
     let enddate: String
     let endtime: String
     let group: Profile?
@@ -28,6 +28,7 @@ class Event: Codable {
     let owningteam: Own
     let production: JSONNull?
     let profile: Profile
+    let resource: Resource?
     let startdate: String
     let starttime: String
     let status: Status
@@ -56,6 +57,7 @@ extension Event {
         case owningteam = "owningteam"
         case production = "production"
         case profile = "profile"
+        case resource = "resource"
         case startdate = "startdate"
         case starttime = "starttime"
         case status = "status"

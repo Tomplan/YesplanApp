@@ -12,16 +12,9 @@ class VCEvents: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var EventDatePicker: UINavigationItem!
     
     var events = [Event]()
-    var contacts = [Contact]()
-    var tasks = [Task]()
-    var profiles = [Profile]()
-    
-    var profileColorArray: [String] = []
-    
-    var selectedDateString = ""
-    var selectedEndDateString = ""
     var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -36,11 +29,22 @@ class VCEvents: UIViewController {
         } else {
             tableView.addSubview(refreshControl)
         }
+        GetStatuses()
         GetProfiles()
-        GetData()
-//        do_table_refresh()
+        GetEvents()
+        do_table_refresh()
     }
-    
+
+    @objc func dateSelected(datePicker:UIDatePicker) {
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        selectedDateString = formatter.string(from:datePicker.date)
+        let selectedEndDate = Calendar.current.date(byAdding: Calendar.Component.day, value: 10, to: datePicker.date)
+        selectedEndDateString = formatter.string(from:selectedEndDate!)
+        print(selectedDateString)
+    }
+
     @IBAction func SelectDate(_ sender: UIButton) {
         
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 260))
@@ -56,8 +60,8 @@ class VCEvents: UIViewController {
         let cancelAction = UIAlertAction(title: "Done", style: .cancel) { (action) in
             
             self.dateSelected(datePicker: datePicker)
-            self.GetData()
-//            self.do_table_refresh()
+            GetEvents()
+            self.do_table_refresh()
             
         }
         
@@ -69,68 +73,27 @@ class VCEvents: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         
     }
-    
-    
-    @objc func dateSelected(datePicker:UIDatePicker) {
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        selectedDateString = formatter.string(from:datePicker.date)
-        let selectedEndDate = Calendar.current.date(byAdding: Calendar.Component.day, value: 10, to: datePicker.date)
-        selectedEndDateString = formatter.string(from:selectedEndDate!)
-    }
-    
-    
+
     @objc func refreshData () {
         
-        GetData()
+        GetEvents()
         tableView.reloadData()
         self.refreshControl.endRefreshing()
     }
-    func GetCurrentDate() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        selectedDateString = formatter.string(from:Date())
-        let selectedEndDate = Calendar.current.date(byAdding: Calendar.Component.day, value: 10, to: Date())
-        selectedEndDateString = formatter.string(from:selectedEndDate!)
-        
-    }
     
-    
-    func GetData()
-    {
-        if selectedDateString.isEmpty == true {
-            GetCurrentDate()
+    func do_table_refresh() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
-//        groupedYPEvents.removeAll()
-//        groupedYPEventsSorted.removeAll()
-//
-        let events = Events.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
-//            dump(events)
-        
-        print(events.data.count)
-        for i in 0 ..< events.data.count {
-            let ProfileId = events.data[i].profile.id
-            let ProfileColor = profileDict[ProfileId]
-//            print(ProfileId)
-//            print(ProfileColor!)
-            profileColorArray.append(ProfileColor!)
-        }
-//        let contacts = Contacts.from(url: "https://dewerft.yesplan.be/api/contacts?api_key=6AED6266671C92209161289C37D109E0")!
-//           dump(contacts)
-//        let tasks = Tasks.from(url: "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0")
-//        dump(tasks)
-//        let profiles = Profiles.from(url: "https://dewerft.yesplan.be/api/profiles?api_key=6AED6266671C92209161289C37D109E0")!
-//                   dump(profiles)
-//        let myStatuses = YPData.from(url: "https://dewerft.yesplan.be/api/statuses?api_key=6AED6266671C92209161289C37D109E0")
-//        dump(myStatuses)
-        
+        return
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
@@ -141,49 +104,146 @@ class VCEvents: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+//    */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DVCEvent" {
+//            let detailVC: VCEventDetails? = segue.destination as? UITabBarController
+//            let cell: UITableViewCell? = sender as? TVCEvents
 
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let object = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row]
+
+                let objectID = object.id
+                print("self.objectID: ", objectID)
+                let EventCustomData = Welcome.from(url: "https://dewerft.yesplan.be/api/event/1323153921-1488996245/customdata?api_key=6AED6266671C92209161289C37D109E0")!
+//                print("EventCustomData:  \n \(EventCustomData)")
+//                dump(EventCustomData)
+                print("**** \(EventCustomData.event!.name!) ****")
+//                print(EventCustomData.groups!)
+                for a in 0 ..< EventCustomData.groups!.count {
+                    print("*** \(EventCustomData.groups![a].name!) ***")
+//                    print(EventCustomData.groups![a].children?.count)
+                        if EventCustomData.groups![a].children?.isEmpty != true {
+//                        print("FIRST")
+                            for b in 0 ..< EventCustomData.groups![a].children!.count {
+                            print(" \t \(EventCustomData.groups![a].children![b].name!)")
+//                          print(EventCustomData.groups![a].children?[b].children?.count)
+                                if EventCustomData.groups![a].children![b].children?.isEmpty != true {
+//                            print("ok")
+                                    if EventCustomData.groups![a].children![b].children != nil {
+                            for c in 0 ..< EventCustomData.groups![a].children![b].children!.count {
+//                                print("ok")
+                            print(" \t\t \(EventCustomData.groups![a].children![b].children![c].name!)")
+                            }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+//                JSONEventSchedule(objectID: objectID)
+//                JSONEventResourceBooking(objectID: objectID)
+//                JSONEventAantalBezet(objectID: objectID)
+//                JSONEventAantalBeschikbaar(objectID: objectID)
+//
+//
+//                if cell != nil && detailVC != nil {
+//                    detailVC!.contentText = object.name
+//                    detailVC!.EventNameText = object.name
+//                    detailVC!.EventDefaultschedulestarttimeText = "\(object.defaultschedulestarttime!) - \(object.defaultscheduleendtime!)"
+//                    if object.locations.isEmpty == false {
+//                        detailVC!.EventLocationsNameText = object.locations[0].name
+//                    } else {
+//                        detailVC!.EventLocationsNameText = "zonder locatie"
+//                    }
+//                    detailVC!.EventScheduleTimeListText =  EventScheduleTimeListSorted.joined(separator: "\n")
+//                    detailVC!.ResourceListHumanText =  resourcelisthuman.joined(separator: "\n")
+//                    detailVC!.ResourceListMaterialText =  resourcelistmaterial.joined(separator: "\n")
+                }
+            }
+        }
+//        eventScheduleList = [String: String]()
+//        eventScheduleListSorted = [String: String]()
+//        EventScheduleTimeList = [String]()
+//        EventScheduleTimeListSorted = [String]()
+//
+//        resourcelisthuman = [String]()
+//        resourcelistmaterial = [String]()
+//    }
+//}
+//
+//
 }
 
 extension VCEvents: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return YPgroupedEventsSorted.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "header"
+        return stringToEventsDate(myDateString: YPgroupedEventsSorted[section].date)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profileColorArray.count
+        return YPgroupedEventsSorted[section].YPEvents.count
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TVCEvents") as! TVCEvents
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "TVCEvents") as! TVCEvents
+    
+    
+    if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].profile.id.isEmpty != true {
         
-//        let borderColor: UIColor = .red
-//        print(profileColorArray[indexPath.row])
-        if let bordercolor = UIColor(rgbString: profileColorArray[indexPath.row]) {
-            cell.ViewBorder.layer.borderColor = bordercolor.cgColor
+        let YPEventProfile = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].profile.id
+        let YPEventProfileColor = profileDict[YPEventProfile]!
+//        print(YPEventProfileColor)
+        
+    
+    if let bordercolor = UIColor(rgbString: YPEventProfileColor) {
+        cell.ViewBorder.layer.borderColor = bordercolor.cgColor
         } else {
             print("invalid color specification")
         }
-       
+    
+        let YPEventStatus = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].status.name!
+        let YPEventStatusColor = statusDict[YPEventStatus]!
         
+        if let backgroundcolor = UIColor(rgbString: YPEventStatusColor) {
+            cell.ViewBorder.layer.backgroundColor = backgroundcolor.cgColor
+        } else {
+            print("invalid color specification")
+        }
+    
         cell.ViewBorder.layer.cornerRadius = 5
-        cell.ViewBorder.layer.borderWidth = 2
+        cell.ViewBorder.layer.borderWidth = 4
         cell.ViewBorder.layer.shadowOffset = CGSize(width: -1, height: 1)
-//        cell.ViewBorder.layer.borderColor = borderColor.cgColor
+    
+    }
+        cell.LblEventsDefaultschedulestarttime.text =   "\(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].defaultschedulestarttime!) - \(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].defaultscheduleendtime!)"
+    
+    
+    
+    
         
- 
-        cell.LblEventName.text = "Name"
-        cell.LblEventLocation.text = "Location"
-        cell.LblEventsDefaultschedulestarttime.text = "starttime"
-        
+        if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations.isEmpty != true {
+            
+            cell.LblEventLocation.text =     YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations[0].name
+        } else {
+            cell.LblEventLocation.text =  "geen locatie!"
+            
+        }
+        cell.LblEventName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].name
+        cell.LblEventGroupName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].group?.name
         return cell
     }
+    
 }
+
+
+
 extension UIColor {
     convenience init?(rgbString: String) {
         var red = 0.0
