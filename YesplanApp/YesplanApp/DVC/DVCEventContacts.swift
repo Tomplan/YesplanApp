@@ -1,19 +1,16 @@
 //
-//  TBCEvent.swift
+//  DVCEventContacts.swift
 //  YesplanApp
 //
-//  Created by Tom Slegers on 14/12/17.
+//  Created by Tom Slegers on 19/12/17.
 //  Copyright © 2017 TomPlan. All rights reserved.
 //
 
 import UIKit
 
-class TBCEvent: UITabBarController, UITabBarControllerDelegate {
+class DVCEventContacts: UIViewController {
 
-//    var objectID
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -35,18 +32,4 @@ class TBCEvent: UITabBarController, UITabBarControllerDelegate {
     }
     */
 
-}
-
-extension TBCEvent {
-func tabBarController(_ tabBarController: UITabBarController, didEndCustomizing viewControllers: [UIViewController], changed: Bool) {
-    if changed {
-        var tabOrder: [Int] = []
-        for vc: UIViewController in viewControllers {
-            tabOrder.append(vc.tabBarItem.tag)
-        }
-        
-        let defaults: UserDefaults = UserDefaults.standard
-        defaults.set(tabOrder, forKey: "tabOrder")
-    }
-}
 }

@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 class Contactbookings: Codable {
     let data: [Contactbooking]
     let pagination: Pagination

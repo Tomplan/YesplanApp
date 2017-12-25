@@ -1,22 +1,33 @@
 //
-//  TBCEvent.swift
+//  DVCEventCustomData.swift
 //  YesplanApp
 //
-//  Created by Tom Slegers on 14/12/17.
+//  Created by Tom Slegers on 19/12/17.
 //  Copyright © 2017 TomPlan. All rights reserved.
 //
 
 import UIKit
 
-class TBCEvent: UITabBarController, UITabBarControllerDelegate {
+class DVCEventCustomData: UIViewController {
 
-//    var objectID
+    var CustomDataText: String?
+    var CustomDataText2: String?
+    
+    @IBOutlet weak var LblCustomData: UILabel!
+    @IBOutlet weak var TxtCustomData: UITextView!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if CustomDataText != nil {
+            self.LblCustomData.text =
+            CustomDataText
+        }
+        if CustomDataText2 != nil {
+            self.TxtCustomData.text =
+            CustomDataText2
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,18 +46,4 @@ class TBCEvent: UITabBarController, UITabBarControllerDelegate {
     }
     */
 
-}
-
-extension TBCEvent {
-func tabBarController(_ tabBarController: UITabBarController, didEndCustomizing viewControllers: [UIViewController], changed: Bool) {
-    if changed {
-        var tabOrder: [Int] = []
-        for vc: UIViewController in viewControllers {
-            tabOrder.append(vc.tabBarItem.tag)
-        }
-        
-        let defaults: UserDefaults = UserDefaults.standard
-        defaults.set(tabOrder, forKey: "tabOrder")
-    }
-}
 }

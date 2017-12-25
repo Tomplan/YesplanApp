@@ -52,6 +52,7 @@ struct ValueClass: Codable {
     let datatype: String?
     let dataurl: String?
 }
+
 //
 //struct Contact: Codable {
 //    let url: String
@@ -75,6 +76,7 @@ struct CustomDataEvent: Codable {
     let resource: Resource?
     let name: String?
 }
+
 //
 //struct Resource: Codable {
 //    let url: String
@@ -166,6 +168,7 @@ extension PurpleValue {
         }
         if let x = try? container.decode([FluffyValue].self) {
             self = .unionArray(x)
+
             return
         }
         if container.decodeNil() {
@@ -224,10 +227,15 @@ extension FluffyValue {
         let container = try decoder.singleValueContainer()
         if let x = try? container.decode(String.self) {
             self = .string(x)
+//            print("string")
+//            print("self: ", self)
             return
         }
         if let x = try? container.decode(CustomDataEvent.self) {
             self = .event(x)
+//            print("event")
+//            print("self: ", x)
+
             return
         }
         throw DecodingError.typeMismatch(FluffyValue.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for FluffyValue"))

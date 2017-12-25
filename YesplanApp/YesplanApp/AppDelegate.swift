@@ -14,37 +14,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        
-//        // Override point for customization after application launch.
-//        let tabBarController: UITabBarController? = self.window?.rootViewController as? UITabBarController
-//        
-//        if tabBarController != nil {
-//            tabBarController?.delegate = self
-//            if tabBarController!.viewControllers != nil {
-//                for i in 0 ..< tabBarController!.viewControllers!.count {
-//                    let vc: UIViewController = tabBarController!.viewControllers![i]
-//                    vc.tabBarItem.tag = i
-//                }
-//            }
-//        }
-//
-//        let defaults: UserDefaults = UserDefaults.standard
-//        let tabOrder: [Int]? = defaults.object(forKey: "tabOrder") as? [Int]
-//        
-//        if tabOrder != nil {
-//            var vcOrder: [UIViewController] = []
-//            for tag: Int in tabOrder! {
-//                for vc in tabBarController!.viewControllers! {
-//                    if vc.tabBarItem.tag == tag {
-//                        vcOrder.append(vc)
-//                    }
-//                }
-//            }
-//            tabBarController?.viewControllers = vcOrder
-//        }
-//        return true
-//    }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        // Override point for customization after application launch.
+        let tabBarController: UITabBarController? = self.window?.rootViewController as? UITabBarController
+        
+        if tabBarController != nil {
+            tabBarController?.delegate = self
+            if tabBarController!.viewControllers != nil {
+                for i in 0 ..< tabBarController!.viewControllers!.count {
+                    let vc: UIViewController = tabBarController!.viewControllers![i]
+                    vc.tabBarItem.tag = i
+                }
+            }
+        }
+
+        let defaults: UserDefaults = UserDefaults.standard
+        let tabOrder: [Int]? = defaults.object(forKey: "tabOrder") as? [Int]
+        
+        if tabOrder != nil {
+            var vcOrder: [UIViewController] = []
+            for tag: Int in tabOrder! {
+                for vc in tabBarController!.viewControllers! {
+                    if vc.tabBarItem.tag == tag {
+                        vcOrder.append(vc)
+                    }
+                }
+            }
+            tabBarController?.viewControllers = vcOrder
+        }
+        return true
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

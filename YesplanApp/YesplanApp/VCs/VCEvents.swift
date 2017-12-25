@@ -107,48 +107,48 @@ class VCEvents: UIViewController {
 //    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DVCEvent" {
-//            let detailVC: VCEventDetails? = segue.destination as? UITabBarController
-//            let cell: UITableViewCell? = sender as? TVCEvents
+            let tabBarController = segue.destination as! TBCEvent
+//                tabBarController.setViewControllers([DVCEventInfo, DVCEventTimeSchedules, DVCEventLocation, DVCEventTeam, DVCEventResources, DVCEventContacts, DVCEventAttachments], animated: false)
+//            for i in 0 ..< tabBarController.viewControllers!.count {
+//                dump(tabBarController.viewControllers![i])
+//            }
+            let detailVC = tabBarController.viewControllers![0] as! DVCEventTimeSchedules // or whatever tab index you're trying to access
+//            destination.property = "some value"
+//            let detailVC: DVCEventTimeSchedules? = segue.destination as? DVCEventTimeSchedules
+            let cell: UITableViewCell? = sender as? TVCEvents
 
+            let detailCustomDataVC = tabBarController.viewControllers!.last as! DVCEventCustomData
+            let customDatacell: UITableViewCell? = sender as? TVCEvents
+            
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row]
 
                 let objectID = object.id
                 print("self.objectID: ", objectID)
-                let EventCustomData = Welcome.from(url: "https://dewerft.yesplan.be/api/event/1323153921-1488996245/customdata?api_key=6AED6266671C92209161289C37D109E0")!
-//                print("EventCustomData:  \n \(EventCustomData)")
-//                dump(EventCustomData)
-                print("**** \(EventCustomData.event!.name!) ****")
-//                print(EventCustomData.groups!)
-                for a in 0 ..< EventCustomData.groups!.count {
-                    print("*** \(EventCustomData.groups![a].name!) ***")
-//                    print(EventCustomData.groups![a].children?.count)
-                        if EventCustomData.groups![a].children?.isEmpty != true {
-//                        print("FIRST")
-                            for b in 0 ..< EventCustomData.groups![a].children!.count {
-                            print(" \t \(EventCustomData.groups![a].children![b].name!)")
-//                          print(EventCustomData.groups![a].children?[b].children?.count)
-                                if EventCustomData.groups![a].children![b].children?.isEmpty != true {
-//                            print("ok")
-                                    if EventCustomData.groups![a].children![b].children != nil {
-                            for c in 0 ..< EventCustomData.groups![a].children![b].children!.count {
-//                                print("ok")
-                            print(" \t\t \(EventCustomData.groups![a].children![b].children![c].name!)")
-                            }
-                                }
-                            }
-                        }
-                    }
-                    
+                GetSchedule(objectID: objectID)
+                
+                if cell != nil && detailVC != nil {
+//                    print(ScheduleList.joined(separator: "\n"))
+                    detailVC.ScheduleListText = ScheduleList.joined(separator: "\n")
                 }
-//                JSONEventSchedule(objectID: objectID)
-//                JSONEventResourceBooking(objectID: objectID)
-//                JSONEventAantalBezet(objectID: objectID)
-//                JSONEventAantalBeschikbaar(objectID: objectID)
-//
-//
-//                if cell != nil && detailVC != nil {
-//                    detailVC!.contentText = object.name
+                GetCustomData(objectID: objectID)
+                
+                if customDatacell != nil && detailCustomDataVC != nil {
+//                    print(CustomDataList.joined(separator: "\n"))
+                    print(CustomDataList[0])
+                    detailCustomDataVC.CustomDataText = CustomDataList[0]
+                    detailCustomDataVC.CustomDataText2 = CustomDataList.joined(separator: "\n")
+                }
+                
+                    
+                    //                JSONEventSchedule(objectID: objectID)
+                    //                JSONEventResourceBooking(objectID: objectID)
+                    //                JSONEventAantalBezet(objectID: objectID)
+                    //                JSONEventAantalBeschikbaar(objectID: objectID)
+                    //
+                    //)
+//                    detailVC!.ScheduleListText = ScheduleList.joined(separator: "\n")
+                    
 //                    detailVC!.EventNameText = object.name
 //                    detailVC!.EventDefaultschedulestarttimeText = "\(object.defaultschedulestarttime!) - \(object.defaultscheduleendtime!)"
 //                    if object.locations.isEmpty == false {
@@ -159,17 +159,18 @@ class VCEvents: UIViewController {
 //                    detailVC!.EventScheduleTimeListText =  EventScheduleTimeListSorted.joined(separator: "\n")
 //                    detailVC!.ResourceListHumanText =  resourcelisthuman.joined(separator: "\n")
 //                    detailVC!.ResourceListMaterialText =  resourcelistmaterial.joined(separator: "\n")
-                }
+                
             }
+            
+            
+            
         }
-//        eventScheduleList = [String: String]()
-//        eventScheduleListSorted = [String: String]()
-//        EventScheduleTimeList = [String]()
-//        EventScheduleTimeListSorted = [String]()
-//
+        ScheduleList = [String]()
+        CustomDataList = [String]()
+
 //        resourcelisthuman = [String]()
 //        resourcelistmaterial = [String]()
-//    }
+    }
 //}
 //
 //
