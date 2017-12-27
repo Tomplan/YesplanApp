@@ -78,18 +78,22 @@ enum ValueUnion: Codable {
         let container = try decoder.singleValueContainer()
         if let x = try? container.decode(Int.self) {
             self = .integer(x)
+//            print("Int")
             return
         }
         if let x = try? container.decode(String.self) {
             self = .string(x)
+//            print("String")
             return
         }
         if let x = try? container.decode(ValueClass.self) {
             self = .valueClass(x)
+//            print("valueClass")
             return
         }
         if let x = try? container.decode([JSONAny].self) {
             self = .anythingArray(x)
+//            print("anythingArray")
             return
         }
         if container.decodeNil() {
