@@ -25,21 +25,21 @@ func GetCustomData(objectID: String) {
                     CustomDataList.append("**** \(EventCustomData.event.name) ****")
 //        print("groups: ", EventCustomData.groups!)
                     for a in 0 ..< EventCustomData.groups!.count {
-                        print("ok a")
+//                        print("ok a")
                         CustomDataList.append("*** \(EventCustomData.groups![a].name) ***")
                         print(EventCustomData.groups![a].children.count)
                             if EventCustomData.groups![a].children.isEmpty != true {
 
     //                        print("FIRST")
                                 for b in 0 ..< EventCustomData.groups![a].children.count {
-                                    print("ok b")
+//                                    print("ok b")
                                 CustomDataList.append(" \t \(EventCustomData.groups![a].children[b].name)")
 //                              print(EventCustomData.groups![a].children![b])
                                     if EventCustomData.groups![a].children[b].children?.isEmpty != true {
                                 
                                         if EventCustomData.groups![a].children[b].children != nil {
                                 for c in 0 ..< EventCustomData.groups![a].children[b].children!.count {
-                                    print("ok c")
+//                                    print("ok c")
 //                                    print(EventCustomData.groups![a].children[b].children![c].value)
 
                                 CustomDataList.append(" \t\t \(EventCustomData.groups![a].children[b].children![c].name)")
@@ -47,7 +47,7 @@ func GetCustomData(objectID: String) {
 
 
                                             if EventCustomData.groups![a].children[b].children![c].value != nil {
-                                            print(EventCustomData.groups![a].children[b].children![c].value)
+//                                            print(EventCustomData.groups![a].children[b].children![c].value)
 
 
 
@@ -56,20 +56,24 @@ func GetCustomData(objectID: String) {
                                                 switch myValue {
                                                 case .integer(let model):
                                                     print("INTEGER")
+                                                    dump(model)
                                             CustomDataList.append(" \t\t\t \(model)")                                          case .string(let model):
-                                                        print("STRING")
+                                                    print("STRING")
+                                                    dump(model)
                                                     CustomDataList.append(" \t\t\t \(model)")
                                                 case .anythingArray(let model):
                                                     print("anythingArray")
+                                                    dump(model)
 //                                                    CustomDataList.append(" \t\t\t \(model)")
                                                 case .valueClass(let model):
                                                     print("VALUECLASS")
-//                                                    dump(model)
-                                                    CustomDataList.append(" \t\t\t \(model)")
+                                                    dump(model)
+//                                                    CustomDataList.append(" \t\t\t \(model)")
 
 
                                                 default:
-                                                    print("no case detected")
+                                                    let zomaariets = ""
+//                                                    print("no value (case) detected")
                                                 }
 
 
