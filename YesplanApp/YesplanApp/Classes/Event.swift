@@ -15,23 +15,23 @@ class Event: Codable {
     var defaultscheduleendtime: String?
     let defaultschedulestart: String?
     var defaultschedulestarttime: String?
-    let enddate: String
-    let endtime: String
+    let enddate: String?         //  Date on which the end of the event appears in the calendar.
+    let endtime: String?         // Date and time of the end of the event.
     let group: Profile?
     let id: String
     let isproduction: Bool
-    let labels: [JSONAny]
+    let labels: [JSONAny]?
     let locations: [Profile]
-    let name: String
-    let owner: Own
-    let owninggroup: Own
-    let owningteam: Own
+    let name: String?
+    let owner: Own?
+    let owninggroup: Own?
+    let owningteam: Own?
     let production: JSONNull?
-    let profile: Profile
+    let profile: Profile?
     let resource: Resource?
-    let startdate: String
-    let starttime: String
-    let status: Status
+    let startdate: String?       // Date on which the start of the event appears in the calendar.
+    let starttime: String?       // Date and time of the start of the event.
+    let status: Status?
     let type: String
     let url: String
 }

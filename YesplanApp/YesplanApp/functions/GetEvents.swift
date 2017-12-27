@@ -27,7 +27,7 @@ public func GetEvents()
     //            dump(events)
 //        ************** compress by date ************
     
-        groupedEvents = Dictionary(grouping: events.data, by: { $0.startdate })
+        groupedEvents = Dictionary(grouping: events.data, by: { $0.startdate! })
     
 //      ****************************************************
     

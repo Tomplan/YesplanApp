@@ -135,11 +135,12 @@ class VCEvents: UIViewController {
                 
                 if customDatacell != nil && detailCustomDataVC != nil {
 //                    print(CustomDataList.joined(separator: "\n"))
+                    if CustomDataList.isEmpty == false {
                     print(CustomDataList[0])
                     detailCustomDataVC.CustomDataText = CustomDataList[0]
                     detailCustomDataVC.CustomDataText2 = CustomDataList.joined(separator: "\n")
                 }
-                
+                }
                     
                     //                JSONEventSchedule(objectID: objectID)
                     //                JSONEventResourceBooking(objectID: objectID)
@@ -196,9 +197,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let cell = tableView.dequeueReusableCell(withIdentifier: "TVCEvents") as! TVCEvents
     
     
-    if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].profile.id.isEmpty != true {
+    if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].profile!.id.isEmpty != true {
         
-        let YPEventProfile = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].profile.id
+        let YPEventProfile = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].profile!.id
         let YPEventProfileColor = profileDict[YPEventProfile]!
 //        print(YPEventProfileColor)
         
@@ -209,7 +210,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             print("invalid color specification")
         }
     
-        let YPEventStatus = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].status.name!
+        let YPEventStatus = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].status!.name!
         let YPEventStatusColor = statusDict[YPEventStatus]!
         
         if let backgroundcolor = UIColor(rgbString: YPEventStatusColor) {
