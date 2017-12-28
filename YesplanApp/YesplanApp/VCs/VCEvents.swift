@@ -230,9 +230,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     
     
         
-        if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations.isEmpty != true {
+        if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations!.isEmpty != true {
             
-            cell.LblEventLocation.text =     YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations[0].name
+            cell.LblEventLocation.text =     YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations![0].name
         } else {
             cell.LblEventLocation.text =  "geen locatie!"
             

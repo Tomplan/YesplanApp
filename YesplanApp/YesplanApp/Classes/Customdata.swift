@@ -12,9 +12,9 @@
 import Foundation
 
 struct Customdata: Codable {
-    let event: CustomdataEvent
-    let definitions: Definitions
-    let groups: [CustomdataGroup]?
+    let event: Event
+    let definitions: Customdata_ID
+    let groups: [Custom_Data_Group]?
     
     enum CodingKeys: String, CodingKey {
         case event = "event"
@@ -23,10 +23,10 @@ struct Customdata: Codable {
     }
 }
 
-struct CustomdataGroup: Codable {
+struct Custom_Data_Group: Codable {
     let name: String
     let keyword: String
-    let children: [GroupChild]
+    let children: [Custom_Data_Element]
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -35,10 +35,10 @@ struct CustomdataGroup: Codable {
     }
 }
 
-struct GroupChild: Codable {
+struct Custom_Data_Element: Codable {
     let name: String
     let keyword: String
-    let children: [ChildChild]?
+    let children: [Custom_Data_Child]?
     let type: String?
     let value: JSONNull?
     
@@ -51,11 +51,11 @@ struct GroupChild: Codable {
     }
 }
 
-struct ChildChild: Codable {
+struct Custom_Data_Child: Codable {
     let name: String
     let keyword: String
-    let type: PurpleType
-    let value: ValueUnion
+    let type: Custom_Data_Type
+    let value: Custom_Data_Value
     let options: [String]?
     
     enum CodingKeys: String, CodingKey {
@@ -67,11 +67,11 @@ struct ChildChild: Codable {
     }
 }
 
-enum ValueUnion: Codable {
+enum Custom_Data_Value: Codable {
     case anythingArray([JSONAny])
     case integer(Int)
     case string(String)
-    case valueClass(ValueClass)
+    case custom_Data_attachment(Custom_Data_Attachment)
     case null
     
     init(from decoder: Decoder) throws {
@@ -86,9 +86,9 @@ enum ValueUnion: Codable {
 //            print("String")
             return
         }
-        if let x = try? container.decode(ValueClass.self) {
-            self = .valueClass(x)
-//            print("valueClass")
+        if let x = try? container.decode(Custom_Data_Attachment.self) {
+            self = .custom_Data_attachment(x)
+//            print("custom_Data_attachment")
             return
         }
         if let x = try? container.decode([JSONAny].self) {
@@ -100,7 +100,7 @@ enum ValueUnion: Codable {
             self = .null
             return
         }
-        throw DecodingError.typeMismatch(ValueUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for ValueUnion"))
+        throw DecodingError.typeMismatch(Custom_Data_Value.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for ValueUnion"))
     }
     
     func encode(to encoder: Encoder) throws {
@@ -112,7 +112,7 @@ enum ValueUnion: Codable {
             try container.encode(x)
         case .string(let x):
             try container.encode(x)
-        case .valueClass(let x):
+        case .custom_Data_attachment(let x):
             try container.encode(x)
         case .null:
             try container.encodeNil()
@@ -120,7 +120,7 @@ enum ValueUnion: Codable {
     }
 }
 
-struct ValueClass: Codable {
+struct Custom_Data_Attachment: Codable {
     let url: String?
     let id: String?
     let type: String?
@@ -152,8 +152,8 @@ struct CustomdataContact: Codable {
     let name: String?
     let type: String
     let jobtitle: String?
-    let organization: CustomdataEvent?
-    let person: CustomdataEvent?
+    let organization: Event?
+    let person: Event?
     
     enum CodingKeys: String, CodingKey {
         case url = "url"
@@ -166,7 +166,7 @@ struct CustomdataContact: Codable {
     }
 }
 
-enum PurpleType: String, Codable {
+enum Custom_Data_Type: String, Codable {
     case attachment = "Attachment"
     case checkbox = "Checkbox"
     case contact = "Contact"
@@ -183,22 +183,22 @@ enum PurpleType: String, Codable {
     case text = "Text"
     case yN = "Y/N"
 }
+//
+//struct CustomdataEvent: Codable {
+//    let url: String
+//    let id: String
+//    let name: String
+//    let type: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case url = "url"
+//        case id = "id"
+//        case name = "name"
+//        case type = "_type"
+//    }
+//}
 
-struct CustomdataEvent: Codable {
-    let url: String
-    let id: String
-    let name: String
-    let type: String
-    
-    enum CodingKeys: String, CodingKey {
-        case url = "url"
-        case id = "id"
-        case name = "name"
-        case type = "_type"
-    }
-}
-
-struct Definitions: Codable {
+struct Customdata_ID: Codable {
     let url: String
     
     enum CodingKeys: String, CodingKey {
@@ -234,10 +234,37 @@ extension Customdata {
         return String(data: data, encoding: .utf8)
     }
 }
-
-extension CustomdataGroup {
+//
+//extension CustomdataGroup {
+//    init?(data: Data) {
+//        guard let me = try? JSONDecoder().decode(CustomdataGroup.self, from: data) else { return nil }
+//        self = me
+//    }
+//
+//    init?(_ json: String, using encoding: String.Encoding = .utf8) {
+//        guard let data = json.data(using: encoding) else { return nil }
+//        self.init(data: data)
+//    }
+//
+//    init?(url: String) {
+//        guard let url = URL(string: url) else { return nil }
+//        guard let data = try? Data(contentsOf: url) else { return nil }
+//        self.init(data: data)
+//    }
+//
+//    var jsonData: Data? {
+//        return try? JSONEncoder().encode(self)
+//    }
+//
+//    var json: String? {
+//        guard let data = self.jsonData else { return nil }
+//        return String(data: data, encoding: .utf8)
+//    }
+//}
+//
+extension Custom_Data_Element {
     init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(CustomdataGroup.self, from: data) else { return nil }
+        guard let me = try? JSONDecoder().decode(Custom_Data_Element.self, from: data) else { return nil }
         self = me
     }
     
@@ -261,64 +288,37 @@ extension CustomdataGroup {
         return String(data: data, encoding: .utf8)
     }
 }
+//
+//extension ChildChild {
+//    init?(data: Data) {
+//        guard let me = try? JSONDecoder().decode(ChildChild.self, from: data) else { return nil }
+//        self = me
+//    }
+//
+//    init?(_ json: String, using encoding: String.Encoding = .utf8) {
+//        guard let data = json.data(using: encoding) else { return nil }
+//        self.init(data: data)
+//    }
+//
+//    init?(url: String) {
+//        guard let url = URL(string: url) else { return nil }
+//        guard let data = try? Data(contentsOf: url) else { return nil }
+//        self.init(data: data)
+//    }
+//
+//    var jsonData: Data? {
+//        return try? JSONEncoder().encode(self)
+//    }
+//
+//    var json: String? {
+//        guard let data = self.jsonData else { return nil }
+//        return String(data: data, encoding: .utf8)
+//    }
+//}
 
-extension GroupChild {
+extension Custom_Data_Attachment {
     init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(GroupChild.self, from: data) else { return nil }
-        self = me
-    }
-    
-    init?(_ json: String, using encoding: String.Encoding = .utf8) {
-        guard let data = json.data(using: encoding) else { return nil }
-        self.init(data: data)
-    }
-    
-    init?(url: String) {
-        guard let url = URL(string: url) else { return nil }
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        self.init(data: data)
-    }
-    
-    var jsonData: Data? {
-        return try? JSONEncoder().encode(self)
-    }
-    
-    var json: String? {
-        guard let data = self.jsonData else { return nil }
-        return String(data: data, encoding: .utf8)
-    }
-}
-
-extension ChildChild {
-    init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(ChildChild.self, from: data) else { return nil }
-        self = me
-    }
-    
-    init?(_ json: String, using encoding: String.Encoding = .utf8) {
-        guard let data = json.data(using: encoding) else { return nil }
-        self.init(data: data)
-    }
-    
-    init?(url: String) {
-        guard let url = URL(string: url) else { return nil }
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        self.init(data: data)
-    }
-    
-    var jsonData: Data? {
-        return try? JSONEncoder().encode(self)
-    }
-    
-    var json: String? {
-        guard let data = self.jsonData else { return nil }
-        return String(data: data, encoding: .utf8)
-    }
-}
-
-extension ValueClass {
-    init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(ValueClass.self, from: data) else { return nil }
+        guard let me = try? JSONDecoder().decode(Custom_Data_Attachment.self, from: data) else { return nil }
         self = me
     }
     
@@ -369,33 +369,33 @@ extension CustomdataContact {
         return String(data: data, encoding: .utf8)
     }
 }
-
-extension CustomdataEvent {
-    init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(CustomdataEvent.self, from: data) else { return nil }
-        self = me
-    }
-    
-    init?(_ json: String, using encoding: String.Encoding = .utf8) {
-        guard let data = json.data(using: encoding) else { return nil }
-        self.init(data: data)
-    }
-    
-    init?(url: String) {
-        guard let url = URL(string: url) else { return nil }
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        self.init(data: data)
-    }
-    
-    var jsonData: Data? {
-        return try? JSONEncoder().encode(self)
-    }
-    
-    var json: String? {
-        guard let data = self.jsonData else { return nil }
-        return String(data: data, encoding: .utf8)
-    }
-}
+//
+//extension CustomdataEvent {
+//    init?(data: Data) {
+//        guard let me = try? JSONDecoder().decode(CustomdataEvent.self, from: data) else { return nil }
+//        self = me
+//    }
+//
+//    init?(_ json: String, using encoding: String.Encoding = .utf8) {
+//        guard let data = json.data(using: encoding) else { return nil }
+//        self.init(data: data)
+//    }
+//
+//    init?(url: String) {
+//        guard let url = URL(string: url) else { return nil }
+//        guard let data = try? Data(contentsOf: url) else { return nil }
+//        self.init(data: data)
+//    }
+//
+//    var jsonData: Data? {
+//        return try? JSONEncoder().encode(self)
+//    }
+//
+//    var json: String? {
+//        guard let data = self.jsonData else { return nil }
+//        return String(data: data, encoding: .utf8)
+//    }
+//}
 //
 //extension Definitions {
 //    init?(data: Data) {

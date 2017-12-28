@@ -16,13 +16,14 @@ func GetCustomData(objectID: String) {
     print("objectId: ", objectID)
 //    let EventCustomData = Welcome.from(url: "https://dewerft.yesplan.be/api/event/\(objectID)/customdata?api_key=6AED6266671C92209161289C37D109E0")!
     let EventCustomData = Customdata(url: "https://dewerft.yesplan.be/api/event/\(objectID)/customdata?api_key=6AED6266671C92209161289C37D109E0")
+    print("EventCustomData: ", EventCustomData)
     if EventCustomData != nil {
-    //                print("EventCustomData:  \n \(EventCustomData)")
-//                    dump(EventCustomData)
+                    print("EventCustomData: ", EventCustomData)
+                    dump(EventCustomData)
         let EventCustomData = EventCustomData!
 //    dump(EventCustomData.event)
 //    print("CustomDataList: " ,CustomDataList)
-                    CustomDataList.append("**** \(EventCustomData.event.name) ****")
+                    CustomDataList.append("**** \(EventCustomData.event.name!) ****")
 //        print("groups: ", EventCustomData.groups!)
                     for a in 0 ..< EventCustomData.groups!.count {
 //                        print("ok a")
@@ -65,7 +66,7 @@ func GetCustomData(objectID: String) {
                                                     print("anythingArray")
                                                     dump(model)
 //                                                    CustomDataList.append(" \t\t\t \(model)")
-                                                case .valueClass(let model):
+                                                case .custom_Data_attachment(let model):
                                                     print("VALUECLASS")
                                                     dump(model)
 //                                                    CustomDataList.append(" \t\t\t \(model)")

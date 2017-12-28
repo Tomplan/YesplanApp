@@ -9,7 +9,7 @@
 import Foundation
 
 class Event: Codable {
-    let attributes: Attributes
+    let attributes: Attributes?
     let defaultscheduledescription: String?
     let defaultscheduleend: String?
     var defaultscheduleendtime: String?
@@ -19,9 +19,9 @@ class Event: Codable {
     let endtime: String?         // Date and time of the end of the event.
     let group: Profile?
     let id: String
-    let isproduction: Bool
+    let isproduction: Bool?
     let labels: [JSONAny]?
-    let locations: [Profile]
+    let locations: [Profile]?
     let name: String?
     let owner: Own?
     let owninggroup: Own?
