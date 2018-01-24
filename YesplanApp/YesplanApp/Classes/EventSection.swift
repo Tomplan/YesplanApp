@@ -10,7 +10,7 @@ import Foundation
 
 struct EventsSection: Codable{
     let date:String
-    var YPEvents:[Event]
+    var YPEvents:[Event_Id]
 }
 
 var YPgroupedEvents = [EventsSection]()

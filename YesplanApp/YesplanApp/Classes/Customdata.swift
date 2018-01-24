@@ -12,8 +12,8 @@
 import Foundation
 
 struct Customdata: Codable {
-    let event: Event
-    let definitions: Customdata_ID
+    let event: Event_Id
+    let definitions: Customdata_Id
     let groups: [Custom_Data_Group]?
     
     enum CodingKeys: String, CodingKey {
@@ -70,6 +70,7 @@ struct Custom_Data_Child: Codable {
 enum Custom_Data_Value: Codable {
     case anythingArray([JSONAny])
     case integer(Int)
+    case double(Double)
     case string(String)
     case custom_Data_attachment(Custom_Data_Attachment)
     case null
@@ -79,6 +80,10 @@ enum Custom_Data_Value: Codable {
         if let x = try? container.decode(Int.self) {
             self = .integer(x)
 //            print("Int")
+            return
+        }
+        if let x = try? container.decode(Double.self) {
+            self = .double(x)
             return
         }
         if let x = try? container.decode(String.self) {
@@ -109,6 +114,8 @@ enum Custom_Data_Value: Codable {
         case .anythingArray(let x):
             try container.encode(x)
         case .integer(let x):
+            try container.encode(x)
+        case .double(let x):
             try container.encode(x)
         case .string(let x):
             try container.encode(x)
@@ -152,8 +159,8 @@ struct CustomdataContact: Codable {
     let name: String?
     let type: String
     let jobtitle: String?
-    let organization: Event?
-    let person: Event?
+    let organization: Event_Id?
+    let person: Event_Id?
     
     enum CodingKeys: String, CodingKey {
         case url = "url"
@@ -198,7 +205,7 @@ enum Custom_Data_Type: String, Codable {
 //    }
 //}
 
-struct Customdata_ID: Codable {
+struct Customdata_Id: Codable {
     let url: String
     
     enum CodingKeys: String, CodingKey {
@@ -396,10 +403,10 @@ extension CustomdataContact {
 //        return String(data: data, encoding: .utf8)
 //    }
 //}
-//
-//extension Definitions {
+
+//extension Customdata_Id {
 //    init?(data: Data) {
-//        guard let me = try? JSONDecoder().decode(Definitions.self, from: data) else { return nil }
+//        guard let me = try? JSONDecoder().decode(Customdata_Id.self, from: data) else { return nil }
 //        self = me
 //    }
 //

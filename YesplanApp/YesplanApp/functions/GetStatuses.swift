@@ -15,8 +15,8 @@ public func GetStatuses() {
     //    dump(profiles)
     //    print(profiles.data.count)
     for i in 0 ..< statuses.data.count {
-//                print(statuses.data[i].name!)
-//                print(statuses.data[i].backgroundcolor!)
+                print(statuses.data[i].name!)
+                print(statuses.data[i].backgroundcolor!)
         statusDict[statuses.data[i].name!] = statuses.data[i].backgroundcolor!
     }
 //        print(statusDict)

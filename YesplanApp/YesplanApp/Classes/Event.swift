@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Event: Codable {
+class Event_Id: Codable {
     let attributes: Attributes?
     let defaultscheduledescription: String?
     let defaultscheduleend: String?
@@ -36,7 +36,7 @@ class Event: Codable {
     let url: String
 }
 
-extension Event {
+extension Event_Id {
     enum CodingKeys: String, CodingKey {
         case attributes = "attributes"
         case defaultscheduledescription = "defaultscheduledescription"

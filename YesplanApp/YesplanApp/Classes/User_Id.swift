@@ -1,5 +1,5 @@
 //
-//  Base.swift
+//  User_Id.swift
 //  YesplanApp
 //
 //  Created by Tom Slegers on 22/01/18.
@@ -8,30 +8,30 @@
 
 import Foundation
 
-struct Base: Codable {
+struct User_Id: Codable {
     let url: String
-    let id: String?
+    let id: String
     let name: String?
-    let type: String?
+    let email: String?
     
     enum CodingKeys: String, CodingKey {
         case url = "url"
         case id = "id"
         case name = "name"
-        case type = "_type"
+        case email = "email"
     }
     
-    func printBase() {
+    func printUser_Id() {
         print("\t\t url: \(self.url)")
-        if let id = self.name { print("\t\t id: \(id)") }
+        print("\t\t id: \(self.id)")
         if let name = self.name { print("\t\t name: \(name)") }
-        if let type = self.type { print("\t\t email: \(type)") }
+        if let email = self.email { print("\t\t email: \(email)") }
     }
 }
 
-extension Base {
+extension User_Id {
     init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(Base.self, from: data) else { return nil }
+        guard let me = try? JSONDecoder().decode(User_Id.self, from: data) else { return nil }
         self = me
     }
     

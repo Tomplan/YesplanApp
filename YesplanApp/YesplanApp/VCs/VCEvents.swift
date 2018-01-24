@@ -14,7 +14,7 @@ class VCEvents: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var EventDatePicker: UINavigationItem!
     
-    var events = [Event]()
+    var events = [Event_Id]()
     var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {

@@ -8,44 +8,49 @@
 
 import Foundation
 
-class Tasks: Codable {
-    let data: [Task]
+struct Tasks: Codable {
     let pagination: Pagination
+    let data: [Task_Id]
+    
+    enum CodingKeys: String, CodingKey {
+        case pagination = "pagination"
+        case data = "data"
+    }
+    
+    func printTasks() {
+        self.pagination.printPagination()
+        print("tasks: ")
+        for task in self.data {
+            task.printTask_Id()
+            
+        }
+    }
 }
 
 extension Tasks {
-    static func from(json: String, using encoding: String.Encoding = .utf8) -> Tasks? {
+    init?(data: Data) {
+        guard let me = try? JSONDecoder().decode(Tasks.self, from: data) else { return nil }
+        self = me
+    }
+    
+    init?(_ json: String, using encoding: String.Encoding = .utf8) {
         guard let data = json.data(using: encoding) else { return nil }
-        return Tasks.from(data: data)
+        self.init(data: data)
     }
     
-    static func from(data: Data) -> Tasks? {
-        let decoder = JSONDecoder()
-        return try? decoder.decode(Tasks.self, from: data)
-    }
-    
-    static func from(url urlString: String) -> Tasks? {
-        guard let url = URL(string: urlString) else {
-            return nil }
-        guard let data = try? Data(contentsOf: url) else {
-            return nil }
-        return from(data: data)
+    init?(url: String) {
+        guard let url = URL(string: url) else { return nil }
+        guard let data = try? Data(contentsOf: url) else { return nil }
+        self.init(data: data)
     }
     
     var jsonData: Data? {
-        let encoder = JSONEncoder()
-        return try? encoder.encode(self)
+        return try? JSONEncoder().encode(self)
     }
     
-    var jsonString: String? {
+    var json: String? {
         guard let data = self.jsonData else { return nil }
         return String(data: data, encoding: .utf8)
     }
 }
 
-extension Tasks {
-    enum CodingKeys: String, CodingKey {
-        case data = "data"
-        case pagination = "pagination"
-    }
-}

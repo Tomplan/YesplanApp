@@ -16,10 +16,10 @@ func GetCustomData(objectID: String) {
     print("objectId: ", objectID)
 //    let EventCustomData = Welcome.from(url: "https://dewerft.yesplan.be/api/event/\(objectID)/customdata?api_key=6AED6266671C92209161289C37D109E0")!
     let EventCustomData = Customdata(url: "https://dewerft.yesplan.be/api/event/\(objectID)/customdata?api_key=6AED6266671C92209161289C37D109E0")
-    print("EventCustomData: ", EventCustomData)
+//    print("EventCustomData: ", EventCustomData)
     if EventCustomData != nil {
-                    print("EventCustomData: ", EventCustomData)
-                    dump(EventCustomData)
+//                    print("EventCustomData: ", EventCustomData)
+//                    dump(EventCustomData)
         let EventCustomData = EventCustomData!
 //    dump(EventCustomData.event)
 //    print("CustomDataList: " ,CustomDataList)
@@ -48,7 +48,7 @@ func GetCustomData(objectID: String) {
 
 
                                             if EventCustomData.groups![a].children[b].children![c].value != nil {
-//                                            print(EventCustomData.groups![a].children[b].children![c].value)
+                                            print(EventCustomData.groups![a].children[b].children![c].value)
 
 
 

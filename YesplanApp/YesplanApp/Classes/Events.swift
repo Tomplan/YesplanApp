@@ -9,7 +9,7 @@
 import Foundation
 
 class Events: Codable {
-    let data: [Event]
+    let data: [Event_Id]
     let pagination: Pagination
 }
 

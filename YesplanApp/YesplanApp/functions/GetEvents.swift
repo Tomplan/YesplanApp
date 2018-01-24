@@ -8,7 +8,7 @@
 
 import Foundation
 
-var groupedEvents = [String : [Event]]()
+var groupedEvents = [String : [Event_Id]]()
 var profileColorArray: [String] = []
 var YPEventProfileColor = ""
 

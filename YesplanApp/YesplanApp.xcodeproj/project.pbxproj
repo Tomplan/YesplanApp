@@ -17,6 +17,12 @@
 		E22DE4841FDB173300E0F499 /* YesplanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE4831FDB173300E0F499 /* YesplanAppTests.swift */; };
 		E22DE48F1FDB173300E0F499 /* YesplanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */; };
 		E22FB6AB1FE701EE006E7658 /* Customdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22FB6AA1FE701EE006E7658 /* Customdata.swift */; };
+		E23C6553201769E800ED40B5 /* TVCTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C6551201769E800ED40B5 /* TVCTasks.swift */; };
+		E23C6554201769E800ED40B5 /* TVCTasks.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23C6552201769E800ED40B5 /* TVCTasks.xib */; };
+		E2444C722015FD5A00556906 /* Task_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C712015FD5A00556906 /* Task_Id.swift */; };
+		E2444C762015FE4200556906 /* User_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C752015FE4200556906 /* User_Id.swift */; };
+		E2444C782015FE6700556906 /* Usergroup_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C772015FE6700556906 /* Usergroup_Id.swift */; };
+		E2444C7A2015FEB900556906 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C792015FEB900556906 /* Base.swift */; };
 		E24FB9291FDFFA0D00C5242B /* Resourcebooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */; };
 		E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */; };
 		E24FB92F1FDFFB0000C5242B /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92E1FDFFB0000C5242B /* Placeholder.swift */; };
@@ -31,6 +37,8 @@
 		E25513F81FE856D400C76673 /* GetSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25513F71FE856D400C76673 /* GetSchedule.swift */; };
 		E25513FC1FE8588B00C76673 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25513FB1FE8588B00C76673 /* Schedule.swift */; };
 		E25513FE1FE858D400C76673 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25513FD1FE858D400C76673 /* Entry.swift */; };
+		E2605970201688F800C8BE6A /* VCTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260596E201688F800C8BE6A /* VCTasks.swift */; };
+		E2605971201688F800C8BE6A /* VCTasks.xib in Resources */ = {isa = PBXBuildFile; fileRef = E260596F201688F800C8BE6A /* VCTasks.xib */; };
 		E262445E1FE9989E001CCE59 /* DVCEventInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262445C1FE9989E001CCE59 /* DVCEventInfo.swift */; };
 		E262445F1FE9989E001CCE59 /* DVCEventInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262445D1FE9989E001CCE59 /* DVCEventInfo.xib */; };
 		E26244621FE998DF001CCE59 /* DVCEventLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26244601FE998DF001CCE59 /* DVCEventLocation.swift */; };
@@ -100,6 +108,20 @@
 		E2FDE6291FE084F9006BA8DD /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6281FE084F9006BA8DD /* Statuses.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		E2797444200F8DA000DD5850 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.stencil";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.generated.swift",
+			);
+			script = "sh sources/stencil.sh \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.generated.swift\"";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		E22DE4801FDB173300E0F499 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -134,6 +156,12 @@
 		E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesplanAppUITests.swift; sourceTree = "<group>"; };
 		E22DE4901FDB173300E0F499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22FB6AA1FE701EE006E7658 /* Customdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customdata.swift; sourceTree = "<group>"; };
+		E23C6551201769E800ED40B5 /* TVCTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCTasks.swift; sourceTree = "<group>"; };
+		E23C6552201769E800ED40B5 /* TVCTasks.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCTasks.xib; sourceTree = "<group>"; };
+		E2444C712015FD5A00556906 /* Task_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_Id.swift; sourceTree = "<group>"; };
+		E2444C752015FE4200556906 /* User_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Id.swift; sourceTree = "<group>"; };
+		E2444C772015FE6700556906 /* Usergroup_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usergroup_Id.swift; sourceTree = "<group>"; };
+		E2444C792015FEB900556906 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourcebooking.swift; sourceTree = "<group>"; };
 		E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInstance.swift; sourceTree = "<group>"; };
 		E24FB92E1FDFFB0000C5242B /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
@@ -148,6 +176,8 @@
 		E25513F71FE856D400C76673 /* GetSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSchedule.swift; sourceTree = "<group>"; };
 		E25513FB1FE8588B00C76673 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		E25513FD1FE858D400C76673 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		E260596E201688F800C8BE6A /* VCTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTasks.swift; sourceTree = "<group>"; };
+		E260596F201688F800C8BE6A /* VCTasks.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCTasks.xib; sourceTree = "<group>"; };
 		E262445C1FE9989E001CCE59 /* DVCEventInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventInfo.swift; sourceTree = "<group>"; };
 		E262445D1FE9989E001CCE59 /* DVCEventInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventInfo.xib; sourceTree = "<group>"; };
 		E26244601FE998DF001CCE59 /* DVCEventLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventLocation.swift; sourceTree = "<group>"; };
@@ -258,8 +288,13 @@
 				E2286E461FDDBA52006CE49D /* Pagination.swift */,
 				E265B3311FDF2D7B0000591B /* Address.swift */,
 				E265B3211FDF2BD50000591B /* Attributes.swift */,
+				E2444C712015FD5A00556906 /* Task_Id.swift */,
+				E2444C792015FEB900556906 /* Base.swift */,
+				E2444C772015FE6700556906 /* Usergroup_Id.swift */,
+				E2444C752015FE4200556906 /* User_Id.swift */,
 				E2A07FD61FDF317100F0D94B /* Child.swift */,
 				E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */,
+				E2A07FD41FDF308600F0D94B /* Group.swift */,
 				E265B32F1FDF2D520000591B /* Contactinfo.swift */,
 				E265B3171FDF22AF0000591B /* ContactLink.swift */,
 				E265B3191FDF25950000591B /* Contact.swift */,
@@ -271,7 +306,6 @@
 				E265B3271FDF2C830000591B /* Profile.swift */,
 				E265B3291FDF2CA90000591B /* Status.swift */,
 				E265B31F1FDF2B7C0000591B /* Task.swift */,
-				E2A07FD41FDF308600F0D94B /* Group.swift */,
 				E2A07FD81FDF319D00F0D94B /* Location.swift */,
 				E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */,
 				E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */,
@@ -349,6 +383,8 @@
 			children = (
 				E26A7D431FDC53A800F55465 /* VCEvents.swift */,
 				E26A7D441FDC53A800F55465 /* VCEvents.xib */,
+				E260596E201688F800C8BE6A /* VCTasks.swift */,
+				E260596F201688F800C8BE6A /* VCTasks.xib */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -358,6 +394,8 @@
 			children = (
 				E26A7D481FDC55C600F55465 /* TVCEvents.swift */,
 				E26A7D491FDC55C600F55465 /* TVCEvents.xib */,
+				E23C6551201769E800ED40B5 /* TVCTasks.swift */,
+				E23C6552201769E800ED40B5 /* TVCTasks.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -453,6 +491,7 @@
 				E22DE4671FDB173300E0F499 /* Resources */,
 			);
 			buildRules = (
+				E2797444200F8DA000DD5850 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -523,7 +562,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E22DE4641FDB173300E0F499 /* Build configuration list for PBXProject "YesplanApp" */;
+			buildConfigurationList = E22DE4641FDB173300E0F499 /* Build configuration list for PBXProject "yesplanapp" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -551,6 +590,7 @@
 				E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */,
 				E2DAC7121FDC265500B5B81B /* Teamplanner.storyboard in Resources */,
 				E2DAC70C1FDC264A00B5B81B /* Resources.storyboard in Resources */,
+				E2605971201688F800C8BE6A /* VCTasks.xib in Resources */,
 				E2DAC6F41FDC262500B5B81B /* To Do.storyboard in Resources */,
 				E2DAC6FA1FDC262F00B5B81B /* Conflicts.storyboard in Resources */,
 				E2DAC6F11FDC261F00B5B81B /* Updates.storyboard in Resources */,
@@ -560,6 +600,7 @@
 				E26244731FE99945001CCE59 /* DVCEventContacts.xib in Resources */,
 				E262445F1FE9989E001CCE59 /* DVCEventInfo.xib in Resources */,
 				E2AE9A691FE2940D00FD0C8A /* TBCEvent.xib in Resources */,
+				E23C6554201769E800ED40B5 /* TVCTasks.xib in Resources */,
 				E2DAC6F71FDC262A00B5B81B /* User.storyboard in Resources */,
 				E2DAC7061FDC264200B5B81B /* Tasks.storyboard in Resources */,
 				E26A7D4B1FDC55C600F55465 /* TVCEvents.xib in Resources */,
@@ -625,10 +666,12 @@
 				E265B3321FDF2D7B0000591B /* Address.swift in Sources */,
 				E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */,
 				E265B31C1FDF27290000591B /* Event.swift in Sources */,
+				E23C6553201769E800ED40B5 /* TVCTasks.swift in Sources */,
 				E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */,
 				E26244621FE998DF001CCE59 /* DVCEventLocation.swift in Sources */,
 				E2FDE61D1FE06E1B006BA8DD /* EventSection.swift in Sources */,
 				E24FB92F1FDFFB0000C5242B /* Placeholder.swift in Sources */,
+				E2605970201688F800C8BE6A /* VCTasks.swift in Sources */,
 				E2FDE6291FE084F9006BA8DD /* Statuses.swift in Sources */,
 				E2A07FD71FDF317100F0D94B /* Child.swift in Sources */,
 				E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */,
@@ -636,6 +679,7 @@
 				E265B3261FDF2C440000591B /* Own.swift in Sources */,
 				E262446E1FE99923001CCE59 /* DVCEventTasks.swift in Sources */,
 				E265B32E1FDF2D1A0000591B /* Organization.swift in Sources */,
+				E2444C7A2015FEB900556906 /* Base.swift in Sources */,
 				E24FB93B1FDFFF6E00C5242B /* Priceformula.swift in Sources */,
 				E24FB9331FDFFC0D00C5242B /* Discount.swift in Sources */,
 				E25513F81FE856D400C76673 /* GetSchedule.swift in Sources */,
@@ -645,12 +689,15 @@
 				E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */,
 				E2A07FD51FDF308600F0D94B /* Group.swift in Sources */,
 				E265B3221FDF2BD50000591B /* Attributes.swift in Sources */,
+				E2444C762015FE4200556906 /* User_Id.swift in Sources */,
 				E265B31E1FDF2AF70000591B /* Contacts.swift in Sources */,
+				E2444C722015FD5A00556906 /* Task_Id.swift in Sources */,
 				E22DE46D1FDB173300E0F499 /* AppDelegate.swift in Sources */,
 				E25513FE1FE858D400C76673 /* Entry.swift in Sources */,
 				E262447A1FE9AD8E001CCE59 /* DVCEventCustomData.swift in Sources */,
 				E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */,
 				E265B3301FDF2D520000591B /* Contactinfo.swift in Sources */,
+				E2444C782015FE6700556906 /* Usergroup_Id.swift in Sources */,
 				E2FDE6271FE08486006BA8DD /* GetStatuses.swift in Sources */,
 				E22FB6AB1FE701EE006E7658 /* Customdata.swift in Sources */,
 				E265B32C1FDF2CED0000591B /* Link.swift in Sources */,
@@ -1019,7 +1066,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E22DE4641FDB173300E0F499 /* Build configuration list for PBXProject "YesplanApp" */ = {
+		E22DE4641FDB173300E0F499 /* Build configuration list for PBXProject "yesplanapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E22DE4911FDB173300E0F499 /* Debug */,

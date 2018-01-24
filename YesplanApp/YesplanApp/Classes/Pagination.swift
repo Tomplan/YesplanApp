@@ -8,14 +8,18 @@
 
 import Foundation
 
-class Pagination: Codable {
-    let expires: String?
+struct Pagination: Codable {
     let next: String?
-}
-
-extension Pagination {
+    let expires: String?
+    
     enum CodingKeys: String, CodingKey {
-        case expires = "expires"
         case next = "next"
+        case expires = "expires"
+    }
+    
+    func printPagination() {
+        print("pagination: ")
+        if let next = self.next { print("\t next: \(next)") }
+        if let expires = self.expires { print("\t expires: \(expires)") }
     }
 }
