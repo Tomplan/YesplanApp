@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CC1461E2018E9DB00ABE404 /* TasksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1461D2018E9DB00ABE404 /* TasksSection.swift */; };
+		3CC146202018EA5A00ABE404 /* GetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1461F2018EA5A00ABE404 /* GetTasks.swift */; };
+		3CC1462220193CF400ABE404 /* func stringToDateShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1462120193CF400ABE404 /* func stringToDateShort.swift */; };
 		E2286E451FDDB9BA006CE49D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E441FDDB9BA006CE49D /* Events.swift */; };
 		E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E461FDDBA52006CE49D /* Pagination.swift */; };
 		E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */; };
@@ -140,6 +143,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CC1461D2018E9DB00ABE404 /* TasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksSection.swift; sourceTree = "<group>"; };
+		3CC1461F2018EA5A00ABE404 /* GetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTasks.swift; sourceTree = "<group>"; };
+		3CC1462120193CF400ABE404 /* func stringToDateShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "func stringToDateShort.swift"; sourceTree = "<group>"; };
 		E2286E441FDDB9BA006CE49D /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E2286E461FDDBA52006CE49D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelpers.swift; sourceTree = "<group>"; };
@@ -318,6 +324,7 @@
 				E24FB93A1FDFFF6E00C5242B /* Priceformula.swift */,
 				E2FDE60E1FE00070006BA8DD /* Amount.swift */,
 				E22FB6AA1FE701EE006E7658 /* Customdata.swift */,
+				3CC1461D2018E9DB00ABE404 /* TasksSection.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -429,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FDE61E1FE0706A006BA8DD /* public func stringToDate.swift */,
+				3CC1462120193CF400ABE404 /* func stringToDateShort.swift */,
 				E2FDE6201FE0706B006BA8DD /* public func stringToEventDate.swift */,
 				E2FDE61F1FE0706B006BA8DD /* public func stringToSelectedDate.swift */,
 				E2FDE6211FE0706B006BA8DD /* public func stringToTime.swift */,
@@ -436,6 +444,7 @@
 				E2FDE6261FE08486006BA8DD /* GetStatuses.swift */,
 				E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */,
 				E2FDE6181FE063AF006BA8DD /* GetEvents.swift */,
+				3CC1461F2018EA5A00ABE404 /* GetTasks.swift */,
 				E25513F71FE856D400C76673 /* GetSchedule.swift */,
 				E262447C1FE9B5AB001CCE59 /* GetCustomData.swift */,
 			);
@@ -650,6 +659,7 @@
 				E26244761FE99966001CCE59 /* DVCEventAttachments.swift in Sources */,
 				E2B4AB791FDF1DBE00374830 /* Contactbooking.swift in Sources */,
 				E24FB9311FDFFB8C00C5242B /* Costmodel.swift in Sources */,
+				3CC1462220193CF400ABE404 /* func stringToDateShort.swift in Sources */,
 				E26244721FE99945001CCE59 /* DVCEventContacts.swift in Sources */,
 				E265B32A1FDF2CA90000591B /* Status.swift in Sources */,
 				E262445E1FE9989E001CCE59 /* DVCEventInfo.swift in Sources */,
@@ -675,6 +685,7 @@
 				E2FDE6291FE084F9006BA8DD /* Statuses.swift in Sources */,
 				E2A07FD71FDF317100F0D94B /* Child.swift in Sources */,
 				E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */,
+				3CC146202018EA5A00ABE404 /* GetTasks.swift in Sources */,
 				E2AE9A681FE2940D00FD0C8A /* TBCEvent.swift in Sources */,
 				E265B3261FDF2C440000591B /* Own.swift in Sources */,
 				E262446E1FE99923001CCE59 /* DVCEventTasks.swift in Sources */,
@@ -702,6 +713,7 @@
 				E22FB6AB1FE701EE006E7658 /* Customdata.swift in Sources */,
 				E265B32C1FDF2CED0000591B /* Link.swift in Sources */,
 				E24FB9351FDFFC3800C5242B /* Formula.swift in Sources */,
+				3CC1461E2018E9DB00ABE404 /* TasksSection.swift in Sources */,
 				E2286E451FDDB9BA006CE49D /* Events.swift in Sources */,
 				E26A7D451FDC53A900F55465 /* VCEvents.swift in Sources */,
 				E2FDE60F1FE00070006BA8DD /* Amount.swift in Sources */,

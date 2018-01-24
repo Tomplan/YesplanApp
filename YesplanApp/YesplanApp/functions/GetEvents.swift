@@ -21,8 +21,8 @@ public func GetEvents()
             YPgroupedEvents.removeAll()
             YPgroupedEventsSorted.removeAll()
     //
-    print("*: ",selectedDateString)
-    print("*: ",selectedEndDateString)
+//    print("*: ",selectedDateString)
+//    print("*: ",selectedEndDateString)
     let events = Events.from(url: "https://dewerft.yesplan.be/api/events/event%3Adate%3A\(selectedDateString)%20TO%20\(selectedEndDateString)%20event%3Astatus%3Abevestigd?api_key=6AED6266671C92209161289C37D109E0")!
     //            dump(events)
 //        ************** compress by date ************

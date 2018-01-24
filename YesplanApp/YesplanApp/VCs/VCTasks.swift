@@ -8,18 +8,15 @@
 
 import UIKit
 
+// tasksSorted = [Task_Id]()
+
 class VCTasks: UIViewController {
 
-    var tasksSorted = [Task_Id]()
-    var dueTasks = [Task_Id]()
-    
     @IBOutlet weak var TVTasks: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.TVTasks.dataSource = self
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 140
         
         GetTasks()
     }
@@ -29,49 +26,38 @@ class VCTasks: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func GetTasks() {
-        let tasks_json = "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0"
-        if let tasksDownload = Tasks(url: tasks_json) {
-//            tasksDownload.printTasks()
-            let tasks = tasksDownload.data
-            
-            for task in tasks where task.due == nil {
-                    tasksSorted.append(task)
-            }
-            
-            for task in tasks where task.due != nil {
-                dueTasks.append(task) }
-            
-            dueTasks = dueTasks.sorted {
-                $0.due!.localizedCaseInsensitiveCompare($1.due!) == ComparisonResult.orderedAscending
-            }
+    
 
-            for task in dueTasks {
-                tasksSorted.append(task)
-            }
-        } else { print("not ok") }
-    }
 }
 
-
-
 extension VCTasks: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return YPgroupedTasksSorted.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var sectionCell = ""
+        if  YPgroupedTasksSorted[section].date != "geen vervaldatum" { sectionCell = stringToEventsDate(myDateString: YPgroupedTasksSorted[section].date)} else { sectionCell = "geen vervaldatum" }
+        
+        return  sectionCell
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(tasksSorted.count)
-        return tasksSorted.count
+        return YPgroupedTasksSorted[section].YPtasks.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCTasks") as! TVCTasks
-         if tasksSorted[indexPath.row].name != nil {
+         if YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].name != nil {
             cell.LabelTaskName.textColor = UIColor.red
-        cell.LabelTaskName.text = tasksSorted[indexPath.row].name!
+        cell.LabelTaskName.text = YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].name!
         }
-        if tasksSorted[indexPath.row].due != nil {
-            if tasksSorted[indexPath.row].due != nil {
+        if YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].due != nil {
+            if YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].due != nil {
                 cell.LabelTaskDue.textColor = UIColor.darkGray
-                cell.LabelTaskDue.text = stringToDate(myDateString: tasksSorted[indexPath.row].due!)
+                cell.LabelTaskDue.text = stringToDate(myDateString: YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].due!)
             } else {
                 cell.LabelTaskDue.text = "geen vervaldatum"
             }
@@ -80,8 +66,8 @@ extension VCTasks: UITableViewDataSource {
             cell.LabelTaskDue.text = "geen vervaldatum"
         }
 
-        if tasksSorted[indexPath.row].assignedto != nil {
-            cell.LabelTaskAssignedto.text = tasksSorted[indexPath.row].assignedto!
+        if YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].assignedto != nil {
+            cell.LabelTaskAssignedto.text = YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].assignedto!
         } else {
             cell.LabelTaskAssignedto.text = "niet toegewezen"
         }

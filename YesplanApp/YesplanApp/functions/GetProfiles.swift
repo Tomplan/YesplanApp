@@ -16,7 +16,7 @@ public func GetProfiles() {
 //    print(profiles.data.count)
     for i in 0 ..< profiles.data.count {
 //        print(profiles.data[i].id)
-        print(profiles.data[i].color!)
+//        print(profiles.data[i].color!)
         profileDict[profiles.data[i].id] = profiles.data[i].color!
     }
 //    print(profileDict)
