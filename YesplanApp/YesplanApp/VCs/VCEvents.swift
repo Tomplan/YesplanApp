@@ -204,8 +204,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 //        print(YPEventProfileColor)
         
     
-    if let bordercolor = UIColor(rgbString: YPEventProfileColor) {
-        cell.ViewBorder.layer.borderColor = bordercolor.cgColor
+        if let bordercolor = UIColor(rgbString: YPEventProfileColor) {
+            cell.layer.borderColor = bordercolor.cgColor
         } else {
             print("invalid color specification")
         }
@@ -214,14 +214,12 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         let YPEventStatusColor = statusDict[YPEventStatus]!
         
         if let backgroundcolor = UIColor(rgbString: YPEventStatusColor) {
-            cell.ViewBorder.layer.backgroundColor = backgroundcolor.cgColor
+//            cell.layer.backgroundColor = backgroundcolor.cgColor
+            cell.backgroundColor = backgroundcolor
         } else {
             print("invalid color specification")
         }
     
-        cell.ViewBorder.layer.cornerRadius = 5
-        cell.ViewBorder.layer.borderWidth = 4
-        cell.ViewBorder.layer.shadowOffset = CGSize(width: -1, height: 1)
     
     }
         cell.LblEventsDefaultschedulestarttime.text =   "\(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].defaultschedulestarttime!) - \(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].defaultscheduleendtime!)"
@@ -237,7 +235,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             cell.LblEventLocation.text =  "geen locatie!"
             
         }
-        cell.LblEventName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].name
+        cell.LblEventName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].name!
+//    print(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].name!)
         cell.LblEventGroupName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].group?.name
         return cell
     }

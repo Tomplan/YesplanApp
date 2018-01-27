@@ -10,12 +10,14 @@
 		3CC1461E2018E9DB00ABE404 /* TasksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1461D2018E9DB00ABE404 /* TasksSection.swift */; };
 		3CC146202018EA5A00ABE404 /* GetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1461F2018EA5A00ABE404 /* GetTasks.swift */; };
 		3CC1462220193CF400ABE404 /* func stringToDateShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1462120193CF400ABE404 /* func stringToDateShort.swift */; };
+		3CC14625201BB56200ABE404 /* DVCTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC14623201BB56200ABE404 /* DVCTask.swift */; };
+		3CC14626201BB56200ABE404 /* DVCTask.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC14624201BB56200ABE404 /* DVCTask.xib */; };
+		3CDAA4D1201C7D34008F9E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4751FDB173300E0F499 /* Assets.xcassets */; };
 		E2286E451FDDB9BA006CE49D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E441FDDB9BA006CE49D /* Events.swift */; };
 		E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E461FDDBA52006CE49D /* Pagination.swift */; };
 		E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */; };
 		E22DE46D1FDB173300E0F499 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE46C1FDB173300E0F499 /* AppDelegate.swift */; };
 		E22DE4741FDB173300E0F499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4721FDB173300E0F499 /* Main.storyboard */; };
-		E22DE4761FDB173300E0F499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4751FDB173300E0F499 /* Assets.xcassets */; };
 		E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DE4771FDB173300E0F499 /* LaunchScreen.storyboard */; };
 		E22DE4841FDB173300E0F499 /* YesplanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE4831FDB173300E0F499 /* YesplanAppTests.swift */; };
 		E22DE48F1FDB173300E0F499 /* YesplanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE48E1FDB173300E0F499 /* YesplanAppUITests.swift */; };
@@ -146,6 +148,8 @@
 		3CC1461D2018E9DB00ABE404 /* TasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksSection.swift; sourceTree = "<group>"; };
 		3CC1461F2018EA5A00ABE404 /* GetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTasks.swift; sourceTree = "<group>"; };
 		3CC1462120193CF400ABE404 /* func stringToDateShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "func stringToDateShort.swift"; sourceTree = "<group>"; };
+		3CC14623201BB56200ABE404 /* DVCTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCTask.swift; sourceTree = "<group>"; };
+		3CC14624201BB56200ABE404 /* DVCTask.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCTask.xib; sourceTree = "<group>"; };
 		E2286E441FDDB9BA006CE49D /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E2286E461FDDBA52006CE49D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelpers.swift; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 				E26244751FE99966001CCE59 /* DVCEventAttachments.xib */,
 				E26244781FE9AD8E001CCE59 /* DVCEventCustomData.swift */,
 				E26244791FE9AD8E001CCE59 /* DVCEventCustomData.xib */,
+				3CC14623201BB56200ABE404 /* DVCTask.swift */,
+				3CC14624201BB56200ABE404 /* DVCTask.xib */,
 			);
 			path = DVC;
 			sourceTree = "<group>";
@@ -600,12 +606,13 @@
 				E2DAC7121FDC265500B5B81B /* Teamplanner.storyboard in Resources */,
 				E2DAC70C1FDC264A00B5B81B /* Resources.storyboard in Resources */,
 				E2605971201688F800C8BE6A /* VCTasks.xib in Resources */,
+				3CDAA4D1201C7D34008F9E1D /* Assets.xcassets in Resources */,
 				E2DAC6F41FDC262500B5B81B /* To Do.storyboard in Resources */,
 				E2DAC6FA1FDC262F00B5B81B /* Conflicts.storyboard in Resources */,
+				3CC14626201BB56200ABE404 /* DVCTask.xib in Resources */,
 				E2DAC6F11FDC261F00B5B81B /* Updates.storyboard in Resources */,
 				E2DAC70F1FDC265000B5B81B /* Events.storyboard in Resources */,
 				E26244771FE99966001CCE59 /* DVCEventAttachments.xib in Resources */,
-				E22DE4761FDB173300E0F499 /* Assets.xcassets in Resources */,
 				E26244731FE99945001CCE59 /* DVCEventContacts.xib in Resources */,
 				E262445F1FE9989E001CCE59 /* DVCEventInfo.xib in Resources */,
 				E2AE9A691FE2940D00FD0C8A /* TBCEvent.xib in Resources */,
@@ -673,6 +680,7 @@
 				E25513FC1FE8588B00C76673 /* Schedule.swift in Sources */,
 				E262446A1FE9990E001CCE59 /* DVCEventResources.swift in Sources */,
 				E265B3201FDF2B7C0000591B /* Task.swift in Sources */,
+				3CC14625201BB56200ABE404 /* DVCTask.swift in Sources */,
 				E265B3321FDF2D7B0000591B /* Address.swift in Sources */,
 				E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */,
 				E265B31C1FDF27290000591B /* Event.swift in Sources */,

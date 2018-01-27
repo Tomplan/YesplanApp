@@ -23,7 +23,6 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.2148629994" green="0.54797701089999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVCEvents" rowHeight="70" id="B4h-Zy-GfW" customClass="TVCEvents" customModule="YesplanApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="20" width="375" height="70"/>
@@ -31,72 +30,14 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B4h-Zy-GfW" id="2Wc-xh-38t">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-GY-SgN" userLabel="ViewBorder">
-                                                    <rect key="frame" x="1" y="6" width="372" height="58"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelEventsDefaultschedulestarttime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1S-1L-B0e">
-                                                    <rect key="frame" x="15" y="26" width="345" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelEventsName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjv-NE-W2l">
-                                                    <rect key="frame" x="15" y="9" width="345" height="15.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="textColor" red="0.92776381969451904" green="0.17225378751754761" blue="0.04131152480840683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelEventsLocation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ai-k5-2c4">
-                                                    <rect key="frame" x="15" y="9" width="345" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LblEventsGroupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm4-pH-Tes">
-                                                    <rect key="frame" x="15" y="43.5" width="149.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="Rm4-pH-Tes" firstAttribute="top" secondItem="V1S-1L-B0e" secondAttribute="bottom" constant="-0.5" id="03k-Uh-PtT"/>
-                                                <constraint firstItem="5ai-k5-2c4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2Wc-xh-38t" secondAttribute="leadingMargin" id="2Hv-E3-oXD"/>
-                                                <constraint firstItem="yjv-NE-W2l" firstAttribute="top" secondItem="2Wc-xh-38t" secondAttribute="topMargin" constant="-2" id="59n-vs-hpa"/>
-                                                <constraint firstItem="5ai-k5-2c4" firstAttribute="top" secondItem="2Wc-xh-38t" secondAttribute="topMargin" constant="-2" id="9PF-VZ-Tyy"/>
-                                                <constraint firstItem="Rm4-pH-Tes" firstAttribute="leading" secondItem="yjv-NE-W2l" secondAttribute="leading" id="AOE-8K-QeO"/>
-                                                <constraint firstItem="5ai-k5-2c4" firstAttribute="trailing" secondItem="2Wc-xh-38t" secondAttribute="trailingMargin" id="Fea-nW-7QH"/>
-                                                <constraint firstItem="NI0-GY-SgN" firstAttribute="centerX" secondItem="V1S-1L-B0e" secondAttribute="centerX" id="Kql-4R-dKd"/>
-                                                <constraint firstItem="yjv-NE-W2l" firstAttribute="trailing" secondItem="5ai-k5-2c4" secondAttribute="trailing" id="Nad-B4-xyx"/>
-                                                <constraint firstItem="NI0-GY-SgN" firstAttribute="leading" secondItem="2Wc-xh-38t" secondAttribute="leadingMargin" constant="-14" id="Oie-Mr-oB0"/>
-                                                <constraint firstItem="yjv-NE-W2l" firstAttribute="leading" secondItem="V1S-1L-B0e" secondAttribute="leading" id="ReT-xp-Cmr"/>
-                                                <constraint firstItem="NI0-GY-SgN" firstAttribute="centerY" secondItem="V1S-1L-B0e" secondAttribute="centerY" id="VEK-js-WnY"/>
-                                                <constraint firstItem="NI0-GY-SgN" firstAttribute="centerY" secondItem="2Wc-xh-38t" secondAttribute="centerY" id="Y1i-qp-FVb"/>
-                                                <constraint firstItem="V1S-1L-B0e" firstAttribute="trailing" secondItem="2Wc-xh-38t" secondAttribute="trailingMargin" id="iSq-ku-tHG"/>
-                                                <constraint firstItem="V1S-1L-B0e" firstAttribute="top" secondItem="yjv-NE-W2l" secondAttribute="bottom" constant="1.5" id="paO-z4-SMJ"/>
-                                                <constraint firstItem="NI0-GY-SgN" firstAttribute="top" secondItem="2Wc-xh-38t" secondAttribute="topMargin" constant="-5" id="qki-09-L08"/>
-                                                <constraint firstItem="5ai-k5-2c4" firstAttribute="leading" secondItem="yjv-NE-W2l" secondAttribute="leading" id="vdn-2s-89a"/>
-                                                <constraint firstItem="5ai-k5-2c4" firstAttribute="top" secondItem="yjv-NE-W2l" secondAttribute="top" id="zPC-fF-jPF"/>
-                                                <constraint firstItem="V1S-1L-B0e" firstAttribute="leading" secondItem="2Wc-xh-38t" secondAttribute="leadingMargin" id="zVe-Gc-Vkb"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
-                                            <outlet property="LblEventGroupName" destination="Rm4-pH-Tes" id="glm-SY-Ax1"/>
-                                            <outlet property="LblEventLocation" destination="5ai-k5-2c4" id="lA3-VL-Rx4"/>
-                                            <outlet property="LblEventName" destination="yjv-NE-W2l" id="UZI-fY-zkx"/>
-                                            <outlet property="LblEventsDefaultschedulestarttime" destination="V1S-1L-B0e" id="QOd-TV-OHC"/>
-                                            <outlet property="ViewBorder" destination="NI0-GY-SgN" id="HwO-Nf-8Zj"/>
                                             <segue destination="Bl2-ke-6rS" kind="show" identifier="DVCEvent" id="L9W-z2-aau"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Vsc-pE-1eU" firstAttribute="leading" secondItem="Pd1-9p-eRK" secondAttribute="leading" id="KWs-bQ-lWZ"/>
                             <constraint firstItem="Pd1-9p-eRK" firstAttribute="bottom" secondItem="Vsc-pE-1eU" secondAttribute="bottom" id="dNy-WS-EyJ"/>
@@ -342,7 +283,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oxn-fx-8gE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="Events" id="Ejp-pT-Buo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LXp-hD-uH9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LXp-hD-uH9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -388,7 +329,7 @@
         <image name="Events" width="36" height="36"/>
         <image name="Help" width="36" height="36"/>
         <image name="Resources" width="36" height="36"/>
-        <image name="Tasks" width="36" height="36"/>
+        <image name="Tasks" width="18" height="18"/>
         <image name="Teamplanner" width="36" height="36"/>
     </resources>
 </document>
