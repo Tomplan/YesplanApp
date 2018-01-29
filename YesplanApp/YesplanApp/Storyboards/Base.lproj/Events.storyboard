@@ -21,7 +21,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vsc-pE-1eU">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" red="0.2148629994" green="0.54797701089999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVCEvents" rowHeight="70" id="B4h-Zy-GfW" customClass="TVCEvents" customModule="YesplanApp" customModuleProvider="target">
@@ -283,7 +283,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oxn-fx-8gE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="Events" id="Ejp-pT-Buo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LXp-hD-uH9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LXp-hD-uH9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -329,7 +329,7 @@
         <image name="Events" width="36" height="36"/>
         <image name="Help" width="36" height="36"/>
         <image name="Resources" width="36" height="36"/>
-        <image name="Tasks" width="18" height="18"/>
+        <image name="Tasks" width="36" height="36"/>
         <image name="Teamplanner" width="36" height="36"/>
     </resources>
 </document>

@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="SoA-q1-1kg" kind="show" id="wIu-WG-Lk4"/>
+                                    <segue destination="SoA-q1-1kg" kind="show" identifier="DVCTask" id="wIu-WG-Lk4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,6 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tasks" width="18" height="18"/>
+        <image name="Tasks" width="36" height="36"/>
     </resources>
 </document>

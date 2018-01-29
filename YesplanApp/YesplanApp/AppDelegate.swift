@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.lightGray], for: .selected)
         
         let VC01: VCEvents = VCEvents()
-//        VC01.view.backgroundColor = UIColor.darkGray
         VC01.tabBarItem.title = "Events"
         VC01.tabBarItem.image = UIImage(named: "Events Unselected")?.withRenderingMode(.alwaysOriginal)
         VC01.tabBarItem.selectedImage = UIImage(named: "Events Selected")?.withRenderingMode(.alwaysOriginal)
@@ -55,10 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VC08.tabBarItem.title = "Search"
         VC08.tabBarItem.image = UIImage(named: "Search Unselected")?.withRenderingMode(.alwaysOriginal)
         VC08.tabBarItem.selectedImage = UIImage(named: "Search Selected")?.withRenderingMode(.alwaysOriginal)
-//        let VC09: VCUser = VCUser()
-//        VC09.tabBarItem.title = "User"
-//        VC09.tabBarItem.image = UIImage(named: "User Unselected")?.withRenderingMode(.alwaysOriginal)
-//        VC09.tabBarItem.selectedImage = UIImage(named: "User Selected")?.withRenderingMode(.alwaysOriginal)
+        let VC09: VCUser = VCUser()
+        VC09.tabBarItem.title = "User"
+        VC09.tabBarItem.image = UIImage(named: "User Unselected")?.withRenderingMode(.alwaysOriginal)
+        VC09.tabBarItem.selectedImage = UIImage(named: "User Selected")?.withRenderingMode(.alwaysOriginal)
         // max allowed viewcontrollers = 11?
         let VC10: VCTodo = VCTodo()
         VC10.tabBarItem.title = "Todo"
@@ -74,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VC12.tabBarItem.selectedImage = UIImage(named: "Updates Selected")?.withRenderingMode(.alwaysOriginal)
         
         let tabBarController: UITabBarController = UITabBarController()
-        let controllers = [VC01, VC02, VC03, VC04, VC05, VC06, VC07, VC08, VC10, VC11, VC12]
+        let controllers = [VC01, VC02, VC03, VC04, VC05, VC06, VC07, VC08, VC09, VC10, VC11, VC12]
 //        tabBarController.setViewControllers(controllers, animated: false)
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
 //
@@ -90,19 +89,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         tabBarController.delegate = self
         
-//        var customizableViewControllers: [UIViewController] = []
 
         if tabBarController.viewControllers != nil {
-//            print(tabBarController.viewControllers)
+//            print(tabBarController.viewControllers!)
             for i in 0 ..< tabBarController.viewControllers!.count {
                 let vc: UIViewController = tabBarController.viewControllers![i]
                 vc.tabBarItem.tag = i
 //                customizableViewControllers.append(vc)
             }
         }
+        
+        if tabBarController.viewControllers != nil {
+//            print(tabBarController.viewControllers!)
+        }
 
         let defaults: UserDefaults = UserDefaults.standard
-        let tabOrder: [Int]? = defaults.object(forKey: "tabOrder") as? [Int]
+        
+//        print(defaults.object(forKey: "tabOrder"))
+//        var tabOrder: [Int]? = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+//        print(tabOrder)
+//
+//        defaults.set(tabOrder, forKey: "tabOrder")
+       let tabOrder: [Int]? = defaults.object(forKey: "tabOrder") as? [Int]
 
         if tabOrder != nil {
             var vcOrder: [UIViewController] = []
@@ -156,7 +164,7 @@ extension AppDelegate: UITabBarControllerDelegate {
         if changed {
 //            print("done")
             var tabOrder: [Int] = []
-            print("viewControllers: ", viewControllers)
+//            print("viewControllers: ", viewControllers)
             for vc: UIViewController in viewControllers {
                 tabOrder.append(vc.tabBarItem.tag)
             }

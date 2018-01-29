@@ -1,14 +1,14 @@
 //
-//  DVCEventTasks.swift
+//  DVCEventTimeSchedulesViewController.swift
 //  YesplanApp
 //
-//  Created by Tom Slegers on 19/12/17.
-//  Copyright © 2017 TomPlan. All rights reserved.
+//  Created by Techcc - FOH - Video on 29/01/18.
+//  Copyright © 2018 TomPlan. All rights reserved.
 //
 
 import UIKit
 
-class DVCEventTasks: UIViewController {
+class DVCEventTimeSchedules: UIViewController {
 
     var contentText: String?
     var contentLabel: UILabel?
@@ -16,7 +16,7 @@ class DVCEventTasks: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.darkGray
-        self.title = "Tasks"
+        self.title = "Schedules"
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()
         

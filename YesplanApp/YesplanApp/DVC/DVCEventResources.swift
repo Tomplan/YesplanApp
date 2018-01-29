@@ -10,26 +10,33 @@ import UIKit
 
 class DVCEventResources: UIViewController {
 
+    var contentText: String?
+    var contentLabel: UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.view.backgroundColor = UIColor.darkGray
+        self.title = "Resources"
+        self.initializeInterfaceElements()
+        self.autolayoutInterfaceElements()
+        
+        if self.contentText != nil {
+            self.contentLabel?.text = self.contentText
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func initializeInterfaceElements() {
+        self.contentLabel = UILabel()
+        self.contentLabel!.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.contentLabel!)
     }
-    */
-
+    
+    
+    func autolayoutInterfaceElements() {
+        self.contentLabel!.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        self.contentLabel!.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+    }
+    
 }
+

@@ -45,7 +45,6 @@ class TVCEvents: UITableViewCell {
             self.layer.borderColor = UIColor.black.cgColor
             self.backgroundColor = UIColor.yellow
     
-    
             self.LblEventName.translatesAutoresizingMaskIntoConstraints = false
             self.LblEventName.numberOfLines = 0
             self.LblEventName.font = UIFont.systemFont(ofSize: 15.0)
