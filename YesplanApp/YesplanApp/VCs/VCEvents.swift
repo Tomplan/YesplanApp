@@ -408,16 +408,11 @@ extension VCEvents: UITableViewDataSource {
 extension VCEvents: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell: UITableViewCell? = tableView.cellForRow(at: indexPath)
-
-        if cell != nil {
-            print("hierse")
-//            let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "DVCEvent") as! EVCEvent
-//            let VC1 = DVCEvent() //change this to your class name
-//            self.present(VC1, animated: true, completion: nil)
-//            self.navigationController!.pushViewController(VC1, animated: true)
+        if let _: UITableViewCell = tableView.cellForRow(at: indexPath) {
+            
+            let object = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row]
             let detailVC = DVCEvent()
-//
+            detailVC.objectId = object.id
             self.navigationController!.pushViewController(detailVC, animated: true)
         }
     }

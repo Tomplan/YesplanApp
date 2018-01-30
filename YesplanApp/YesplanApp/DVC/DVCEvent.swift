@@ -14,11 +14,13 @@ class DVCEvent: UIViewController {
     
     var tableView: UITableView = UITableView()
     var eventTabs = [String]()
+    var objectId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         eventTabs = ["Info", "Schedule", "Location", "Team", "Resources", "Tasks", "Contacts", "Attachments", "Customdata"]
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.darkGray
+        self.tableView.backgroundColor = UIColor.darkGray
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()
     }
@@ -45,10 +47,15 @@ extension DVCEvent: UITableViewDataSource {
         return eventTabs.count
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor? = UIColor.darkGray
+        cell.textLabel?.textColor = UIColor.lightGray
+        tableView.separatorStyle = .none
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "defaultCell")
-        
+
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "defaultCell")
         }
@@ -59,11 +66,38 @@ extension DVCEvent: UITableViewDataSource {
 
 extension DVCEvent: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell: UITableViewCell? = tableView.cellForRow(at: indexPath)
-        
-        if cell != nil {
+//        let cell: UITableViewCell? = tableView.cellForRow(at: indexPath)
+
+        if indexPath.row == 0 {
             let detailVC: DVCEventInfo = DVCEventInfo()
-//            detailVC.contentText = cell?.textLabel?.text
+            
+
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 1 {
+            GetSchedule(objectID: objectId)
+            let detailVC: DVCEventSchedule = DVCEventSchedule()
+            detailVC.scheduleList = scheduleList
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 2 {
+            let detailVC: DVCEventLocation = DVCEventLocation()
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 3 {
+            let detailVC: DVCEventTeam = DVCEventTeam()
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 4 {
+            let detailVC: DVCEventResources = DVCEventResources()
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 5 {
+            let detailVC: DVCEventTasks = DVCEventTasks()
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 6 {
+            let detailVC: DVCEventContacts = DVCEventContacts()
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else if indexPath.row == 7 {
+            let detailVC: DVCEventAttachments = DVCEventAttachments()
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        } else {
+            let detailVC: DVCEventCustomData = DVCEventCustomData()
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }

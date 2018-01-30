@@ -9,16 +9,18 @@
 import Foundation
 
 
-var ScheduleList = [String]()
+ var scheduleList = [String]()
 
 
 func GetSchedule(objectID: String) {
-    let schedule = Schedule.from(url: "https://dewerft.yesplan.be/api/event/\(objectID)/schedule?api_key=6AED6266671C92209161289C37D109E0")
+    
+    scheduleList = [""]
+    let schedule = Schedule(url: "https://dewerft.yesplan.be/api/event/\(objectID)/schedule?api_key=6AED6266671C92209161289C37D109E0")
     if schedule != nil {
         for i in 0 ..< schedule!.entries.count {
             let MYschedule = "\(stringToTime(myDateString: schedule!.entries[i].starttime)) \(schedule!.entries[i].description)"
-            ScheduleList.append(MYschedule)
+            scheduleList.append(MYschedule)
         }
     }
-//    dump(ScheduleList)
+//    dump(scheduleList)
 }

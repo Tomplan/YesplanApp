@@ -41,6 +41,7 @@
 		3CDAA503201E4C9E008F9E1D /* VCConflicts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDAA501201E4C9E008F9E1D /* VCConflicts.xib */; };
 		3CDAA506201E4CB0008F9E1D /* VCUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA504201E4CB0008F9E1D /* VCUpdates.swift */; };
 		3CDAA507201E4CB0008F9E1D /* VCUpdates.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDAA505201E4CB0008F9E1D /* VCUpdates.xib */; };
+		3CECCF0220210C3000165319 /* Schedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CECCF0120210C3000165319 /* Schedules.swift */; };
 		E2286E451FDDB9BA006CE49D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E441FDDB9BA006CE49D /* Events.swift */; };
 		E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E461FDDBA52006CE49D /* Pagination.swift */; };
 		E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */; };
@@ -191,6 +192,7 @@
 		3CDAA501201E4C9E008F9E1D /* VCConflicts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCConflicts.xib; sourceTree = "<group>"; };
 		3CDAA504201E4CB0008F9E1D /* VCUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCUpdates.swift; sourceTree = "<group>"; };
 		3CDAA505201E4CB0008F9E1D /* VCUpdates.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCUpdates.xib; sourceTree = "<group>"; };
+		3CECCF0120210C3000165319 /* Schedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedules.swift; sourceTree = "<group>"; };
 		E2286E441FDDB9BA006CE49D /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E2286E461FDDBA52006CE49D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelpers.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				E29CF9091FE152CC005038A8 /* Resourcebookings.swift */,
 				E2FDE61C1FE06E1B006BA8DD /* EventSection.swift */,
 				E25513FB1FE8588B00C76673 /* Schedule.swift */,
+				3CECCF0120210C3000165319 /* Schedules.swift */,
 				E2286E461FDDBA52006CE49D /* Pagination.swift */,
 				E265B3311FDF2D7B0000591B /* Address.swift */,
 				E265B3211FDF2BD50000591B /* Attributes.swift */,
@@ -769,6 +772,7 @@
 				E2286E451FDDB9BA006CE49D /* Events.swift in Sources */,
 				E26A7D451FDC53A900F55465 /* VCEvents.swift in Sources */,
 				E2FDE60F1FE00070006BA8DD /* Amount.swift in Sources */,
+				3CECCF0220210C3000165319 /* Schedules.swift in Sources */,
 				E24FB9291FDFFA0D00C5242B /* Resourcebooking.swift in Sources */,
 				E24FB9371FDFFD1800C5242B /* Resource.swift in Sources */,
 				E262447D1FE9B5AB001CCE59 /* GetCustomData.swift in Sources */,
