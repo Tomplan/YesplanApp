@@ -15,17 +15,17 @@ class DVCEventInfo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.darkGray
-        self.title = "Eventinfo"
+        self.view.backgroundColor = UIColor.red
+        self.title = "Info"
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()
         
         if self.contentText != nil {
             self.contentLabel?.text = self.contentText
         }
+        
     }
-    
-    
+
     func initializeInterfaceElements() {
         self.contentLabel = UILabel()
         self.contentLabel!.translatesAutoresizingMaskIntoConstraints = false

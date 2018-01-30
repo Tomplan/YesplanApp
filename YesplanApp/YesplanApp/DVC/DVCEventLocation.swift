@@ -15,7 +15,7 @@ class DVCEventLocation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.darkGray
+        self.view.backgroundColor = UIColor.blue
         self.title = "Location"
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()

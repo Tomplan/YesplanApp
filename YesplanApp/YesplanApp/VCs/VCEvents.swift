@@ -23,7 +23,7 @@ class VCEvents: UIViewController {
         super.viewDidLoad()
         
         self.title = "Events"
-//        self.view.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor.lightGray
         self.TVEvents.dataSource = self
         self.TVEvents.delegate = self
         self.initializeInterfaceElements()
@@ -37,8 +37,10 @@ class VCEvents: UIViewController {
         GetEvents()
         do_table_refresh()
         print("in viewDIDLOAD")
+        
+        
     }
-    
+   
     
     func initializeInterfaceElements() {
         self.TVEvents.translatesAutoresizingMaskIntoConstraints = false
@@ -387,13 +389,13 @@ extension VCEvents: UITableViewDataSource {
     }
         cell!.LblEventsDefaultschedulestarttime.text = "\(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].defaultschedulestarttime!) - \(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].defaultscheduleendtime!)"
 //
-//        if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations!.isEmpty != true {
+        if YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations!.isEmpty != true {
 //
             cell!.LblEventLocation.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].locations![0].name
 //        } else {
 //            cell!.LblEventLocation.text =  "geen locatie!"
 //
-//        }
+        }
         cell!.LblEventName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].name!
 ////    print(YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].name!)
         cell!.LblEventGroupName.text = YPgroupedEventsSorted[indexPath.section].YPEvents[indexPath.row].group?.name
@@ -410,12 +412,13 @@ extension VCEvents: UITableViewDelegate {
 
         if cell != nil {
             print("hierse")
-
-            let detailVC: DVCEvent = DVCEvent()
-            
-//            detailVC.contentText = "Yep" // cell?.textLabel?.text
-            
-            self.navigationController?.pushViewController(detailVC, animated: true)
+//            let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "DVCEvent") as! EVCEvent
+//            let VC1 = DVCEvent() //change this to your class name
+//            self.present(VC1, animated: true, completion: nil)
+//            self.navigationController!.pushViewController(VC1, animated: true)
+            let detailVC = DVCEvent()
+//
+            self.navigationController!.pushViewController(detailVC, animated: true)
         }
     }
 }

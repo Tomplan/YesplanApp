@@ -15,7 +15,7 @@ class DVCEventTeam: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.darkGray
+        self.view.backgroundColor = UIColor.white
         self.title = "Team"
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()

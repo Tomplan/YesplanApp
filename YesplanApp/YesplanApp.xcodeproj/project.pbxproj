@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C6DE9D7201F4D6400446ACD /* DVCEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D5201F4D6400446ACD /* DVCEvent.swift */; };
-		3C6DE9D8201F4D6400446ACD /* DVCEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D6201F4D6400446ACD /* DVCEvent.xib */; };
-		3C6DE9DB201F56B100446ACD /* DVCEventTimeSchedulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D9201F56B100446ACD /* DVCEventTimeSchedulesViewController.swift */; };
-		3C6DE9DC201F56B100446ACD /* DVCEventTimeSchedulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DE9DA201F56B100446ACD /* DVCEventTimeSchedulesViewController.xib */; };
+		3C257EA8201F8DAE00D23B3A /* DVCNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C257EA6201F8DAE00D23B3A /* DVCNav.swift */; };
+		3C257EA9201F8DAE00D23B3A /* DVCNav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C257EA7201F8DAE00D23B3A /* DVCNav.xib */; };
+		3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */; };
+		3C6DE9D8201F4D6400446ACD /* DVCEventOLD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D6201F4D6400446ACD /* DVCEventOLD.xib */; };
+		3CA6E795201FC55900499A3D /* DVCEventSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E793201FC55900499A3D /* DVCEventSchedule.swift */; };
+		3CA6E796201FC55900499A3D /* DVCEventSchedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA6E794201FC55900499A3D /* DVCEventSchedule.xib */; };
+		3CA6E799201FCF5600499A3D /* DVCEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E797201FCF5600499A3D /* DVCEvent.swift */; };
+		3CA6E79A201FCF5600499A3D /* DVCEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA6E798201FCF5600499A3D /* DVCEvent.xib */; };
 		3CC1461E2018E9DB00ABE404 /* TasksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1461D2018E9DB00ABE404 /* TasksSection.swift */; };
 		3CC146202018EA5A00ABE404 /* GetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1461F2018EA5A00ABE404 /* GetTasks.swift */; };
 		3CC1462220193CF400ABE404 /* func stringToDateShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1462120193CF400ABE404 /* func stringToDateShort.swift */; };
@@ -154,10 +158,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C6DE9D5201F4D6400446ACD /* DVCEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEvent.swift; sourceTree = "<group>"; };
-		3C6DE9D6201F4D6400446ACD /* DVCEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEvent.xib; sourceTree = "<group>"; };
-		3C6DE9D9201F56B100446ACD /* DVCEventTimeSchedulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventTimeSchedulesViewController.swift; sourceTree = "<group>"; };
-		3C6DE9DA201F56B100446ACD /* DVCEventTimeSchedulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventTimeSchedulesViewController.xib; sourceTree = "<group>"; };
+		3C257EA6201F8DAE00D23B3A /* DVCNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCNav.swift; sourceTree = "<group>"; };
+		3C257EA7201F8DAE00D23B3A /* DVCNav.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCNav.xib; sourceTree = "<group>"; };
+		3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventOLD.swift; sourceTree = "<group>"; };
+		3C6DE9D6201F4D6400446ACD /* DVCEventOLD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventOLD.xib; sourceTree = "<group>"; };
+		3CA6E793201FC55900499A3D /* DVCEventSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventSchedule.swift; sourceTree = "<group>"; };
+		3CA6E794201FC55900499A3D /* DVCEventSchedule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventSchedule.xib; sourceTree = "<group>"; };
+		3CA6E797201FCF5600499A3D /* DVCEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEvent.swift; sourceTree = "<group>"; };
+		3CA6E798201FCF5600499A3D /* DVCEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEvent.xib; sourceTree = "<group>"; };
 		3CC1461D2018E9DB00ABE404 /* TasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksSection.swift; sourceTree = "<group>"; };
 		3CC1461F2018EA5A00ABE404 /* GetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTasks.swift; sourceTree = "<group>"; };
 		3CC1462120193CF400ABE404 /* func stringToDateShort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "func stringToDateShort.swift"; sourceTree = "<group>"; };
@@ -451,12 +459,16 @@
 		E29CF9131FE1B93A005038A8 /* DVC */ = {
 			isa = PBXGroup;
 			children = (
-				3C6DE9D5201F4D6400446ACD /* DVCEvent.swift */,
-				3C6DE9D6201F4D6400446ACD /* DVCEvent.xib */,
+				3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */,
+				3C6DE9D6201F4D6400446ACD /* DVCEventOLD.xib */,
+				3CA6E797201FCF5600499A3D /* DVCEvent.swift */,
+				3CA6E798201FCF5600499A3D /* DVCEvent.xib */,
+				3C257EA6201F8DAE00D23B3A /* DVCNav.swift */,
+				3C257EA7201F8DAE00D23B3A /* DVCNav.xib */,
 				E262445C1FE9989E001CCE59 /* DVCEventInfo.swift */,
 				E262445D1FE9989E001CCE59 /* DVCEventInfo.xib */,
-				3C6DE9D9201F56B100446ACD /* DVCEventTimeSchedulesViewController.swift */,
-				3C6DE9DA201F56B100446ACD /* DVCEventTimeSchedulesViewController.xib */,
+				3CA6E793201FC55900499A3D /* DVCEventSchedule.swift */,
+				3CA6E794201FC55900499A3D /* DVCEventSchedule.xib */,
 				E26244601FE998DF001CCE59 /* DVCEventLocation.swift */,
 				E26244611FE998DF001CCE59 /* DVCEventLocation.xib */,
 				E26244641FE998F7001CCE59 /* DVCEventTeam.swift */,
@@ -624,9 +636,11 @@
 				E22DE4791FDB173300E0F499 /* LaunchScreen.storyboard in Resources */,
 				3CDAA503201E4C9E008F9E1D /* VCConflicts.xib in Resources */,
 				3CDAA4FF201E4C8E008F9E1D /* VCTodo.xib in Resources */,
+				3CA6E796201FC55900499A3D /* DVCEventSchedule.xib in Resources */,
 				E2605971201688F800C8BE6A /* VCTasks.xib in Resources */,
 				3CDAA4D1201C7D34008F9E1D /* Assets.xcassets in Resources */,
-				3C6DE9D8201F4D6400446ACD /* DVCEvent.xib in Resources */,
+				3C6DE9D8201F4D6400446ACD /* DVCEventOLD.xib in Resources */,
+				3C257EA9201F8DAE00D23B3A /* DVCNav.xib in Resources */,
 				3CC14626201BB56200ABE404 /* DVCTask.xib in Resources */,
 				3CDAA4F7201E4C5E008F9E1D /* VCSearch.xib in Resources */,
 				E26244771FE99966001CCE59 /* DVCEventAttachments.xib in Resources */,
@@ -644,10 +658,10 @@
 				E262446B1FE9990E001CCE59 /* DVCEventResources.xib in Resources */,
 				3CDAA4FB201E4C71008F9E1D /* VCUser.xib in Resources */,
 				E26244631FE998DF001CCE59 /* DVCEventLocation.xib in Resources */,
-				3C6DE9DC201F56B100446ACD /* DVCEventTimeSchedulesViewController.xib in Resources */,
 				E26A7D461FDC53A900F55465 /* VCEvents.xib in Resources */,
 				E262447B1FE9AD8E001CCE59 /* DVCEventCustomData.xib in Resources */,
 				3CDAA507201E4CB0008F9E1D /* VCUpdates.xib in Resources */,
+				3CA6E79A201FCF5600499A3D /* DVCEvent.xib in Resources */,
 				3CDAA4D5201E1E6F008F9E1D /* VCTeamplanner.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,16 +700,18 @@
 				3CDAA4F2201E4C4B008F9E1D /* VCHelp.swift in Sources */,
 				E26244721FE99945001CCE59 /* DVCEventContacts.swift in Sources */,
 				E265B32A1FDF2CA90000591B /* Status.swift in Sources */,
+				3CA6E795201FC55900499A3D /* DVCEventSchedule.swift in Sources */,
 				E262445E1FE9989E001CCE59 /* DVCEventInfo.swift in Sources */,
 				E26244661FE998F7001CCE59 /* DVCEventTeam.swift in Sources */,
 				E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */,
 				E2FDE6191FE063AF006BA8DD /* GetEvents.swift in Sources */,
-				3C6DE9D7201F4D6400446ACD /* DVCEvent.swift in Sources */,
+				3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */,
 				E2FDE6111FE00185006BA8DD /* Contactbookings.swift in Sources */,
 				E2FDE6231FE0706B006BA8DD /* public func stringToSelectedDate.swift in Sources */,
 				E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */,
 				E2FDE6221FE0706B006BA8DD /* public func stringToDate.swift in Sources */,
 				E25513FC1FE8588B00C76673 /* Schedule.swift in Sources */,
+				3CA6E799201FCF5600499A3D /* DVCEvent.swift in Sources */,
 				3CDAA4D4201E1E6F008F9E1D /* VCTeamplanner.swift in Sources */,
 				E262446A1FE9990E001CCE59 /* DVCEventResources.swift in Sources */,
 				E265B3201FDF2B7C0000591B /* Task.swift in Sources */,
@@ -718,6 +734,7 @@
 				3CC146202018EA5A00ABE404 /* GetTasks.swift in Sources */,
 				E2AE9A681FE2940D00FD0C8A /* TBCEvent.swift in Sources */,
 				E265B3261FDF2C440000591B /* Own.swift in Sources */,
+				3C257EA8201F8DAE00D23B3A /* DVCNav.swift in Sources */,
 				E262446E1FE99923001CCE59 /* DVCEventTasks.swift in Sources */,
 				E265B32E1FDF2D1A0000591B /* Organization.swift in Sources */,
 				E2444C7A2015FEB900556906 /* Base.swift in Sources */,
@@ -734,7 +751,6 @@
 				E2444C762015FE4200556906 /* User_Id.swift in Sources */,
 				E265B31E1FDF2AF70000591B /* Contacts.swift in Sources */,
 				E2444C722015FD5A00556906 /* Task_Id.swift in Sources */,
-				3C6DE9DB201F56B100446ACD /* DVCEventTimeSchedulesViewController.swift in Sources */,
 				E22DE46D1FDB173300E0F499 /* AppDelegate.swift in Sources */,
 				E25513FE1FE858D400C76673 /* Entry.swift in Sources */,
 				E262447A1FE9AD8E001CCE59 /* DVCEventCustomData.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  DVCEventTimeSchedulesViewController.swift
+//  DVCEventSchedule.swift
 //  YesplanApp
 //
 //  Created by Techcc - FOH - Video on 29/01/18.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-class DVCEventTimeSchedules: UIViewController {
-
+class DVCEventSchedule: UIViewController {
+    
     var contentText: String?
     var contentLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.darkGray
-        self.title = "Schedules"
+        self.view.backgroundColor = UIColor.green
+        self.title = "Schedule"
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()
         
         if self.contentText != nil {
             self.contentLabel?.text = self.contentText
         }
+        
     }
-    
     
     func initializeInterfaceElements() {
         self.contentLabel = UILabel()
