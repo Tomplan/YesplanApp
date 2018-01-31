@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C257EA8201F8DAE00D23B3A /* DVCNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C257EA6201F8DAE00D23B3A /* DVCNav.swift */; };
 		3C257EA9201F8DAE00D23B3A /* DVCNav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C257EA7201F8DAE00D23B3A /* DVCNav.xib */; };
+		3C53666820226A6800838E6D /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53666720226A6800838E6D /* GlobalVariable.swift */; };
+		3C53666A202273D000838E6D /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C536669202273D000838E6D /* GetLocation.swift */; };
 		3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */; };
 		3C6DE9D8201F4D6400446ACD /* DVCEventOLD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D6201F4D6400446ACD /* DVCEventOLD.xib */; };
 		3CA6E795201FC55900499A3D /* DVCEventSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E793201FC55900499A3D /* DVCEventSchedule.swift */; };
@@ -41,6 +43,14 @@
 		3CDAA503201E4C9E008F9E1D /* VCConflicts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDAA501201E4C9E008F9E1D /* VCConflicts.xib */; };
 		3CDAA506201E4CB0008F9E1D /* VCUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA504201E4CB0008F9E1D /* VCUpdates.swift */; };
 		3CDAA507201E4CB0008F9E1D /* VCUpdates.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDAA505201E4CB0008F9E1D /* VCUpdates.xib */; };
+		3CE435B020225B16009CCAB1 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435AF20225B16009CCAB1 /* Locations.swift */; };
+		3CE435B220225FCB009CCAB1 /* ContactType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435B120225FCB009CCAB1 /* ContactType.swift */; };
+		3CE435B42022602F009CCAB1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435B32022602F009CCAB1 /* Person.swift */; };
+		3CE435B820226269009CCAB1 /* Contact_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435B720226269009CCAB1 /* Contact_Id.swift */; };
+		3CE435BA2022643B009CCAB1 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435B92022643B009CCAB1 /* Resources.swift */; };
+		3CE435BC20226478009CCAB1 /* Resource_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435BB20226478009CCAB1 /* Resource_Id.swift */; };
+		3CE435BE202264D6009CCAB1 /* ContactbookingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435BD202264D6009CCAB1 /* ContactbookingType.swift */; };
+		3CE435C020226652009CCAB1 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435BF20226652009CCAB1 /* Groups.swift */; };
 		3CECCF0220210C3000165319 /* Schedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CECCF0120210C3000165319 /* Schedules.swift */; };
 		E2286E451FDDB9BA006CE49D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E441FDDB9BA006CE49D /* Events.swift */; };
 		E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E461FDDBA52006CE49D /* Pagination.swift */; };
@@ -56,11 +66,11 @@
 		E2444C762015FE4200556906 /* User_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C752015FE4200556906 /* User_Id.swift */; };
 		E2444C782015FE6700556906 /* Usergroup_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C772015FE6700556906 /* Usergroup_Id.swift */; };
 		E2444C7A2015FEB900556906 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2444C792015FEB900556906 /* Base.swift */; };
-		E24FB9291FDFFA0D00C5242B /* Resourcebooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */; };
-		E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */; };
-		E24FB92F1FDFFB0000C5242B /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92E1FDFFB0000C5242B /* Placeholder.swift */; };
+		E24FB9291FDFFA0D00C5242B /* Resourcebooking_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9281FDFFA0D00C5242B /* Resourcebooking_Id.swift */; };
+		E24FB92D1FDFFA8900C5242B /* ResourceInstance_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92C1FDFFA8900C5242B /* ResourceInstance_Id.swift */; };
+		E24FB92F1FDFFB0000C5242B /* ResourcePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB92E1FDFFB0000C5242B /* ResourcePlaceholder.swift */; };
 		E24FB9311FDFFB8C00C5242B /* Costmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9301FDFFB8B00C5242B /* Costmodel.swift */; };
-		E24FB9331FDFFC0D00C5242B /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9321FDFFC0D00C5242B /* Discount.swift */; };
+		E24FB9331FDFFC0D00C5242B /* Discount_Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9321FDFFC0D00C5242B /* Discount_Formula.swift */; };
 		E24FB9351FDFFC3800C5242B /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9341FDFFC3800C5242B /* Formula.swift */; };
 		E24FB9371FDFFD1800C5242B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9361FDFFD1800C5242B /* Resource.swift */; };
 		E24FB9391FDFFF0500C5242B /* CostFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FB9381FDFFF0500C5242B /* CostFormula.swift */; };
@@ -87,16 +97,16 @@
 		E262447A1FE9AD8E001CCE59 /* DVCEventCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26244781FE9AD8E001CCE59 /* DVCEventCustomData.swift */; };
 		E262447B1FE9AD8E001CCE59 /* DVCEventCustomData.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26244791FE9AD8E001CCE59 /* DVCEventCustomData.xib */; };
 		E262447D1FE9B5AB001CCE59 /* GetCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262447C1FE9B5AB001CCE59 /* GetCustomData.swift */; };
-		E265B3181FDF22AF0000591B /* ContactLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3171FDF22AF0000591B /* ContactLink.swift */; };
+		E265B3181FDF22AF0000591B /* ContactLink_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3171FDF22AF0000591B /* ContactLink_Id.swift */; };
 		E265B31A1FDF25950000591B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3191FDF25950000591B /* Contact.swift */; };
-		E265B31C1FDF27290000591B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B31B1FDF27290000591B /* Event.swift */; };
+		E265B31C1FDF27290000591B /* Event_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B31B1FDF27290000591B /* Event_Id.swift */; };
 		E265B31E1FDF2AF70000591B /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B31D1FDF2AF70000591B /* Contacts.swift */; };
 		E265B3201FDF2B7C0000591B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B31F1FDF2B7C0000591B /* Task.swift */; };
 		E265B3221FDF2BD50000591B /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3211FDF2BD50000591B /* Attributes.swift */; };
 		E265B3261FDF2C440000591B /* Own.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3251FDF2C440000591B /* Own.swift */; };
-		E265B3281FDF2C830000591B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3271FDF2C830000591B /* Profile.swift */; };
-		E265B32A1FDF2CA90000591B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3291FDF2CA90000591B /* Status.swift */; };
-		E265B32C1FDF2CED0000591B /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B32B1FDF2CED0000591B /* Link.swift */; };
+		E265B3281FDF2C830000591B /* Profile_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3271FDF2C830000591B /* Profile_Id.swift */; };
+		E265B32A1FDF2CA90000591B /* Status_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3291FDF2CA90000591B /* Status_Id.swift */; };
+		E265B32C1FDF2CED0000591B /* LinkAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B32B1FDF2CED0000591B /* LinkAttachment.swift */; };
 		E265B32E1FDF2D1A0000591B /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B32D1FDF2D1A0000591B /* Organization.swift */; };
 		E265B3301FDF2D520000591B /* Contactinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B32F1FDF2D520000591B /* Contactinfo.swift */; };
 		E265B3321FDF2D7B0000591B /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265B3311FDF2D7B0000591B /* Address.swift */; };
@@ -105,15 +115,15 @@
 		E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26A7D481FDC55C600F55465 /* TVCEvents.swift */; };
 		E26A7D4B1FDC55C600F55465 /* TVCEvents.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26A7D491FDC55C600F55465 /* TVCEvents.xib */; };
 		E29CF90A1FE152CC005038A8 /* Resourcebookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29CF9091FE152CC005038A8 /* Resourcebookings.swift */; };
-		E2A07FD51FDF308600F0D94B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD41FDF308600F0D94B /* Group.swift */; };
+		E2A07FD51FDF308600F0D94B /* Group_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD41FDF308600F0D94B /* Group_Id.swift */; };
 		E2A07FD71FDF317100F0D94B /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD61FDF317100F0D94B /* Child.swift */; };
-		E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD81FDF319D00F0D94B /* Location.swift */; };
+		E2A07FD91FDF319D00F0D94B /* Location_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FD81FDF319D00F0D94B /* Location_Id.swift */; };
 		E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDA1FDF333B00F0D94B /* Tasks.swift */; };
 		E2A07FDD1FDF379500F0D94B /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDC1FDF379500F0D94B /* Profiles.swift */; };
 		E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */; };
 		E2AE9A681FE2940D00FD0C8A /* TBCEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE9A661FE2940D00FD0C8A /* TBCEvent.swift */; };
 		E2AE9A691FE2940D00FD0C8A /* TBCEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE9A671FE2940D00FD0C8A /* TBCEvent.xib */; };
-		E2B4AB791FDF1DBE00374830 /* Contactbooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */; };
+		E2B4AB791FDF1DBE00374830 /* Contactbooking_Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4AB781FDF1DBE00374830 /* Contactbooking_Id.swift */; };
 		E2FDE60F1FE00070006BA8DD /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE60E1FE00070006BA8DD /* Amount.swift */; };
 		E2FDE6111FE00185006BA8DD /* Contactbookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6101FE00185006BA8DD /* Contactbookings.swift */; };
 		E2FDE6131FE05EA2006BA8DD /* GetCurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */; };
@@ -161,6 +171,8 @@
 /* Begin PBXFileReference section */
 		3C257EA6201F8DAE00D23B3A /* DVCNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCNav.swift; sourceTree = "<group>"; };
 		3C257EA7201F8DAE00D23B3A /* DVCNav.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCNav.xib; sourceTree = "<group>"; };
+		3C53666720226A6800838E6D /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		3C536669202273D000838E6D /* GetLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
 		3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventOLD.swift; sourceTree = "<group>"; };
 		3C6DE9D6201F4D6400446ACD /* DVCEventOLD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventOLD.xib; sourceTree = "<group>"; };
 		3CA6E793201FC55900499A3D /* DVCEventSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventSchedule.swift; sourceTree = "<group>"; };
@@ -192,6 +204,14 @@
 		3CDAA501201E4C9E008F9E1D /* VCConflicts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCConflicts.xib; sourceTree = "<group>"; };
 		3CDAA504201E4CB0008F9E1D /* VCUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCUpdates.swift; sourceTree = "<group>"; };
 		3CDAA505201E4CB0008F9E1D /* VCUpdates.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCUpdates.xib; sourceTree = "<group>"; };
+		3CE435AF20225B16009CCAB1 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		3CE435B120225FCB009CCAB1 /* ContactType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactType.swift; sourceTree = "<group>"; };
+		3CE435B32022602F009CCAB1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3CE435B720226269009CCAB1 /* Contact_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_Id.swift; sourceTree = "<group>"; };
+		3CE435B92022643B009CCAB1 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		3CE435BB20226478009CCAB1 /* Resource_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource_Id.swift; sourceTree = "<group>"; };
+		3CE435BD202264D6009CCAB1 /* ContactbookingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactbookingType.swift; sourceTree = "<group>"; };
+		3CE435BF20226652009CCAB1 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		3CECCF0120210C3000165319 /* Schedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedules.swift; sourceTree = "<group>"; };
 		E2286E441FDDB9BA006CE49D /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E2286E461FDDBA52006CE49D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
@@ -214,11 +234,11 @@
 		E2444C752015FE4200556906 /* User_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Id.swift; sourceTree = "<group>"; };
 		E2444C772015FE6700556906 /* Usergroup_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usergroup_Id.swift; sourceTree = "<group>"; };
 		E2444C792015FEB900556906 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourcebooking.swift; sourceTree = "<group>"; };
-		E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInstance.swift; sourceTree = "<group>"; };
-		E24FB92E1FDFFB0000C5242B /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		E24FB9281FDFFA0D00C5242B /* Resourcebooking_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourcebooking_Id.swift; sourceTree = "<group>"; };
+		E24FB92C1FDFFA8900C5242B /* ResourceInstance_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInstance_Id.swift; sourceTree = "<group>"; };
+		E24FB92E1FDFFB0000C5242B /* ResourcePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePlaceholder.swift; sourceTree = "<group>"; };
 		E24FB9301FDFFB8B00C5242B /* Costmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costmodel.swift; sourceTree = "<group>"; };
-		E24FB9321FDFFC0D00C5242B /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		E24FB9321FDFFC0D00C5242B /* Discount_Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount_Formula.swift; sourceTree = "<group>"; };
 		E24FB9341FDFFC3800C5242B /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
 		E24FB9361FDFFD1800C5242B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		E24FB9381FDFFF0500C5242B /* CostFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostFormula.swift; sourceTree = "<group>"; };
@@ -245,16 +265,16 @@
 		E26244781FE9AD8E001CCE59 /* DVCEventCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventCustomData.swift; sourceTree = "<group>"; };
 		E26244791FE9AD8E001CCE59 /* DVCEventCustomData.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventCustomData.xib; sourceTree = "<group>"; };
 		E262447C1FE9B5AB001CCE59 /* GetCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomData.swift; sourceTree = "<group>"; };
-		E265B3171FDF22AF0000591B /* ContactLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLink.swift; sourceTree = "<group>"; };
+		E265B3171FDF22AF0000591B /* ContactLink_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLink_Id.swift; sourceTree = "<group>"; };
 		E265B3191FDF25950000591B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		E265B31B1FDF27290000591B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E265B31B1FDF27290000591B /* Event_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_Id.swift; sourceTree = "<group>"; };
 		E265B31D1FDF2AF70000591B /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		E265B31F1FDF2B7C0000591B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E265B3211FDF2BD50000591B /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		E265B3251FDF2C440000591B /* Own.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Own.swift; sourceTree = "<group>"; };
-		E265B3271FDF2C830000591B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		E265B3291FDF2CA90000591B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		E265B32B1FDF2CED0000591B /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		E265B3271FDF2C830000591B /* Profile_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_Id.swift; sourceTree = "<group>"; };
+		E265B3291FDF2CA90000591B /* Status_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status_Id.swift; sourceTree = "<group>"; };
+		E265B32B1FDF2CED0000591B /* LinkAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkAttachment.swift; sourceTree = "<group>"; };
 		E265B32D1FDF2D1A0000591B /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		E265B32F1FDF2D520000591B /* Contactinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactinfo.swift; sourceTree = "<group>"; };
 		E265B3311FDF2D7B0000591B /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -263,15 +283,15 @@
 		E26A7D481FDC55C600F55465 /* TVCEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCEvents.swift; sourceTree = "<group>"; };
 		E26A7D491FDC55C600F55465 /* TVCEvents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCEvents.xib; sourceTree = "<group>"; };
 		E29CF9091FE152CC005038A8 /* Resourcebookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourcebookings.swift; sourceTree = "<group>"; };
-		E2A07FD41FDF308600F0D94B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		E2A07FD41FDF308600F0D94B /* Group_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Id.swift; sourceTree = "<group>"; };
 		E2A07FD61FDF317100F0D94B /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
-		E2A07FD81FDF319D00F0D94B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E2A07FD81FDF319D00F0D94B /* Location_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_Id.swift; sourceTree = "<group>"; };
 		E2A07FDA1FDF333B00F0D94B /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		E2A07FDC1FDF379500F0D94B /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
 		E2A07FDE1FDF38E600F0D94B /* GetProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfiles.swift; sourceTree = "<group>"; };
 		E2AE9A661FE2940D00FD0C8A /* TBCEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCEvent.swift; sourceTree = "<group>"; };
 		E2AE9A671FE2940D00FD0C8A /* TBCEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TBCEvent.xib; sourceTree = "<group>"; };
-		E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactbooking.swift; sourceTree = "<group>"; };
+		E2B4AB781FDF1DBE00374830 /* Contactbooking_Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactbooking_Id.swift; sourceTree = "<group>"; };
 		E2FDE60E1FE00070006BA8DD /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		E2FDE6101FE00185006BA8DD /* Contactbookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactbookings.swift; sourceTree = "<group>"; };
 		E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentDate.swift; sourceTree = "<group>"; };
@@ -310,20 +330,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E2286E431FDDB98E006CE49D /* Classes */ = {
+		E2286E431FDDB98E006CE49D /* Classes&Structs */ = {
 			isa = PBXGroup;
 			children = (
+				3C53666720226A6800838E6D /* GlobalVariable.swift */,
 				E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */,
 				E2286E441FDDB9BA006CE49D /* Events.swift */,
+				3CE435BF20226652009CCAB1 /* Groups.swift */,
 				E265B31D1FDF2AF70000591B /* Contacts.swift */,
 				E2FDE6101FE00185006BA8DD /* Contactbookings.swift */,
 				E2A07FDA1FDF333B00F0D94B /* Tasks.swift */,
 				E2A07FDC1FDF379500F0D94B /* Profiles.swift */,
 				E2FDE6281FE084F9006BA8DD /* Statuses.swift */,
 				E29CF9091FE152CC005038A8 /* Resourcebookings.swift */,
+				3CE435B92022643B009CCAB1 /* Resources.swift */,
 				E2FDE61C1FE06E1B006BA8DD /* EventSection.swift */,
-				E25513FB1FE8588B00C76673 /* Schedule.swift */,
 				3CECCF0120210C3000165319 /* Schedules.swift */,
+				E25513FB1FE8588B00C76673 /* Schedule.swift */,
 				E2286E461FDDBA52006CE49D /* Pagination.swift */,
 				E265B3311FDF2D7B0000591B /* Address.swift */,
 				E265B3211FDF2BD50000591B /* Attributes.swift */,
@@ -332,34 +355,40 @@
 				E2444C772015FE6700556906 /* Usergroup_Id.swift */,
 				E2444C752015FE4200556906 /* User_Id.swift */,
 				E2A07FD61FDF317100F0D94B /* Child.swift */,
-				E2B4AB781FDF1DBE00374830 /* Contactbooking.swift */,
-				E2A07FD41FDF308600F0D94B /* Group.swift */,
+				E2B4AB781FDF1DBE00374830 /* Contactbooking_Id.swift */,
+				3CE435BD202264D6009CCAB1 /* ContactbookingType.swift */,
+				3CE435B120225FCB009CCAB1 /* ContactType.swift */,
+				E2A07FD41FDF308600F0D94B /* Group_Id.swift */,
 				E265B32F1FDF2D520000591B /* Contactinfo.swift */,
-				E265B3171FDF22AF0000591B /* ContactLink.swift */,
+				E265B3171FDF22AF0000591B /* ContactLink_Id.swift */,
 				E265B3191FDF25950000591B /* Contact.swift */,
+				3CE435B720226269009CCAB1 /* Contact_Id.swift */,
 				E25513FD1FE858D400C76673 /* Entry.swift */,
-				E265B31B1FDF27290000591B /* Event.swift */,
-				E265B32B1FDF2CED0000591B /* Link.swift */,
+				E265B31B1FDF27290000591B /* Event_Id.swift */,
+				E265B32B1FDF2CED0000591B /* LinkAttachment.swift */,
 				E265B32D1FDF2D1A0000591B /* Organization.swift */,
 				E265B3251FDF2C440000591B /* Own.swift */,
-				E265B3271FDF2C830000591B /* Profile.swift */,
-				E265B3291FDF2CA90000591B /* Status.swift */,
+				E265B3271FDF2C830000591B /* Profile_Id.swift */,
+				E265B3291FDF2CA90000591B /* Status_Id.swift */,
 				E265B31F1FDF2B7C0000591B /* Task.swift */,
-				E2A07FD81FDF319D00F0D94B /* Location.swift */,
-				E24FB9281FDFFA0D00C5242B /* Resourcebooking.swift */,
-				E24FB92C1FDFFA8900C5242B /* ResourceInstance.swift */,
-				E24FB92E1FDFFB0000C5242B /* Placeholder.swift */,
-				E24FB9301FDFFB8B00C5242B /* Costmodel.swift */,
-				E24FB9321FDFFC0D00C5242B /* Discount.swift */,
-				E24FB9341FDFFC3800C5242B /* Formula.swift */,
+				E2A07FD81FDF319D00F0D94B /* Location_Id.swift */,
+				3CE435AF20225B16009CCAB1 /* Locations.swift */,
 				E24FB9361FDFFD1800C5242B /* Resource.swift */,
+				3CE435BB20226478009CCAB1 /* Resource_Id.swift */,
+				E24FB9281FDFFA0D00C5242B /* Resourcebooking_Id.swift */,
+				E24FB92C1FDFFA8900C5242B /* ResourceInstance_Id.swift */,
+				E24FB92E1FDFFB0000C5242B /* ResourcePlaceholder.swift */,
+				E24FB9301FDFFB8B00C5242B /* Costmodel.swift */,
+				E24FB9321FDFFC0D00C5242B /* Discount_Formula.swift */,
+				E24FB9341FDFFC3800C5242B /* Formula.swift */,
 				E24FB9381FDFFF0500C5242B /* CostFormula.swift */,
 				E24FB93A1FDFFF6E00C5242B /* Priceformula.swift */,
 				E2FDE60E1FE00070006BA8DD /* Amount.swift */,
 				E22FB6AA1FE701EE006E7658 /* Customdata.swift */,
 				3CC1461D2018E9DB00ABE404 /* TasksSection.swift */,
+				3CE435B32022602F009CCAB1 /* Person.swift */,
 			);
-			path = Classes;
+			path = "Classes&Structs";
 			sourceTree = "<group>";
 		};
 		E22DE4601FDB173200E0F499 = {
@@ -386,7 +415,7 @@
 		E22DE46B1FDB173300E0F499 /* YesplanApp */ = {
 			isa = PBXGroup;
 			children = (
-				E2286E431FDDB98E006CE49D /* Classes */,
+				E2286E431FDDB98E006CE49D /* Classes&Structs */,
 				E22DE46C1FDB173300E0F499 /* AppDelegate.swift */,
 				E22DE4751FDB173300E0F499 /* Assets.xcassets */,
 				E2DAC6AB1FDC188D00B5B81B /* MainStoryboards */,
@@ -506,6 +535,7 @@
 				E2FDE6181FE063AF006BA8DD /* GetEvents.swift */,
 				3CC1461F2018EA5A00ABE404 /* GetTasks.swift */,
 				E25513F71FE856D400C76673 /* GetSchedule.swift */,
+				3C536669202273D000838E6D /* GetLocation.swift */,
 				E262447C1FE9B5AB001CCE59 /* GetCustomData.swift */,
 			);
 			path = functions;
@@ -691,22 +721,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E265B31A1FDF25950000591B /* Contact.swift in Sources */,
-				E265B3181FDF22AF0000591B /* ContactLink.swift in Sources */,
+				E265B3181FDF22AF0000591B /* ContactLink_Id.swift in Sources */,
 				E2FDE6131FE05EA2006BA8DD /* GetCurrentDate.swift in Sources */,
 				E2FDE6241FE0706B006BA8DD /* public func stringToEventDate.swift in Sources */,
 				E2FDE6251FE0706B006BA8DD /* public func stringToTime.swift in Sources */,
 				E29CF90A1FE152CC005038A8 /* Resourcebookings.swift in Sources */,
 				E26244761FE99966001CCE59 /* DVCEventAttachments.swift in Sources */,
-				E2B4AB791FDF1DBE00374830 /* Contactbooking.swift in Sources */,
+				E2B4AB791FDF1DBE00374830 /* Contactbooking_Id.swift in Sources */,
 				E24FB9311FDFFB8C00C5242B /* Costmodel.swift in Sources */,
 				3CC1462220193CF400ABE404 /* func stringToDateShort.swift in Sources */,
 				3CDAA4F2201E4C4B008F9E1D /* VCHelp.swift in Sources */,
 				E26244721FE99945001CCE59 /* DVCEventContacts.swift in Sources */,
-				E265B32A1FDF2CA90000591B /* Status.swift in Sources */,
+				E265B32A1FDF2CA90000591B /* Status_Id.swift in Sources */,
 				3CA6E795201FC55900499A3D /* DVCEventSchedule.swift in Sources */,
 				E262445E1FE9989E001CCE59 /* DVCEventInfo.swift in Sources */,
+				3CE435B820226269009CCAB1 /* Contact_Id.swift in Sources */,
+				3CE435B020225B16009CCAB1 /* Locations.swift in Sources */,
 				E26244661FE998F7001CCE59 /* DVCEventTeam.swift in Sources */,
 				E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */,
+				3CE435B220225FCB009CCAB1 /* ContactType.swift in Sources */,
 				E2FDE6191FE063AF006BA8DD /* GetEvents.swift in Sources */,
 				3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */,
 				E2FDE6111FE00185006BA8DD /* Contactbookings.swift in Sources */,
@@ -722,35 +755,41 @@
 				E265B3321FDF2D7B0000591B /* Address.swift in Sources */,
 				3CDAA502201E4C9E008F9E1D /* VCConflicts.swift in Sources */,
 				3CDAA4DC201E1EDA008F9E1D /* VCContacts.swift in Sources */,
-				E24FB92D1FDFFA8900C5242B /* ResourceInstance.swift in Sources */,
+				E24FB92D1FDFFA8900C5242B /* ResourceInstance_Id.swift in Sources */,
 				3CDAA4D8201E1E99008F9E1D /* VCResources.swift in Sources */,
-				E265B31C1FDF27290000591B /* Event.swift in Sources */,
+				3CE435BE202264D6009CCAB1 /* ContactbookingType.swift in Sources */,
+				E265B31C1FDF27290000591B /* Event_Id.swift in Sources */,
 				E23C6553201769E800ED40B5 /* TVCTasks.swift in Sources */,
 				E26A7D4A1FDC55C600F55465 /* TVCEvents.swift in Sources */,
 				E26244621FE998DF001CCE59 /* DVCEventLocation.swift in Sources */,
 				E2FDE61D1FE06E1B006BA8DD /* EventSection.swift in Sources */,
-				E24FB92F1FDFFB0000C5242B /* Placeholder.swift in Sources */,
+				E24FB92F1FDFFB0000C5242B /* ResourcePlaceholder.swift in Sources */,
 				E2605970201688F800C8BE6A /* VCTasks.swift in Sources */,
 				E2FDE6291FE084F9006BA8DD /* Statuses.swift in Sources */,
 				E2A07FD71FDF317100F0D94B /* Child.swift in Sources */,
-				E2A07FD91FDF319D00F0D94B /* Location.swift in Sources */,
+				E2A07FD91FDF319D00F0D94B /* Location_Id.swift in Sources */,
 				3CC146202018EA5A00ABE404 /* GetTasks.swift in Sources */,
+				3CE435BC20226478009CCAB1 /* Resource_Id.swift in Sources */,
 				E2AE9A681FE2940D00FD0C8A /* TBCEvent.swift in Sources */,
 				E265B3261FDF2C440000591B /* Own.swift in Sources */,
 				3C257EA8201F8DAE00D23B3A /* DVCNav.swift in Sources */,
+				3CE435BA2022643B009CCAB1 /* Resources.swift in Sources */,
 				E262446E1FE99923001CCE59 /* DVCEventTasks.swift in Sources */,
 				E265B32E1FDF2D1A0000591B /* Organization.swift in Sources */,
 				E2444C7A2015FEB900556906 /* Base.swift in Sources */,
 				E24FB93B1FDFFF6E00C5242B /* Priceformula.swift in Sources */,
-				E24FB9331FDFFC0D00C5242B /* Discount.swift in Sources */,
+				E24FB9331FDFFC0D00C5242B /* Discount_Formula.swift in Sources */,
 				E25513F81FE856D400C76673 /* GetSchedule.swift in Sources */,
 				E24FB9391FDFFF0500C5242B /* CostFormula.swift in Sources */,
+				3CE435B42022602F009CCAB1 /* Person.swift in Sources */,
 				3CDAA4E0201E1EF7008F9E1D /* VCReports.swift in Sources */,
 				E2A07FDD1FDF379500F0D94B /* Profiles.swift in Sources */,
-				E265B3281FDF2C830000591B /* Profile.swift in Sources */,
+				E265B3281FDF2C830000591B /* Profile_Id.swift in Sources */,
 				E2A07FDF1FDF38E600F0D94B /* GetProfiles.swift in Sources */,
-				E2A07FD51FDF308600F0D94B /* Group.swift in Sources */,
+				3C53666820226A6800838E6D /* GlobalVariable.swift in Sources */,
+				E2A07FD51FDF308600F0D94B /* Group_Id.swift in Sources */,
 				E265B3221FDF2BD50000591B /* Attributes.swift in Sources */,
+				3C53666A202273D000838E6D /* GetLocation.swift in Sources */,
 				E2444C762015FE4200556906 /* User_Id.swift in Sources */,
 				E265B31E1FDF2AF70000591B /* Contacts.swift in Sources */,
 				E2444C722015FD5A00556906 /* Task_Id.swift in Sources */,
@@ -766,14 +805,15 @@
 				3CDAA4FA201E4C71008F9E1D /* VCUser.swift in Sources */,
 				3CDAA506201E4CB0008F9E1D /* VCUpdates.swift in Sources */,
 				3CDAA4FE201E4C8E008F9E1D /* VCTodo.swift in Sources */,
-				E265B32C1FDF2CED0000591B /* Link.swift in Sources */,
+				E265B32C1FDF2CED0000591B /* LinkAttachment.swift in Sources */,
 				E24FB9351FDFFC3800C5242B /* Formula.swift in Sources */,
 				3CC1461E2018E9DB00ABE404 /* TasksSection.swift in Sources */,
 				E2286E451FDDB9BA006CE49D /* Events.swift in Sources */,
+				3CE435C020226652009CCAB1 /* Groups.swift in Sources */,
 				E26A7D451FDC53A900F55465 /* VCEvents.swift in Sources */,
 				E2FDE60F1FE00070006BA8DD /* Amount.swift in Sources */,
 				3CECCF0220210C3000165319 /* Schedules.swift in Sources */,
-				E24FB9291FDFFA0D00C5242B /* Resourcebooking.swift in Sources */,
+				E24FB9291FDFFA0D00C5242B /* Resourcebooking_Id.swift in Sources */,
 				E24FB9371FDFFD1800C5242B /* Resource.swift in Sources */,
 				E262447D1FE9B5AB001CCE59 /* GetCustomData.swift in Sources */,
 			);

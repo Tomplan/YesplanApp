@@ -11,21 +11,25 @@ import UIKit
 class DVCEventSchedule: UIViewController {
     
     var tableView: UITableView = UITableView()
-    var scheduleList = [String]()
+//    var scheduleList = [String]()
+//    var eventName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.darkGray
         self.tableView.backgroundColor = UIColor.darkGray
-        self.tableView.delegate = self
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()
     }
     
     
     func initializeInterfaceElements() {
+        GetSchedule(objectID: GlobalVariable.ObjectId)
+
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.dataSource = self
+        self.tableView.delegate = self
+
         self.view.addSubview(self.tableView)
     }
     
@@ -40,9 +44,6 @@ class DVCEventSchedule: UIViewController {
 
 
 extension DVCEventSchedule: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scheduleList.count
-    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor? = UIColor.darkGray
@@ -50,6 +51,19 @@ extension DVCEventSchedule: UITableViewDataSource, UITableViewDelegate {
         tableView.separatorStyle = .none
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {        
+        return eventName
+        }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return scheduleList.count
+    }
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "defaultCell")
         

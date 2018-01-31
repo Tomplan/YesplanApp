@@ -9,34 +9,68 @@
 import UIKit
 
 class DVCEventLocation: UIViewController {
-
-    var contentText: String?
-    var contentLabel: UILabel?
+    
+    var tableView: UITableView = UITableView()
+//    var objectId = String()
+    var eventName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blue
-        self.title = "Location"
+        self.view.backgroundColor = UIColor.darkGray
+        self.tableView.backgroundColor = UIColor.darkGray
         self.initializeInterfaceElements()
         self.autolayoutInterfaceElements()
-        
-        if self.contentText != nil {
-            self.contentLabel?.text = self.contentText
-        }
     }
     
     
     func initializeInterfaceElements() {
-        self.contentLabel = UILabel()
-        self.contentLabel!.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(self.contentLabel!)
+        GetLocation(objectID: GlobalVariable.ObjectId)
+        
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        self.view.addSubview(self.tableView)
     }
     
     
     func autolayoutInterfaceElements() {
-        self.contentLabel!.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        self.contentLabel!.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
-    
 }
 
+
+extension DVCEventLocation: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor? = UIColor.darkGray
+        cell.textLabel?.textColor = UIColor.lightGray
+        tableView.separatorStyle = .none
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return eventName
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return locationList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "defaultCell")
+        
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "defaultCell")
+        }
+        cell!.textLabel?.text = locationList[indexPath.row]
+        return cell!
+    }
+}

@@ -11,13 +11,13 @@ import Foundation
 var statusDict: [String:String] = [:]
 
 public func GetStatuses() {
-    let statuses = Statuses.from(url: "https://dewerft.yesplan.be/api/statuses?api_key=6AED6266671C92209161289C37D109E0")!
+    let statuses = Statuses(url: "\(GlobalVariable.OrganizationURL)/api/statuses?api_key=\(GlobalVariable.API_Key)")!
     //    dump(profiles)
     //    print(profiles.data.count)
     for i in 0 ..< statuses.data.count {
 //                print(statuses.data[i].name!)
 //                print(statuses.data[i].backgroundcolor!)
-        statusDict[statuses.data[i].name!] = statuses.data[i].backgroundcolor!
+        statusDict[statuses.data[i].name] = statuses.data[i].backgroundcolor
     }
 //        print(statusDict)
 }

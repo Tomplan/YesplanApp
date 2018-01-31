@@ -14,7 +14,8 @@ class DVCEvent: UIViewController {
     
     var tableView: UITableView = UITableView()
     var eventTabs = [String]()
-    var objectId = ""
+    var objectId = String() 
+    var eventName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +44,10 @@ class DVCEvent: UIViewController {
 
 
 extension DVCEvent: UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventTabs.count
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor? = UIColor.darkGray
-        cell.textLabel?.textColor = UIColor.lightGray
-        tableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,21 +62,41 @@ extension DVCEvent: UITableViewDataSource {
 }
 
 extension DVCEvent: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor? = UIColor.darkGray
+        cell.textLabel?.textColor = UIColor.lightGray
+        tableView.separatorStyle = .none
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return eventName
+        } else {
+            return "eventname"
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let cell: UITableViewCell? = tableView.cellForRow(at: indexPath)
 
         if indexPath.row == 0 {
             let detailVC: DVCEventInfo = DVCEventInfo()
-            
-
             self.navigationController?.pushViewController(detailVC, animated: true)
         } else if indexPath.row == 1 {
-            GetSchedule(objectID: objectId)
+//            GetSchedule(objectID: GlobalVariable.ObjectId)
             let detailVC: DVCEventSchedule = DVCEventSchedule()
-            detailVC.scheduleList = scheduleList
+//            detailVC.eventName = eventName
+//            detailVC.scheduleList = scheduleList
             self.navigationController?.pushViewController(detailVC, animated: true)
         } else if indexPath.row == 2 {
             let detailVC: DVCEventLocation = DVCEventLocation()
+             detailVC.eventName = eventName
+            
             self.navigationController?.pushViewController(detailVC, animated: true)
         } else if indexPath.row == 3 {
             let detailVC: DVCEventTeam = DVCEventTeam()

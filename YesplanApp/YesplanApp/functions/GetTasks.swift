@@ -18,7 +18,7 @@ public func GetTasks()
     YPgroupedTasks.removeAll()
     YPgroupedTasksSorted.removeAll()
     
-    let tasks_json = "https://dewerft.yesplan.be/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=6AED6266671C92209161289C37D109E0"
+    let tasks_json = "\(GlobalVariable.OrganizationURL)/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=\(GlobalVariable.API_Key)"
     if let tasksDownload = Tasks(url: tasks_json) {
         //            tasksDownload.printTasks()
         let tasks = tasksDownload.data
