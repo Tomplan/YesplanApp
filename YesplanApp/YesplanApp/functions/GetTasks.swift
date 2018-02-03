@@ -18,9 +18,8 @@ public func GetTasks()
     YPgroupedTasks.removeAll()
     YPgroupedTasksSorted.removeAll()
     
-    let tasks_json = "\(GlobalVariable.OrganizationURL)/api/tasks/task%3Ateam%3A1203%20-%20task%3Astatus%3Adone?api_key=\(GlobalVariable.API_Key)"
+    let tasks_json = "\(GlobalVariable.OrganizationURL)/api/tasks/task%3A\(GlobalVariable.TeamId)%20-%20task%3Astatus%3Adone?api_key=\(GlobalVariable.API_Key)"
     if let tasksDownload = Tasks(url: tasks_json) {
-        //            tasksDownload.printTasks()
         let tasks = tasksDownload.data
         
         //        First: group all tasks where due = nil
@@ -42,7 +41,6 @@ public func GetTasks()
         for task in tasks where task.due != nil {
             dueTasks.append(task)
             
-//            YPgroupedTasks.append(TasksSection(date: key, YPtasks: value))
         }
         
 //        dueTasks = dueTasks.sorted {
@@ -68,8 +66,6 @@ public func GetTasks()
 
 
     } else { print("not ok") }
-    
-
     
     
 }

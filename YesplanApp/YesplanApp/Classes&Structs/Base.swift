@@ -22,10 +22,13 @@ struct Base: Codable {
     }
     
     func printBase() {
-        print("\t\t url: \(self.url)")
-        if let id = self.name { print("\t\t id: \(id)") }
-        if let name = self.name { print("\t\t name: \(name)") }
-        if let type = self.type { print("\t\t email: \(type)") }
+        baseArray = []
+//        print("\t\t url: \(self.url)")
+//        baseArray.append(self.url)
+//        if let id = self.id { print("\t\t id: \(id)");  baseArray.append(id) }
+//        if let name = self.name { print("\t\t name: \(name)") }
+        if let name = self.name { baseArray.append(name) }
+//        if let type = self.type { print("\t\t type: \(type)");  baseArray.append(type) }
     }
 }
 

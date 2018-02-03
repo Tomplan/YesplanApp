@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3C257EA8201F8DAE00D23B3A /* DVCNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C257EA6201F8DAE00D23B3A /* DVCNav.swift */; };
 		3C257EA9201F8DAE00D23B3A /* DVCNav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C257EA7201F8DAE00D23B3A /* DVCNav.xib */; };
+		3C2A4E952025D3630011A367 /* DVCTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A4E942025D3630011A367 /* DVCTableView.swift */; };
+		3C2A4E972025D4E60011A367 /* GetJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A4E962025D4E60011A367 /* GetJSON.swift */; };
+		3C2A4E992025F0A40011A367 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A4E982025F0A40011A367 /* JSONValue.swift */; };
+		3C2A4E9B2025F1A80011A367 /* JSONValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A4E9A2025F1A80011A367 /* JSONValues.swift */; };
+		3C2A4E9D20265F980011A367 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A4E9C20265F980011A367 /* ExpandableNames.swift */; };
 		3C53666820226A6800838E6D /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53666720226A6800838E6D /* GlobalVariable.swift */; };
 		3C53666A202273D000838E6D /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C536669202273D000838E6D /* GetLocation.swift */; };
 		3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */; };
@@ -43,6 +48,7 @@
 		3CDAA503201E4C9E008F9E1D /* VCConflicts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDAA501201E4C9E008F9E1D /* VCConflicts.xib */; };
 		3CDAA506201E4CB0008F9E1D /* VCUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA504201E4CB0008F9E1D /* VCUpdates.swift */; };
 		3CDAA507201E4CB0008F9E1D /* VCUpdates.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDAA505201E4CB0008F9E1D /* VCUpdates.xib */; };
+		3CDBAA97202341E10088B706 /* GetTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBAA96202341E10088B706 /* GetTask.swift */; };
 		3CE435B020225B16009CCAB1 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435AF20225B16009CCAB1 /* Locations.swift */; };
 		3CE435B220225FCB009CCAB1 /* ContactType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435B120225FCB009CCAB1 /* ContactType.swift */; };
 		3CE435B42022602F009CCAB1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435B32022602F009CCAB1 /* Person.swift */; };
@@ -171,6 +177,11 @@
 /* Begin PBXFileReference section */
 		3C257EA6201F8DAE00D23B3A /* DVCNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCNav.swift; sourceTree = "<group>"; };
 		3C257EA7201F8DAE00D23B3A /* DVCNav.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCNav.xib; sourceTree = "<group>"; };
+		3C2A4E942025D3630011A367 /* DVCTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCTableView.swift; sourceTree = "<group>"; };
+		3C2A4E962025D4E60011A367 /* GetJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJSON.swift; sourceTree = "<group>"; };
+		3C2A4E982025F0A40011A367 /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
+		3C2A4E9A2025F1A80011A367 /* JSONValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValues.swift; sourceTree = "<group>"; };
+		3C2A4E9C20265F980011A367 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
 		3C53666720226A6800838E6D /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		3C536669202273D000838E6D /* GetLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
 		3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventOLD.swift; sourceTree = "<group>"; };
@@ -204,6 +215,7 @@
 		3CDAA501201E4C9E008F9E1D /* VCConflicts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCConflicts.xib; sourceTree = "<group>"; };
 		3CDAA504201E4CB0008F9E1D /* VCUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCUpdates.swift; sourceTree = "<group>"; };
 		3CDAA505201E4CB0008F9E1D /* VCUpdates.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCUpdates.xib; sourceTree = "<group>"; };
+		3CDBAA96202341E10088B706 /* GetTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTask.swift; sourceTree = "<group>"; };
 		3CE435AF20225B16009CCAB1 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		3CE435B120225FCB009CCAB1 /* ContactType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactType.swift; sourceTree = "<group>"; };
 		3CE435B32022602F009CCAB1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -387,6 +399,9 @@
 				E22FB6AA1FE701EE006E7658 /* Customdata.swift */,
 				3CC1461D2018E9DB00ABE404 /* TasksSection.swift */,
 				3CE435B32022602F009CCAB1 /* Person.swift */,
+				3C2A4E9A2025F1A80011A367 /* JSONValues.swift */,
+				3C2A4E982025F0A40011A367 /* JSONValue.swift */,
+				3C2A4E9C20265F980011A367 /* ExpandableNames.swift */,
 			);
 			path = "Classes&Structs";
 			sourceTree = "<group>";
@@ -517,6 +532,7 @@
 				E26244791FE9AD8E001CCE59 /* DVCEventCustomData.xib */,
 				3CC14623201BB56200ABE404 /* DVCTask.swift */,
 				3CC14624201BB56200ABE404 /* DVCTask.xib */,
+				3C2A4E942025D3630011A367 /* DVCTableView.swift */,
 			);
 			path = DVC;
 			sourceTree = "<group>";
@@ -524,6 +540,7 @@
 		E2A07FE01FDF38EE00F0D94B /* functions */ = {
 			isa = PBXGroup;
 			children = (
+				3C2A4E962025D4E60011A367 /* GetJSON.swift */,
 				E2FDE61E1FE0706A006BA8DD /* public func stringToDate.swift */,
 				3CC1462120193CF400ABE404 /* func stringToDateShort.swift */,
 				E2FDE6201FE0706B006BA8DD /* public func stringToEventDate.swift */,
@@ -533,6 +550,7 @@
 				E2FDE6261FE08486006BA8DD /* GetStatuses.swift */,
 				E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */,
 				E2FDE6181FE063AF006BA8DD /* GetEvents.swift */,
+				3CDBAA96202341E10088B706 /* GetTask.swift */,
 				3CC1461F2018EA5A00ABE404 /* GetTasks.swift */,
 				E25513F71FE856D400C76673 /* GetSchedule.swift */,
 				3C536669202273D000838E6D /* GetLocation.swift */,
@@ -723,6 +741,7 @@
 				E265B31A1FDF25950000591B /* Contact.swift in Sources */,
 				E265B3181FDF22AF0000591B /* ContactLink_Id.swift in Sources */,
 				E2FDE6131FE05EA2006BA8DD /* GetCurrentDate.swift in Sources */,
+				3C2A4E972025D4E60011A367 /* GetJSON.swift in Sources */,
 				E2FDE6241FE0706B006BA8DD /* public func stringToEventDate.swift in Sources */,
 				E2FDE6251FE0706B006BA8DD /* public func stringToTime.swift in Sources */,
 				E29CF90A1FE152CC005038A8 /* Resourcebookings.swift in Sources */,
@@ -735,10 +754,13 @@
 				E265B32A1FDF2CA90000591B /* Status_Id.swift in Sources */,
 				3CA6E795201FC55900499A3D /* DVCEventSchedule.swift in Sources */,
 				E262445E1FE9989E001CCE59 /* DVCEventInfo.swift in Sources */,
+				3C2A4E9B2025F1A80011A367 /* JSONValues.swift in Sources */,
 				3CE435B820226269009CCAB1 /* Contact_Id.swift in Sources */,
 				3CE435B020225B16009CCAB1 /* Locations.swift in Sources */,
 				E26244661FE998F7001CCE59 /* DVCEventTeam.swift in Sources */,
 				E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */,
+				3C2A4E952025D3630011A367 /* DVCTableView.swift in Sources */,
+				3CDBAA97202341E10088B706 /* GetTask.swift in Sources */,
 				3CE435B220225FCB009CCAB1 /* ContactType.swift in Sources */,
 				E2FDE6191FE063AF006BA8DD /* GetEvents.swift in Sources */,
 				3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */,
@@ -746,6 +768,7 @@
 				E2FDE6231FE0706B006BA8DD /* public func stringToSelectedDate.swift in Sources */,
 				E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */,
 				E2FDE6221FE0706B006BA8DD /* public func stringToDate.swift in Sources */,
+				3C2A4E9D20265F980011A367 /* ExpandableNames.swift in Sources */,
 				E25513FC1FE8588B00C76673 /* Schedule.swift in Sources */,
 				3CA6E799201FCF5600499A3D /* DVCEvent.swift in Sources */,
 				3CDAA4D4201E1E6F008F9E1D /* VCTeamplanner.swift in Sources */,
@@ -806,6 +829,7 @@
 				3CDAA506201E4CB0008F9E1D /* VCUpdates.swift in Sources */,
 				3CDAA4FE201E4C8E008F9E1D /* VCTodo.swift in Sources */,
 				E265B32C1FDF2CED0000591B /* LinkAttachment.swift in Sources */,
+				3C2A4E992025F0A40011A367 /* JSONValue.swift in Sources */,
 				E24FB9351FDFFC3800C5242B /* Formula.swift in Sources */,
 				3CC1461E2018E9DB00ABE404 /* TasksSection.swift in Sources */,
 				E2286E451FDDB9BA006CE49D /* Events.swift in Sources */,

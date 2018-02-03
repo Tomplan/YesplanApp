@@ -20,9 +20,12 @@ struct Usergroup_Id: Codable {
     }
     
     func printUsergroup_Id() {
+        usergroupArray = []
         print("\t\t url: \(self.url)")
+        usergroupArray.append(self.url)
         print("\t\t id: \(self.id)")
-        if let name = self.name { print("\t\t name: \(name)") }
+        usergroupArray.append(self.id)
+        if let name = self.name { print("\t\t name: \(name)");  usergroupArray.append(name) }
     }
 }
 

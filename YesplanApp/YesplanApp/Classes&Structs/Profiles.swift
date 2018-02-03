@@ -1,5 +1,5 @@
 //
-//  Tasks.swift
+//  Profiles.swift
 //  YesplanApp
 //
 //  Created by Tom Slegers on 11/12/17.
@@ -8,28 +8,28 @@
 
 import Foundation
 
-struct Tasks: Codable {
+
+struct Profiles: Codable {
     let pagination: Pagination
-    let data: [Task_Id]
+    let data: [Profile_Id]
     
     enum CodingKeys: String, CodingKey {
         case pagination = "pagination"
         case data = "data"
     }
     
-    func printTasks() {
+    func printProfiles() {
         self.pagination.printPagination()
-//        print("tasks: ")
-        for task in self.data {
-            task.printTask_Id()
-            
+        print("profiles: ")
+        for profile in self.data {
+            profile.printProfile_Id()
         }
     }
 }
 
-extension Tasks {
+extension Profiles {
     init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(Tasks.self, from: data) else { return nil }
+        guard let me = try? JSONDecoder().decode(Profiles.self, from: data) else { return nil }
         self = me
     }
     
@@ -53,4 +53,3 @@ extension Tasks {
         return String(data: data, encoding: .utf8)
     }
 }
-

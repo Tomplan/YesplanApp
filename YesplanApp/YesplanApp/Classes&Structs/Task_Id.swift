@@ -8,6 +8,8 @@
 
 import Foundation
 
+var task: [String : Any] = [:]
+
 struct Task_Id: Codable {
     let url: String?
     let id: String?
@@ -46,45 +48,52 @@ struct Task_Id: Codable {
     }
     
     func printTask_Id() {
-        print("*")
-        print("task:")
-        if let url = self.url { print("\t url: \(url)") }
-        if let id = self.id { print("\t id: \(id)") }
-        
-        //        print("\t url: \(self.url)")
-        //        print("\t id: \(self.id)")
-        if let owner = self.owner {
-            print("\t owner:")
-            owner.printUser_Id() }
-        if let owningteam = self.owningteam {
-            print("\t owningteam:")
-            owningteam.printUsergroup_Id() }
-        if let owninggroup = self.owninggroup {
-            print("\t owninggroup:")
-            owninggroup.printUsergroup_Id() }
-        print("\t status: \(self.status)")
-        if let name = self.name { print("\t name: \(name)") }
-        print("\t team: \(self.team)")
-        print("\t cost: \(self.cost)")
-        if let due = self.due { print("\t due: \(due)") }
-        if let start = self.start { print("\t start: \(start)") }
-        if let description = self.description { print("\t description: \(description)") }
-        if let event = self.event { print("\t taskEvent: ")
+//        print("task:")
+//        if let url = self.url { print("\t url: \(url)") }
+//        if let url = self.url { objectArray.append(TableViewObjects(sectionName: "url", sectionObjects: [url])) }
+//        if let id = self.id { print("\t id: \(id)") }
+//        if let id = self.id { objectArray.append(TableViewObjects(sectionName: "id", sectionObjects: [id])) }
+//        if let owner = self.owner { print("\t owner:") }
+//        if let owner = self.owner {owner.printUser_Id(); objectArray.append(TableViewObjects(sectionName: "owner", sectionObjects: userArray)) }
+//        if let owningteam = self.owningteam { print("\t owningteam:")}
+//        if let owningteam = self.owningteam {owningteam.printUsergroup_Id(); objectArray.append(TableViewObjects(sectionName: "owningteam", sectionObjects: usergroupArray)) }
+//        if let owninggroup = self.owninggroup { print("\t owninggroup:")}
+//        if let owninggroup = self.owninggroup { owninggroup.printUsergroup_Id(); objectArray.append(TableViewObjects(sectionName: "owninggroup", sectionObjects: usergroupArray)) }
+//        print("\t status: \(self.status)")
+        objectArray.append(TableViewObjects(sectionName: "status", sectionObjects: [self.status]))
+//        if let name = self.name { print("\t name: \(name)") }
+        if let name = self.name { objectArray.append(TableViewObjects(sectionName: "name", sectionObjects: [name])) }
+//        print("\t team: \(self.team)")
+        objectArray.append(TableViewObjects(sectionName: "team", sectionObjects: [self.team]))
+//        print("\t cost: \(self.cost)");
+//        objectArray.append(TableViewObjects(sectionName: "cost", sectionObjects: [String(describing: self.cost)]))
+//        if let due = self.due { print("\t due: \(due)") }
+        if let due = self.due { objectArray.append(TableViewObjects(sectionName: "due", sectionObjects: [stringToDate(myDateString: due)])) }
+//        if let start = self.start { print("\t start: \(start)") }
+        if let start = self.start { objectArray.append(TableViewObjects(sectionName: "start", sectionObjects: [stringToDate(myDateString: start)])) }
+//        if let description = self.description { print("\t description: \(description)") }
+        if let description = self.description { objectArray.append(TableViewObjects(sectionName: "description", sectionObjects: [description])) }
+        if let event = self.event {
+//            print("\t taskEvent: ")
             switch event {
             case .event_Id(let event_Id):
                 event_Id.printBase()
+                objectArray.append(TableViewObjects(sectionName: "event", sectionObjects: baseArray))
             case .group_Id(let group_Id):
                 group_Id.printBase()
+                objectArray.append(TableViewObjects(sectionName: "event", sectionObjects: baseArray))
             case .schedule(let taskSchedule):
                 taskSchedule.printTaskSchedule()
             }
         }
-        if let assignedby = self.assignedby { print("\t assignedby: \(assignedby)") }
-        if let assignedto = self.assignedto { print("\t assignedto: \(assignedto)") }
-        if let duration = self.duration { print("\t duration: \(duration)") }
+//        if let assignedby = self.assignedby { print("\t assignedby: \(assignedby)") }
+        if let assignedby = self.assignedby { objectArray.append(TableViewObjects(sectionName: "assignedby", sectionObjects: [assignedby])) }
+//        if let assignedto = self.assignedto { print("\t assignedto: \(assignedto)") }
+        if let assignedto = self.assignedto { objectArray.append(TableViewObjects(sectionName: "assignedto", sectionObjects: [assignedto])) }
+//        if let duration = self.duration { print("\t duration: \(duration)") }
+        if let duration = self.duration { objectArray.append(TableViewObjects(sectionName: "duration", sectionObjects: [duration])) }
     }
 }
-
 
 enum TaskEvent: Codable {
     case event_Id(Base)
@@ -132,7 +141,7 @@ struct TaskSchedule: Codable {
     }
     
     func printTaskSchedule() {
-        if let name = self.name { print("\t\t name: \(name)") }
+        if let name = self.name { print("\t name: \(name)"); objectArray.append(TableViewObjects(sectionName: "name", sectionObjects: [name])) }
     }
 }
 
@@ -163,3 +172,14 @@ extension Task_Id {
     }
 }
 
+protocol ProfileViewModelItem {
+    var type: CodingKey { get }
+    var rowCount: Int { get }
+    var sectionTitle: String  { get }
+}
+
+extension ProfileViewModelItem {
+    var rowCount: Int {
+        return 1
+    }
+}

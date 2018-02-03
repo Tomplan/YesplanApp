@@ -9,9 +9,8 @@
 import Foundation
 
 
-
-
 // MARK: Encode/decode helpers
+
 
 class JSONNull: Codable {
     public init() {}
@@ -246,6 +245,7 @@ class JSONAny: Codable {
         print("\t value: \(self.value)")
     }
 }
+
 
 //
 //class JSONNull: Codable {

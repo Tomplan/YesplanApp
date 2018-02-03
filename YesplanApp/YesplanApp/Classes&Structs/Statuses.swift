@@ -1,35 +1,36 @@
 //
-//  Tasks.swift
+//  Statuses.swift
 //  YesplanApp
 //
-//  Created by Tom Slegers on 11/12/17.
+//  Created by Tom Slegers on 12/12/17.
 //  Copyright © 2017 TomPlan. All rights reserved.
 //
 
 import Foundation
 
-struct Tasks: Codable {
+
+struct Statuses: Codable {
     let pagination: Pagination
-    let data: [Task_Id]
+    let data: [Status_Id]
     
     enum CodingKeys: String, CodingKey {
         case pagination = "pagination"
         case data = "data"
     }
     
-    func printTasks() {
+    func printStatuses() {
         self.pagination.printPagination()
-//        print("tasks: ")
-        for task in self.data {
-            task.printTask_Id()
-            
+        print("statuses: ")
+        for status in self.data {
+            status.printStatus_Id()
         }
     }
+    
 }
 
-extension Tasks {
+extension Statuses {
     init?(data: Data) {
-        guard let me = try? JSONDecoder().decode(Tasks.self, from: data) else { return nil }
+        guard let me = try? JSONDecoder().decode(Statuses.self, from: data) else { return nil }
         self = me
     }
     
@@ -53,4 +54,3 @@ extension Tasks {
         return String(data: data, encoding: .utf8)
     }
 }
-

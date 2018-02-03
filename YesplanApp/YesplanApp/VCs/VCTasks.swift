@@ -41,48 +41,7 @@ class VCTasks: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "DVCTask" {
-//            print("ok1")
-//
-//            let detailVC: DVCTask? = segue.destination as? DVCTask
-//            let cell: UITableViewCell? = sender as? TVCTasks
-//
-//            if let indexPath = TVTasks.indexPathForSelectedRow {
-//                print("ok2")
-//
-//                let url = YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].url!
-//                if let object = Task_Id(url: url) {
-//                print("ok3")
-//                //                let controller = (segue.destination as! UINavigationController).topViewController as! TasksDetailViewController
-//
-//
-//                if cell != nil && detailVC != nil {
-//                    detailVC!.TaskUrlText = object.url
-//                    detailVC!.TaskIdText = object.id
-//                    detailVC!.TaskOwnerText = object.owner?.name
-//                    detailVC!.TaskOwningteamText = object.owningteam?.name
-//                    detailVC!.TaskOwninggroupText = object.owninggroup?.name
-//                    detailVC!.TaskStatusText = object.status
-//                    detailVC!.TaskNameText = object.name
-//                    detailVC!.TaskTeamText = object.team
-////                    detailVC!.TaskCostText = object.cost
-//                    detailVC!.TaskDueText = object.due
-//                    detailVC!.TaskStartText = object.start
-//                    detailVC!.TaskDescriptionText = object.description
-//                    detailVC!.TaskAssignedbyText = object.assignedby
-//                    detailVC!.TaskAssignedtoText = object.assignedto
-//                    detailVC!.TaskDurationText = object.duration
-//
-//                    //                dump(detailVC!)
-//                    }
-//                }
-//            }
-//        }
-//    }
     
-
 }
 
 extension VCTasks: UITableViewDataSource {
@@ -140,12 +99,18 @@ extension VCTasks: UITableViewDataSource {
 
 extension VCTasks: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("ok")
         let cell: UITableViewCell? = tableView.cellForRow(at: indexPath)
         
         if cell != nil {
             let detailVC: DVCTask = DVCTask()
-            detailVC.contentText = cell?.textLabel?.text
+            let object = YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row]
+            GlobalVariable.URL = YPgroupedTasksSorted[indexPath.section].YPtasks[indexPath.row].url!
+            //            detailVC.objectId = object.id
+            GlobalVariable.ObjectId = object.id!
+//            if let taskName = object.name {
+//                detailVC.taskName = taskName
+//            }
+//            detailVC.contentText = cell?.textLabel?.text
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }

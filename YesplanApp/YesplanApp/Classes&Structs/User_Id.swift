@@ -22,10 +22,13 @@ struct User_Id: Codable {
     }
     
     func printUser_Id() {
+        userArray = []
         print("\t\t url: \(self.url)")
+        userArray.append(self.url)
         print("\t\t id: \(self.id)")
-        if let name = self.name { print("\t\t name: \(name)") }
-        if let email = self.email { print("\t\t email: \(email)") }
+        userArray.append(self.id)
+        if let name = self.name { print("\t\t name: \(name)");  userArray.append(name) }
+        if let email = self.email { print("\t\t email: \(email)");  userArray.append(email) }
     }
 }
 
