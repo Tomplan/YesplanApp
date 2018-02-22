@@ -191,8 +191,12 @@ extension VCEvents: UITableViewDelegate {
             let detailVC = DVCEvent()
 //            detailVC.objectId = object.id
             GlobalVariable.ObjectId = object.id
+            GlobalVariable.URL = object.url
             if let eventName = object.name {
             detailVC.eventName = eventName
+            }
+            if let eventGroupName = object.group?.name {
+                detailVC.eventGroupName = eventGroupName
             }
 //            if let eventGroupName = object.group?.name {
 //            detailVC.eventGroupName = eventGroupName

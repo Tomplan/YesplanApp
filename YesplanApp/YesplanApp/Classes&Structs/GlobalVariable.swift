@@ -8,11 +8,35 @@
 
 import Foundation
 
+
+//extension Sequence  where Generator.Element == [String: AnyObject] {
+//    public func groupBy(key: String) -> [String: AnyObject]{
+//        let  keys = self.flatMap{($0[key] as! String)}
+//        let tempSet = Set<String>(keys)
+//        let uniqueKeys = Array(tempSet)
+//        var result = [String: AnyObject]()
+//        for item in uniqueKeys{
+//            let predicate = NSPredicate(format: "SELF.\(key) =[cd] %@", item)
+//            let arrFilter = self.filter{predicate.evaluateWithObject($0)}
+//            result[item] = arrFilter
+//        }
+//        return result
+//    }
+//}
+
+//var resourceList:(section: String, rows: Any) = (section: "section", rows: ["key": "value"])
+var SwitchValueList = [String]()
+var sectionArray = [SectionObjects]()
 var objectArray = [TableViewObjects]()
 var userArray = [String]()
 var usergroupArray = [String]()
 var baseArray = [String]()
 
+struct SectionObjects : Codable {
+    
+    var sectionName : String!
+    var sectionObjects : [JSONAny]
+}
 
 struct TableViewObjects : Codable {
     
@@ -20,13 +44,18 @@ struct TableViewObjects : Codable {
     var sectionObjects : [String]
 }
 
+
 struct GlobalVariable {
     static var API_Key: String = "6AED6266671C92209161289C37D109E0"
+//    4A0863B77CDA66EAE18095E1947048D9 tom
+    
     static var OrganizationURL: String = "https://dewerft.yesplan.be"
     static var URL = String()
     static var ObjectId = String()
     static var ObjectType = String()
     static var TeamId: String = "team%3A1203"
+    static var EventFull = String()
+
 
 }
 struct YPTableViewObjects : Codable {

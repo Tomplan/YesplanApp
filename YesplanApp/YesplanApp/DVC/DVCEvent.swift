@@ -16,7 +16,8 @@ class DVCEvent: UIViewController {
     var eventTabs = [String]()
     var objectId = String() 
     var eventName = String()
-    
+    var eventGroupName = String()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         eventTabs = ["Info", "Schedule", "Location", "Team", "Resources", "Tasks", "Contacts", "Attachments", "Customdata"]
@@ -75,9 +76,11 @@ extension DVCEvent: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return eventName
+            let EventFull = ("\(eventName) - \(eventGroupName)")
+            GlobalVariable.EventFull = EventFull
+            return EventFull
         } else {
-            return "eventname"
+            return "eventfull"
         }
     }
     

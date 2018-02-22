@@ -8,8 +8,7 @@
 
 import Foundation
 
-import Foundation
-
+protocol AutoEquatable { }
 
 struct Resourcebookings: Codable {
     let pagination: Pagination

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A60B1D7314139C6AE84D2C /* Pods_YesplanAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4A1325DBB2A2E91623863 /* Pods_YesplanAppTests.framework */; };
 		3C257EA8201F8DAE00D23B3A /* DVCNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C257EA6201F8DAE00D23B3A /* DVCNav.swift */; };
 		3C257EA9201F8DAE00D23B3A /* DVCNav.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C257EA7201F8DAE00D23B3A /* DVCNav.xib */; };
 		3C2A4E952025D3630011A367 /* DVCTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A4E942025D3630011A367 /* DVCTableView.swift */; };
@@ -58,6 +59,10 @@
 		3CE435BE202264D6009CCAB1 /* ContactbookingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435BD202264D6009CCAB1 /* ContactbookingType.swift */; };
 		3CE435C020226652009CCAB1 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE435BF20226652009CCAB1 /* Groups.swift */; };
 		3CECCF0220210C3000165319 /* Schedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CECCF0120210C3000165319 /* Schedules.swift */; };
+		3CF358D920270D5400DD12E9 /* GetEvent_Id_Resourcebookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF358D820270D5400DD12E9 /* GetEvent_Id_Resourcebookings.swift */; };
+		3CF358DD20279A1200DD12E9 /* SwitchValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF358DC20279A1200DD12E9 /* SwitchValue.swift */; };
+		7BC1F0BB01E9F5B4D268EAA0 /* Pods_YesplanAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FF9E26510767B6C242C605 /* Pods_YesplanAppUITests.framework */; };
+		B4E5196603F802C1A737A633 /* Pods_YesplanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA458190FA2A36A120F35CA0 /* Pods_YesplanApp.framework */; };
 		E2286E451FDDB9BA006CE49D /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E441FDDB9BA006CE49D /* Events.swift */; };
 		E2286E471FDDBA52006CE49D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E461FDDBA52006CE49D /* Pagination.swift */; };
 		E2286E4F1FDDBC7B006CE49D /* JsonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */; };
@@ -175,6 +180,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A7028D2D3D95EBD87E92B7 /* Pods-YesplanAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YesplanAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YesplanAppUITests/Pods-YesplanAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		147817E49F524B145F2BD43F /* Pods-YesplanAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YesplanAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YesplanAppTests/Pods-YesplanAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CA4A1325DBB2A2E91623863 /* Pods_YesplanAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YesplanAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FF9E26510767B6C242C605 /* Pods_YesplanAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YesplanAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C257EA6201F8DAE00D23B3A /* DVCNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCNav.swift; sourceTree = "<group>"; };
 		3C257EA7201F8DAE00D23B3A /* DVCNav.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCNav.xib; sourceTree = "<group>"; };
 		3C2A4E942025D3630011A367 /* DVCTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCTableView.swift; sourceTree = "<group>"; };
@@ -186,6 +195,7 @@
 		3C536669202273D000838E6D /* GetLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
 		3C6DE9D5201F4D6400446ACD /* DVCEventOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventOLD.swift; sourceTree = "<group>"; };
 		3C6DE9D6201F4D6400446ACD /* DVCEventOLD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventOLD.xib; sourceTree = "<group>"; };
+		3C8CEDC72D233FE401C87D1E /* Pods-YesplanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YesplanApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YesplanApp/Pods-YesplanApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3CA6E793201FC55900499A3D /* DVCEventSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEventSchedule.swift; sourceTree = "<group>"; };
 		3CA6E794201FC55900499A3D /* DVCEventSchedule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DVCEventSchedule.xib; sourceTree = "<group>"; };
 		3CA6E797201FCF5600499A3D /* DVCEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCEvent.swift; sourceTree = "<group>"; };
@@ -225,6 +235,11 @@
 		3CE435BD202264D6009CCAB1 /* ContactbookingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactbookingType.swift; sourceTree = "<group>"; };
 		3CE435BF20226652009CCAB1 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		3CECCF0120210C3000165319 /* Schedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedules.swift; sourceTree = "<group>"; };
+		3CF358D820270D5400DD12E9 /* GetEvent_Id_Resourcebookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEvent_Id_Resourcebookings.swift; sourceTree = "<group>"; };
+		3CF358DC20279A1200DD12E9 /* SwitchValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchValue.swift; sourceTree = "<group>"; };
+		7052ED190F5DBC4E91F97142 /* Pods-YesplanAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YesplanAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YesplanAppUITests/Pods-YesplanAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6A5641F6B10AD1FB8AA2E9D /* Pods-YesplanAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YesplanAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YesplanAppTests/Pods-YesplanAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA458190FA2A36A120F35CA0 /* Pods_YesplanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YesplanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2286E441FDDB9BA006CE49D /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E2286E461FDDBA52006CE49D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		E2286E4E1FDDBC7B006CE49D /* JsonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelpers.swift; sourceTree = "<group>"; };
@@ -315,6 +330,7 @@
 		E2FDE6211FE0706B006BA8DD /* public func stringToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "public func stringToTime.swift"; sourceTree = "<group>"; };
 		E2FDE6261FE08486006BA8DD /* GetStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatuses.swift; sourceTree = "<group>"; };
 		E2FDE6281FE084F9006BA8DD /* Statuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
+		EDED9D47BBA83523959751D6 /* Pods-YesplanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YesplanApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-YesplanApp/Pods-YesplanApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E5196603F802C1A737A633 /* Pods_YesplanApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +346,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A60B1D7314139C6AE84D2C /* Pods_YesplanAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,12 +354,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC1F0BB01E9F5B4D268EAA0 /* Pods_YesplanAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85C1F0BA76B2B9D244C1F73F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C8CEDC72D233FE401C87D1E /* Pods-YesplanApp.debug.xcconfig */,
+				EDED9D47BBA83523959751D6 /* Pods-YesplanApp.release.xcconfig */,
+				147817E49F524B145F2BD43F /* Pods-YesplanAppTests.debug.xcconfig */,
+				A6A5641F6B10AD1FB8AA2E9D /* Pods-YesplanAppTests.release.xcconfig */,
+				7052ED190F5DBC4E91F97142 /* Pods-YesplanAppUITests.debug.xcconfig */,
+				02A7028D2D3D95EBD87E92B7 /* Pods-YesplanAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E2286E431FDDB98E006CE49D /* Classes&Structs */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +446,8 @@
 				E22DE4821FDB173300E0F499 /* YesplanAppTests */,
 				E22DE48D1FDB173300E0F499 /* YesplanAppUITests */,
 				E22DE46A1FDB173300E0F499 /* Products */,
+				85C1F0BA76B2B9D244C1F73F /* Pods */,
+				EF9E0C6E881BF05A3A8AD39B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -541,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2A4E962025D4E60011A367 /* GetJSON.swift */,
+				3CF358DC20279A1200DD12E9 /* SwitchValue.swift */,
 				E2FDE61E1FE0706A006BA8DD /* public func stringToDate.swift */,
 				3CC1462120193CF400ABE404 /* func stringToDateShort.swift */,
 				E2FDE6201FE0706B006BA8DD /* public func stringToEventDate.swift */,
@@ -550,6 +585,7 @@
 				E2FDE6261FE08486006BA8DD /* GetStatuses.swift */,
 				E2FDE6121FE05EA2006BA8DD /* GetCurrentDate.swift */,
 				E2FDE6181FE063AF006BA8DD /* GetEvents.swift */,
+				3CF358D820270D5400DD12E9 /* GetEvent_Id_Resourcebookings.swift */,
 				3CDBAA96202341E10088B706 /* GetTask.swift */,
 				3CC1461F2018EA5A00ABE404 /* GetTasks.swift */,
 				E25513F71FE856D400C76673 /* GetSchedule.swift */,
@@ -576,6 +612,16 @@
 			path = MainStoryboards;
 			sourceTree = "<group>";
 		};
+		EF9E0C6E881BF05A3A8AD39B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA458190FA2A36A120F35CA0 /* Pods_YesplanApp.framework */,
+				1CA4A1325DBB2A2E91623863 /* Pods_YesplanAppTests.framework */,
+				38FF9E26510767B6C242C605 /* Pods_YesplanAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -583,9 +629,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E22DE4931FDB173300E0F499 /* Build configuration list for PBXNativeTarget "YesplanApp" */;
 			buildPhases = (
+				667B5AE74CD41C6E72A6F1CE /* [CP] Check Pods Manifest.lock */,
 				E22DE4651FDB173300E0F499 /* Sources */,
 				E22DE4661FDB173300E0F499 /* Frameworks */,
 				E22DE4671FDB173300E0F499 /* Resources */,
+				18633CAB849B8C83AA2FF949 /* [CP] Embed Pods Frameworks */,
+				2D1E08675B7080829AC89435 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 				E2797444200F8DA000DD5850 /* PBXBuildRule */,
@@ -601,9 +650,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E22DE4961FDB173300E0F499 /* Build configuration list for PBXNativeTarget "YesplanAppTests" */;
 			buildPhases = (
+				DECB15FF0169B028E222E7B0 /* [CP] Check Pods Manifest.lock */,
 				E22DE47B1FDB173300E0F499 /* Sources */,
 				E22DE47C1FDB173300E0F499 /* Frameworks */,
 				E22DE47D1FDB173300E0F499 /* Resources */,
+				5EABB7CA6B57D2C5D0BB27D9 /* [CP] Embed Pods Frameworks */,
+				58FBEFD2815561F3ED6A9DC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,9 +671,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E22DE4991FDB173300E0F499 /* Build configuration list for PBXNativeTarget "YesplanAppUITests" */;
 			buildPhases = (
+				9BB917380DE42CA28E8C34B5 /* [CP] Check Pods Manifest.lock */,
 				E22DE4861FDB173300E0F499 /* Sources */,
 				E22DE4871FDB173300E0F499 /* Frameworks */,
 				E22DE4881FDB173300E0F499 /* Resources */,
+				8A769105AB827FAC9B7CDD2F /* [CP] Embed Pods Frameworks */,
+				EEF2CD21A1525261EF7D49FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -733,6 +788,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18633CAB849B8C83AA2FF949 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YesplanApp/Pods-YesplanApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Sourcery-AutoJSONSerializable/Sourcery_AutoJSONSerializable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sourcery_AutoJSONSerializable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YesplanApp/Pods-YesplanApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D1E08675B7080829AC89435 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YesplanApp/Pods-YesplanApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58FBEFD2815561F3ED6A9DC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YesplanAppTests/Pods-YesplanAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EABB7CA6B57D2C5D0BB27D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YesplanAppTests/Pods-YesplanAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		667B5AE74CD41C6E72A6F1CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YesplanApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A769105AB827FAC9B7CDD2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YesplanAppUITests/Pods-YesplanAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB917380DE42CA28E8C34B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YesplanAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DECB15FF0169B028E222E7B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YesplanAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF2CD21A1525261EF7D49FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YesplanAppUITests/Pods-YesplanAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E22DE4651FDB173300E0F499 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -749,6 +954,7 @@
 				E2B4AB791FDF1DBE00374830 /* Contactbooking_Id.swift in Sources */,
 				E24FB9311FDFFB8C00C5242B /* Costmodel.swift in Sources */,
 				3CC1462220193CF400ABE404 /* func stringToDateShort.swift in Sources */,
+				3CF358DD20279A1200DD12E9 /* SwitchValue.swift in Sources */,
 				3CDAA4F2201E4C4B008F9E1D /* VCHelp.swift in Sources */,
 				E26244721FE99945001CCE59 /* DVCEventContacts.swift in Sources */,
 				E265B32A1FDF2CA90000591B /* Status_Id.swift in Sources */,
@@ -761,6 +967,7 @@
 				E2A07FDB1FDF333B00F0D94B /* Tasks.swift in Sources */,
 				3C2A4E952025D3630011A367 /* DVCTableView.swift in Sources */,
 				3CDBAA97202341E10088B706 /* GetTask.swift in Sources */,
+				3CF358D920270D5400DD12E9 /* GetEvent_Id_Resourcebookings.swift in Sources */,
 				3CE435B220225FCB009CCAB1 /* ContactType.swift in Sources */,
 				E2FDE6191FE063AF006BA8DD /* GetEvents.swift in Sources */,
 				3C6DE9D7201F4D6400446ACD /* DVCEventOLD.swift in Sources */,
@@ -995,6 +1202,7 @@
 		};
 		E22DE4941FDB173300E0F499 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C8CEDC72D233FE401C87D1E /* Pods-YesplanApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1011,6 +1219,7 @@
 		};
 		E22DE4951FDB173300E0F499 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDED9D47BBA83523959751D6 /* Pods-YesplanApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1027,6 +1236,7 @@
 		};
 		E22DE4971FDB173300E0F499 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147817E49F524B145F2BD43F /* Pods-YesplanAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1044,6 +1254,7 @@
 		};
 		E22DE4981FDB173300E0F499 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A5641F6B10AD1FB8AA2E9D /* Pods-YesplanAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1061,6 +1272,7 @@
 		};
 		E22DE49A1FDB173300E0F499 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7052ED190F5DBC4E91F97142 /* Pods-YesplanAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1077,6 +1289,7 @@
 		};
 		E22DE49B1FDB173300E0F499 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A7028D2D3D95EBD87E92B7 /* Pods-YesplanAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

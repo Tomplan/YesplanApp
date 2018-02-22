@@ -242,7 +242,12 @@ class JSONAny: Codable {
     }
     
     func printJSONAny() {
-        print("\t value: \(self.value)")
+        SwitchValueList = []
+//        print("\t value: \(self.value)")
+        SwitchValue(value: self.value)
+//        print(SwitchValueList)
+//        objectArray.append(TableViewObjects(sectionName: "resource", sectionObjects: SwitchValueList))
+
     }
 }
 

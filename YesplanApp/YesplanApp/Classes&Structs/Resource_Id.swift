@@ -8,6 +8,54 @@
 
 import Foundation
 
+//
+//enum Resource_Id: Codable {
+//    case bulkResource(bulkResource)
+//    case adHocResource(adHocResource)
+//    case instantiableResource(instantiableResource)
+//    case resourceSet(resourceSet)
+
+//
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.singleValueContainer()
+//        if let x = try? container.decode(bulkResource.self) {
+//            self = .bulkResource(x)
+//            //            x.printBulkResource()
+//            return
+//        }
+//        if let x = try? container.decode(adHocResource.self) {
+//            self = .adHocResource(x)
+//            //            x.printAdHocResource()
+//            return
+//        }
+//        if let x = try? container.decode(instantiableResource.self) {
+//            self = .instantiableResource(x)
+//            //            x.printInstantiableResource()
+//            return
+//        }
+//        if let x = try? container.decode(resourceSet.self) {
+//            self = .resourceSet(x)
+//            //            x.printResourceSet()
+//            return
+//        }
+//        throw DecodingError.typeMismatch(Pagination.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Pagination"))
+//    }
+//
+//    func encode(to encoder: Encoder) throws {
+//        var container = encoder.singleValueContainer()
+//        switch self {
+//        case .bulkResource(let bulkResource):
+//            try container.encode(bulkResource)
+//        case .adHocResource(let adHocResource):
+//            try container.encode(adHocResource)
+//        case .instantiableResource(let instantiableResource):
+//            try container.encode(instantiableResource)
+//        case .schedule(let taskSchedule):
+//            try container.encode(taskSchedule)
+//        }
+//    }
+//}
+
 
 struct Resource_Id: Codable {
     let url: String

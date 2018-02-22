@@ -55,8 +55,9 @@ extension DVCEventSchedule: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {        
-        return eventName
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        print("eventFull: ", GlobalVariable.EventFull)
+        return GlobalVariable.EventFull
         }
     
     

@@ -30,7 +30,7 @@ public func GetJSON(objectID: String) {
         
         print(jsonData)
         
-        var mirror = Mirror(reflecting: jsonData)
+        let mirror = Mirror(reflecting: jsonData)
         //
         
         
